@@ -3,8 +3,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
@@ -20,7 +18,7 @@ const optimization = () => {
 
   if (isProd) {
     config.minimize = true;
-    config.minimizer = [new TerserWebpackPlugin(), new OptimizeCssAssetsPlugin()];
+    config.minimizer = [new TerserWebpackPlugin()];
   }
 
   return config;
@@ -50,9 +48,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: filename('css'),
     }),
-/*    new CopyPlugin({
-      patterns: [{ from: './assets/images', to: path.resolve(__dirname, `build/images`) }],
-    }),*/
   ],
   module: {
     rules: [
