@@ -1,13 +1,19 @@
 import React from 'react';
-import styles from './App.module.css';
 import usersData from './data';
+import {
+  StyledAppFooter,
+  StyledAppInner,
+  StyledAppWrapper,
+  StyledHeader,
+  StyledTitle,
+} from 'src/App.styled';
 
 function App() {
   return (
-    <div className={styles.appWrapper}>
-      <header className={styles.header}></header>
-      <div className={styles.appInner}>
-        <h1 className={styles.title}>Страница пользователей</h1>
+    <StyledAppWrapper>
+      <StyledHeader></StyledHeader>
+      <StyledAppInner>
+        <StyledTitle>Страница пользователей</StyledTitle>
         <table>
           <caption>Данные пользователей</caption>
           <tbody>
@@ -20,7 +26,7 @@ function App() {
             </tr>
             {usersData.map((user) => {
               return (
-                <tr>
+                <tr key={user.id}>
                   <td>{user.firstName}</td>
                   <td>{user.lastName}</td>
 
@@ -33,9 +39,9 @@ function App() {
             })}
           </tbody>
         </table>
-      </div>
-      <footer className={styles.appFooter}>(c) Chackmool</footer>
-    </div>
+      </StyledAppInner>
+      <StyledAppFooter>(c) Chackmool</StyledAppFooter>
+    </StyledAppWrapper>
   );
 }
 
