@@ -1,9 +1,9 @@
-const usersData = [
+export const USERS = [
   {
     id: 1,
     firstName: 'Иван',
     lastName: 'Иванов',
-    status: 'активен',
+    status: 'active',
     mail: 'ivanov@project.org',
     registrationDate: '2022.10.10',
   },
@@ -11,7 +11,7 @@ const usersData = [
     id: 2,
     firstName: 'Петр',
     lastName: 'Петров',
-    status: 'активен',
+    status: 'active',
     mail: 'petrov@project.org',
     registrationDate: '2022.10.10',
   },
@@ -19,7 +19,7 @@ const usersData = [
     id: 3,
     firstName: 'Сидор',
     lastName: 'Сидоров',
-    status: 'VIP',
+    status: 'blocked',
     mail: 'sidorov@project.org',
     registrationDate: '2022.10.10',
   },
@@ -27,7 +27,7 @@ const usersData = [
     id: 4,
     firstName: 'Матвей',
     lastName: 'Матвеев',
-    status: 'активен',
+    status: 'active',
     mail: 'matveev@project.org',
     registrationDate: '2022.10.10',
   },
@@ -35,10 +35,14 @@ const usersData = [
     id: 5,
     firstName: 'Игнат',
     lastName: 'Игнатов',
-    status: 'не активен',
+    status: 'frozen',
     mail: 'ignatov@project.org',
     registrationDate: '2022.10.10',
   },
 ];
 
-export default usersData;
+export const statusTitle = {
+  active: 'Активный',
+  blocked: 'Заблокирован',
+  frozen: 'Заморожен',
+};

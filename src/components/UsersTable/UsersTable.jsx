@@ -1,5 +1,4 @@
 import React from 'react';
-import usersData from 'components/UsersTable/usersTableData';
 import {
   StyledTableBox,
   StyledTableInner,
@@ -7,6 +6,7 @@ import {
   StyledHeadCell,
   StyledUsersTable,
 } from 'components/UsersTable/UsersTable.styled';
+import { statusTitle, USERS } from 'src/constants';
 
 const UserTable = () => {
   return (
@@ -23,12 +23,12 @@ const UserTable = () => {
             </tr>
           </thead>
           <tbody>
-            {usersData.map((user) => {
+            {USERS.map((user) => {
               return (
                 <tr key={user.id}>
                   <StyledCell>{user.firstName}</StyledCell>
                   <StyledCell>{user.lastName}</StyledCell>
-                  <StyledCell>{user.status}</StyledCell>
+                  <StyledCell>{statusTitle[user.status]}</StyledCell>
                   <StyledCell>{user.mail}</StyledCell>
                   <StyledCell>{user.registrationDate}</StyledCell>
                 </tr>
