@@ -3,10 +3,9 @@ import usersData from 'components/UsersTable/usersTableData';
 import {
   StyledTableBox,
   StyledTableInner,
-  StyledTD,
-  StyledTH,
+  StyledCell,
+  StyledHeadCell,
   StyledUsersTable,
-  StyledUserTableCaption,
 } from 'components/UsersTable/UsersTable.styled';
 
 const UserTable = () => {
@@ -14,25 +13,24 @@ const UserTable = () => {
     <StyledTableBox>
       <StyledTableInner>
         <StyledUsersTable>
-          <StyledUserTableCaption>Данные пользователей</StyledUserTableCaption>
           <thead>
             <tr>
-              <StyledTH>Имя</StyledTH>
-              <StyledTH>Фамилия</StyledTH>
-              <StyledTH>Статус</StyledTH>
-              <StyledTH>Почта</StyledTH>
-              <StyledTH>Дата регистрации</StyledTH>
+              <StyledHeadCell>Имя</StyledHeadCell>
+              <StyledHeadCell>Фамилия</StyledHeadCell>
+              <StyledHeadCell>Статус</StyledHeadCell>
+              <StyledHeadCell>Почта</StyledHeadCell>
+              <StyledHeadCell>Дата регистрации</StyledHeadCell>
             </tr>
           </thead>
           <tbody>
             {usersData.map((user) => {
               return (
                 <tr key={user.id}>
-                  <StyledTD>{user.firstName}</StyledTD>
-                  <StyledTD>{user.lastName}</StyledTD>
-                  <StyledTD>{user.status}</StyledTD>
-                  <StyledTD>{user.mail}</StyledTD>
-                  <StyledTD>{user.registrationDate}</StyledTD>
+                  <StyledCell>{user.firstName}</StyledCell>
+                  <StyledCell>{user.lastName}</StyledCell>
+                  <StyledCell>{user.status}</StyledCell>
+                  <StyledCell>{user.mail}</StyledCell>
+                  <StyledCell>{user.registrationDate}</StyledCell>
                 </tr>
               );
             })}

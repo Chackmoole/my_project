@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MainContentStyled = styled.div`
+export const StyledMainContent = styled.main`
   flex-grow: 1;
   padding: 40px;
 `;

@@ -31,16 +31,7 @@ export const StyledUsersTable = styled.table`
   justify-content: center;
 `;
 
-export const StyledUserTableCaption = styled.caption`
-  font-family: Arial, sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.5;
-  letter-spacing: 0.1px;
-  color: #1a2027;
-  font-weight: 700;
-`;
-
-export const StyledTH = styled.th`
+export const StyledHeadCell = styled.th`
   padding: 16px;
   border-bottom: 1px solid #e7ebf0;
   text-align: left;
@@ -51,7 +42,7 @@ export const StyledTH = styled.th`
   letter-spacing: 0.01071em;
 `;
 
-export const StyledTD = styled.td`
+export const StyledCell = styled.td`
   padding: 16px;
   border-bottom: 1px solid #e7ebf0;
   font-family: 'Arial', sans-serif;
