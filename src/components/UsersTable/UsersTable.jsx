@@ -1,35 +1,39 @@
 import React from 'react';
 import usersData from 'components/UsersTable/usersTableData';
+import {
+  StyledTD,
+  StyledTH,
+  StyledTR,
+  StyledUsersTable,
+} from 'components/UsersTable/UsersTable.styled';
 
 const UserTable = () => {
   return (
-    <table>
+    <StyledUsersTable>
       <caption>Данные пользователей</caption>
       <thead>
-        <tr>
-          <th>Имя</th>
-          <th>Фамилия</th>
-          <th>Статус</th>
-          <th>Почта</th>
-          <th>Дата регистрации</th>
-        </tr>
+        <StyledTR>
+          <StyledTH>Имя</StyledTH>
+          <StyledTH>Фамилия</StyledTH>
+          <StyledTH>Статус</StyledTH>
+          <StyledTH>Почта</StyledTH>
+          <StyledTH>Дата регистрации</StyledTH>
+        </StyledTR>
       </thead>
       <tbody>
         {usersData.map((user) => {
           return (
-            <tr key={user.id}>
-              <td>{user.firstName}</td>
-              <td>{user.lastName}</td>
-
-              <td>{user.status}</td>
-              <td>{user.mail}</td>
-
-              <td>{user.registrationDate}</td>
-            </tr>
+            <StyledTR key={user.id}>
+              <StyledTD>{user.firstName}</StyledTD>
+              <StyledTD>{user.lastName}</StyledTD>
+              <StyledTD>{user.status}</StyledTD>
+              <StyledTD>{user.mail}</StyledTD>
+              <StyledTD>{user.registrationDate}</StyledTD>
+            </StyledTR>
           );
         })}
       </tbody>
-    </table>
+    </StyledUsersTable>
   );
 };
 
