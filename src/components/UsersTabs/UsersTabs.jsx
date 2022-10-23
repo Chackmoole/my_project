@@ -5,7 +5,7 @@ import UsersTab from 'components/UsersTab/UsersTab';
 const UsersTabs = () => {
   return (
     <StyledUsersTabs>
-      <UsersTab children="Все"></UsersTab>
+      <UsersTab isActive={true} children="Все"></UsersTab>
       <UsersTab children="Активные"></UsersTab>
       <UsersTab children="Замороженые"></UsersTab>
       <UsersTab children="Заблокированные"></UsersTab>
