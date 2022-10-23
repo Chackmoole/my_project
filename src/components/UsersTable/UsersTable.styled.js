@@ -2,11 +2,7 @@ import styled from 'styled-components';
 
 export const StyledTableBox = styled.div`
   border-radius: 10px;
-  position: relative;
-  outline: 0;
   margin: auto;
-  display: flex;
-  justify-content: center;
   padding: 24px;
   background-color: #e7ebf0;
 `;

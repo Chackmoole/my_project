@@ -7,10 +7,12 @@ import {
   StyledUsersTable,
 } from 'components/UsersTable/UsersTable.styled';
 import { statusTitle, USERS } from 'src/constants';
+import UsersTabs from 'components/UsersTabs/UsersTabs';
 
 const UserTable = () => {
   return (
     <StyledTableBox>
+      <UsersTabs />
       <StyledTableInner>
         <StyledUsersTable>
           <thead>
