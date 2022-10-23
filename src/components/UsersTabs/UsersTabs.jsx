@@ -5,10 +5,10 @@ import UsersTab from 'components/UsersTab/UsersTab';
 const UsersTabs = () => {
   return (
     <StyledUsersTabs>
-      <UsersTab isActive={true} children="Все"></UsersTab>
-      <UsersTab children="Активные"></UsersTab>
-      <UsersTab children="Замороженые"></UsersTab>
-      <UsersTab children="Заблокированные"></UsersTab>
+      <UsersTab isActive={true}>Все</UsersTab>
+      <UsersTab>Активные</UsersTab>
+      <UsersTab>Замороженые</UsersTab>
+      <UsersTab>Заблокированные</UsersTab>
     </StyledUsersTabs>
   );
 };
