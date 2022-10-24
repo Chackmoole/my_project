@@ -42,6 +42,7 @@ export const USERS = [
 ];
 
 export const statusTitle = {
+  all: 'Все',
   active: 'Активный',
   blocked: 'Заблокирован',
   frozen: 'Заморожен',

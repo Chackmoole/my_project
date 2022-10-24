@@ -20,9 +20,17 @@ const UserTable = () => {
     setSearchText(e.target.value);
   };
 
-  const isInclud = (searchValue, stringValue) => {
-    return stringValue.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
+  const isInclude = (searchValue, stringValue) => {
+    return stringValue.toLowerCase().includes(searchValue.toLowerCase());
   };
+
+  const filteredUsersBySearchText = USERS.filter(
+    (element) =>
+      (!currentStatus &&
+        (isInclude(searchText, element.firstName) || isInclude(searchText, element.lastName))) ||
+      (element.status === currentStatus && isInclude(searchText, element.firstName)) ||
+      (element.status === currentStatus && isInclude(searchText, element.lastName))
+  );
 
   return (
     <StyledTableBox>
@@ -40,22 +48,16 @@ const UserTable = () => {
             </tr>
           </thead>
           <tbody>
-            {USERS.map((user) => {
-              if (
-                (!currentStatus &&
-                  (isInclud(searchText, user.firstName) || isInclud(searchText, user.lastName))) ||
-                (user.status === currentStatus && isInclud(searchText, user.firstName)) ||
-                (user.status === currentStatus && isInclud(searchText, user.lastName))
-              )
-                return (
-                  <tr key={user.id}>
-                    <StyledCell>{user.firstName}</StyledCell>
-                    <StyledCell>{user.lastName}</StyledCell>
-                    <StyledCell>{statusTitle[user.status]}</StyledCell>
-                    <StyledCell>{user.mail}</StyledCell>
-                    <StyledCell>{user.registrationDate}</StyledCell>
-                  </tr>
-                );
+            {filteredUsersBySearchText.map((user) => {
+              return (
+                <tr key={user.id}>
+                  <StyledCell>{user.firstName}</StyledCell>
+                  <StyledCell>{user.lastName}</StyledCell>
+                  <StyledCell>{statusTitle[user.status]}</StyledCell>
+                  <StyledCell>{user.mail}</StyledCell>
+                  <StyledCell>{user.registrationDate}</StyledCell>
+                </tr>
+              );
             })}
           </tbody>
         </StyledUsersTable>
