@@ -1,14 +1,38 @@
 import React from 'react';
-import { StyledUsersTabs } from 'components/UsersTabs/UsersTabs.styled';
-import UsersTab from 'components/UsersTab/UsersTab';
+import { StyledUsersTab, StyledUsersTabs } from 'components/UsersTabs/UsersTabs.styled';
+import { statusTitle } from 'src/constants';
 
-const UsersTabs = () => {
+const options = [
+  {
+    label: 'Все',
+    value: null,
+  },
+  {
+    label: statusTitle['active'],
+    value: 'active',
+  },
+  {
+    label: statusTitle['frozen'],
+    value: 'frozen',
+  },
+  {
+    label: statusTitle['blocked'],
+    value: 'blocked',
+  },
+];
+
+const UsersTabs = (props) => {
   return (
     <StyledUsersTabs>
-      <UsersTab isActive={true}>Все</UsersTab>
-      <UsersTab>Активные</UsersTab>
-      <UsersTab>Замороженые</UsersTab>
-      <UsersTab>Заблокированные</UsersTab>
+      {options.map((item) => (
+        <StyledUsersTab
+          key={item.label}
+          isActive={props.currentStatus === item.value}
+          onClick={() => props.onTabClick(item.value)}
+        >
+          {item.label}
+        </StyledUsersTab>
+      ))}
     </StyledUsersTabs>
   );
 };

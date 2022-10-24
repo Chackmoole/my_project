@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   StyledTableBox,
   StyledTableInner,
@@ -10,9 +10,14 @@ import { statusTitle, USERS } from 'src/constants';
 import UsersTabs from 'components/UsersTabs/UsersTabs';
 
 const UserTable = () => {
+  const [currentStatus, setCurrentStatus] = useState(null);
+  const onTabClick = (value) => {
+    setCurrentStatus(value);
+  };
+
   return (
     <StyledTableBox>
-      <UsersTabs />
+      <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
       <StyledTableInner>
         <StyledUsersTable>
           <thead>
@@ -26,15 +31,16 @@ const UserTable = () => {
           </thead>
           <tbody>
             {USERS.map((user) => {
-              return (
-                <tr key={user.id}>
-                  <StyledCell>{user.firstName}</StyledCell>
-                  <StyledCell>{user.lastName}</StyledCell>
-                  <StyledCell>{statusTitle[user.status]}</StyledCell>
-                  <StyledCell>{user.mail}</StyledCell>
-                  <StyledCell>{user.registrationDate}</StyledCell>
-                </tr>
-              );
+              if (!currentStatus || user.status === currentStatus)
+                return (
+                  <tr key={user.id}>
+                    <StyledCell>{user.firstName}</StyledCell>
+                    <StyledCell>{user.lastName}</StyledCell>
+                    <StyledCell>{statusTitle[user.status]}</StyledCell>
+                    <StyledCell>{user.mail}</StyledCell>
+                    <StyledCell>{user.registrationDate}</StyledCell>
+                  </tr>
+                );
             })}
           </tbody>
         </StyledUsersTable>
