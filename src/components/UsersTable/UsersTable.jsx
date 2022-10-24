@@ -5,10 +5,12 @@ import {
   StyledCell,
   StyledHeadCell,
   StyledUsersTable,
+  StyledTableContainer,
 } from 'components/UsersTable/UsersTable.styled';
 import { statusTitle, USERS } from 'src/constants';
 import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
+import AddUserButton from 'components/AddUserButton/AddUserButton';
 
 const UserTable = () => {
   const [currentStatus, setCurrentStatus] = useState(null);
@@ -34,8 +36,12 @@ const UserTable = () => {
 
   return (
     <StyledTableBox>
-      <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
+      <StyledTableContainer>
+        <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
+        <AddUserButton />
+      </StyledTableContainer>
       <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
+
       <StyledTableInner>
         <StyledUsersTable>
           <thead>
