@@ -8,15 +8,25 @@ import {
 } from 'components/UsersTable/UsersTable.styled';
 import { statusTitle, USERS } from 'src/constants';
 import UsersTabs from 'components/UsersTabs/UsersTabs';
+import SearchInput from 'components/SearchInput/SearchInput';
 
 const UserTable = () => {
   const [currentStatus, setCurrentStatus] = useState(null);
   const onTabClick = (value) => {
     setCurrentStatus(value);
   };
+  const [searchText, setSearchText] = useState('');
+  const onSearchChange = (e) => {
+    setSearchText(e.target.value);
+  };
+
+  const isInclud = (searchValue, stringValue) => {
+    return stringValue.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
+  };
 
   return (
     <StyledTableBox>
+      <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
       <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
       <StyledTableInner>
         <StyledUsersTable>
@@ -31,7 +41,12 @@ const UserTable = () => {
           </thead>
           <tbody>
             {USERS.map((user) => {
-              if (!currentStatus || user.status === currentStatus)
+              if (
+                (!currentStatus &&
+                  (isInclud(searchText, user.firstName) || isInclud(searchText, user.lastName))) ||
+                (user.status === currentStatus && isInclud(searchText, user.firstName)) ||
+                (user.status === currentStatus && isInclud(searchText, user.lastName))
+              )
                 return (
                   <tr key={user.id}>
                     <StyledCell>{user.firstName}</StyledCell>
