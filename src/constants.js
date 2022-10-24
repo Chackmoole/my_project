@@ -17,7 +17,7 @@ export const USERS = [
   },
   {
     id: 3,
-    firstName: 'Сидор',
+    firstName: 'Лаврентий',
     lastName: 'Сидоров',
     status: 'blocked',
     mail: 'sidorov@project.org',
@@ -42,6 +42,7 @@ export const USERS = [
 ];
 
 export const statusTitle = {
+  all: 'Все',
   active: 'Активный',
   blocked: 'Заблокирован',
   frozen: 'Заморожен',
