@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyledAddUserButton } from 'components/AddUserButton/AddUserButton.styled';
+import Button from 'src/ui/Button/Button';
 
-const AddUserButton = () => {
-  return <StyledAddUserButton>Добавить пользователя</StyledAddUserButton>;
+const AddUserButton = ({ openModal }) => {
+  console.log('AddUserButton props: ', openModal);
+  return <Button onClick={openModal}>Добавить пользователя</Button>;
 };
 
 export default AddUserButton;

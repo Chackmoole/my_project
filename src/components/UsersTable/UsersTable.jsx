@@ -12,7 +12,7 @@ import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
 import AddUserButton from 'components/AddUserButton/AddUserButton';
 
-const UserTable = () => {
+const UserTable = ({ openModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
   const onTabClick = (value) => {
     setCurrentStatus(value);
@@ -38,7 +38,7 @@ const UserTable = () => {
     <StyledTableBox>
       <StyledTableContainer>
         <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
-        <AddUserButton />
+        <AddUserButton openModal={openModal} />
       </StyledTableContainer>
       <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
 
