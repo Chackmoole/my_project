@@ -12,12 +12,26 @@ export const StyledAddUserBackdrop = styled.div`
 
 export const StyledAddUserModal = styled.div`
   position: fixed;
-  background-color: red;
+  background-color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 200px;
-  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 400px;
+  min-height: 200px;
   padding: 36px;
+  border-radius: 4px;
   z-index: 101;
+`;
+
+export const StyledH3 = styled.h3`
+  font-size: 20px;
+  margin-bottom: 24px;
+`;
+
+export const StyledText = styled.p`
+  margin-bottom: 16px;
 `;
