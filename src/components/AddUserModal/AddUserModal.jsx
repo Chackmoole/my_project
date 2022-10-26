@@ -3,6 +3,7 @@ import {
   StyledAddUserBackdrop,
   StyledAddUserModal,
   StyledH3,
+  StyledModalActions,
   StyledText,
 } from 'components/AddUserModal/AddUserModal.styled';
 import Button from 'src/ui/Button/Button';
@@ -20,7 +21,12 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
           <CrossButton onClick={closeModal} />
           <StyledH3>Добавление пользователя</StyledH3>
           <StyledText> Место для формы добавление пользователя</StyledText>
-          <Button onClick={closeModal}>Сохранить</Button>
+          <StyledModalActions>
+            <Button onClick={closeModal} variant="outlined">
+              Отменить
+            </Button>
+            <Button onClick={closeModal}>Сохранить</Button>
+          </StyledModalActions>
         </StyledAddUserModal>
       </StyledAddUserBackdrop>
     </>

@@ -12,7 +12,7 @@ import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
 
-const UserTable = ({ openModal }) => {
+const UsersTable = ({ openModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
   const onTabClick = (value) => {
     setCurrentStatus(value);
@@ -72,4 +72,4 @@ const UserTable = ({ openModal }) => {
   );
 };
 
-export default UserTable;
+export default UsersTable;

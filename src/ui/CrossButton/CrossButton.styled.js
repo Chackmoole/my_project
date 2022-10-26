@@ -8,10 +8,16 @@ export const StyledCrossButton = styled.button`
   height: 24px;
   opacity: 0.2;
   cursor: pointer;
+  background-color: transparent;
+  border-radius: 4px;
   transition: opacity ease 0.5s;
 
   &:hover {
     opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.7;
   }
 
   ::before,
@@ -19,7 +25,7 @@ export const StyledCrossButton = styled.button`
     content: '';
     position: absolute;
     top: 9px;
-    left: 1px;
+    left: 0;
     display: block;
     width: 20px;
     height: 2px;

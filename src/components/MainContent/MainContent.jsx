@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyledMainContent } from 'components/MainContent/StyledMainContent';
-import UserTable from 'components/UsersTable/UsersTable';
+import UsersTable from 'components/UsersTable/UsersTable';
 
 const MainContent = ({ openModal }) => {
   return (
     <StyledMainContent>
-      <UserTable openModal={openModal} />
+      <UsersTable openModal={openModal} />
     </StyledMainContent>
   );
 };

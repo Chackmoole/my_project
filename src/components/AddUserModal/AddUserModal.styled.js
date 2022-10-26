@@ -27,11 +27,16 @@ export const StyledAddUserModal = styled.div`
   z-index: 101;
 `;
 
+export const StyledModalActions = styled.div`
+  display: flex;
+  gap: 24px;
+`;
+
 export const StyledH3 = styled.h3`
   font-size: 20px;
   margin-bottom: 24px;
 `;
 
 export const StyledText = styled.p`
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 `;
