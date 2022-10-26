@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledAddUserModal } from 'components/AddUserModal/AddUserModal.styled';
-import SaveUserButton from 'components/SaveUserButton/SaveUserButton';
+import Button from 'src/ui/Button/Button';
 
 const AddUserModal = ({ isModalOpen, closeModal }) => {
   if (!isModalOpen) {
@@ -10,7 +10,7 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
   return (
     <StyledAddUserModal>
       <p>modal window</p>
-      <SaveUserButton closeModal={closeModal}>Сохранить</SaveUserButton>
+      <Button onClick={closeModal}>Сохранить</Button>
     </StyledAddUserModal>
   );
 };

@@ -10,7 +10,7 @@ import {
 import { statusTitle, USERS } from 'src/constants';
 import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
-import AddUserButton from 'components/AddUserButton/AddUserButton';
+import Button from 'src/ui/Button/Button';
 
 const UserTable = ({ openModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
@@ -38,7 +38,7 @@ const UserTable = ({ openModal }) => {
     <StyledTableBox>
       <StyledTableContainer>
         <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
-        <AddUserButton openModal={openModal} />
+        <Button onClick={openModal}>Добавить пользователя</Button>
       </StyledTableContainer>
       <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
 
