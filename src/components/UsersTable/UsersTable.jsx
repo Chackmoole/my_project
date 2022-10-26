@@ -5,12 +5,14 @@ import {
   StyledCell,
   StyledHeadCell,
   StyledUsersTable,
+  StyledTableContainer,
 } from 'components/UsersTable/UsersTable.styled';
 import { statusTitle, USERS } from 'src/constants';
 import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
+import Button from 'src/ui/Button/Button';
 
-const UserTable = () => {
+const UsersTable = ({ openModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
   const onTabClick = (value) => {
     setCurrentStatus(value);
@@ -34,8 +36,12 @@ const UserTable = () => {
 
   return (
     <StyledTableBox>
-      <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
+      <StyledTableContainer>
+        <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
+        <Button onClick={openModal}>Добавить пользователя</Button>
+      </StyledTableContainer>
       <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
+
       <StyledTableInner>
         <StyledUsersTable>
           <thead>
@@ -66,4 +72,4 @@ const UserTable = () => {
   );
 };
 
-export default UserTable;
+export default UsersTable;

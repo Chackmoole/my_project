@@ -7,6 +7,12 @@ export const StyledTableBox = styled.div`
   background-color: #e7ebf0;
 `;
 
+export const StyledTableContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+`;
+
 export const StyledTableInner = styled.div`
   background-color: #fff;
   color: rgba(0, 0, 0, 0.87);
