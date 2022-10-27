@@ -1,9 +1,13 @@
 import React from 'react';
-import { StyledInput, StyledLabel, StyledTextField } from 'src/ui/TextField/TextField.styled';
+import {
+  StyledInput,
+  StyledLabel,
+  StyledAddUserForm,
+} from 'components/AddUserForm/AddUserForm.styled';
 
-const TextField = ({ form, setForm }) => {
+const AddUserForm = ({ form, setForm }) => {
   return (
-    <StyledTextField>
+    <StyledAddUserForm>
       <StyledLabel>
         Имя
         <StyledInput
@@ -40,8 +44,8 @@ const TextField = ({ form, setForm }) => {
           }}
         />
       </StyledLabel>
-    </StyledTextField>
+    </StyledAddUserForm>
   );
 };
 
-export default TextField;
+export default AddUserForm;

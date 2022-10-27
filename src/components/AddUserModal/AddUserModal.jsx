@@ -7,10 +7,10 @@ import {
 } from 'components/AddUserModal/AddUserModal.styled';
 import Button from 'src/ui/Button/Button';
 import CrossButton from 'src/ui/CrossButton/CrossButton';
-import TextField from 'src/ui/TextField/TextField';
+import AddUserForm from 'src/components/AddUserForm/AddUserForm';
 
 const AddUserModal = ({ isModalOpen, closeModal }) => {
-  const [form, setForm] = useState({ firstName: 'имя', secondName: 'фамилия', email: 'email' });
+  const [form, setForm] = useState({ firstName: '', secondName: '', email: '' });
 
   const printFormData = () => {
     console.log(form);
@@ -27,7 +27,7 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
         <StyledAddUserModal onClick={(e) => e.stopPropagation()}>
           <CrossButton onClick={closeModal} />
           <StyledH3>Добавление пользователя</StyledH3>
-          <TextField form={form} setForm={setForm} />
+          <AddUserForm form={form} setForm={setForm} />
           <StyledModalActions>
             <Button onClick={closeModal} variant="outlined">
               Отменить
