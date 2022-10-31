@@ -51,6 +51,7 @@ const UsersTable = ({ openModal }) => {
               <StyledHeadCell>Статус</StyledHeadCell>
               <StyledHeadCell>Почта</StyledHeadCell>
               <StyledHeadCell>Дата регистрации</StyledHeadCell>
+              <StyledHeadCell></StyledHeadCell>
             </tr>
           </thead>
           <tbody>
@@ -62,6 +63,9 @@ const UsersTable = ({ openModal }) => {
                   <StyledCell>{statusTitle[user.status]}</StyledCell>
                   <StyledCell>{user.mail}</StyledCell>
                   <StyledCell>{user.registrationDate}</StyledCell>
+                  <StyledCell>
+                    <Button>Редактировать</Button>
+                  </StyledCell>
                 </tr>
               );
             })}

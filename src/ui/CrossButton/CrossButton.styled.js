@@ -20,8 +20,8 @@ export const StyledCrossButton = styled.button`
     opacity: 0.7;
   }
 
-  ::before,
-  ::after {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     top: 9px;
@@ -32,11 +32,11 @@ export const StyledCrossButton = styled.button`
     background: #000;
   }
 
-  ::before {
+  &::before {
     transform: rotate(-45deg);
   }
 
-  ::after {
+  &::after {
     transform: rotate(45deg);
   }
 `;

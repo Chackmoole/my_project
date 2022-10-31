@@ -1,49 +1,42 @@
 import React from 'react';
-import {
-  StyledInput,
-  StyledLabel,
-  StyledAddUserForm,
-} from 'components/AddUserForm/AddUserForm.styled';
+import { StyledAddUserForm } from 'components/AddUserForm/AddUserForm.styled';
+import TextField from 'src/ui/TextField/TextField';
 
-const AddUserForm = ({ form, setForm }) => {
+const AddUserForm = ({ formValues, setFormValues }) => {
   return (
     <StyledAddUserForm>
-      <StyledLabel>
-        Имя
-        <StyledInput
-          value={form.firstName}
-          onChange={(e) => {
-            setForm({
-              ...form,
-              firstName: e.target.value,
-            });
-          }}
-        />
-      </StyledLabel>
-      <StyledLabel>
-        Фамилия
-        <StyledInput
-          value={form.secondName}
-          onChange={(e) => {
-            setForm({
-              ...form,
-              secondName: e.target.value,
-            });
-          }}
-        />
-      </StyledLabel>
-      <StyledLabel>
-        Почта
-        <StyledInput
-          value={form.email}
-          onChange={(e) => {
-            setForm({
-              ...form,
-              email: e.target.value,
-            });
-          }}
-        />
-      </StyledLabel>
+      <TextField
+        label="Имя"
+        value={formValues.firstName}
+        onChange={(e) => {
+          setFormValues({
+            ...formValues,
+            firstName: e.target.value,
+          });
+        }}
+      />
+
+      <TextField
+        label="Фамилия"
+        value={formValues.secondName}
+        onChange={(e) => {
+          setFormValues({
+            ...formValues,
+            secondName: e.target.value,
+          });
+        }}
+      />
+
+      <TextField
+        label="Почта"
+        value={formValues.email}
+        onChange={(e) => {
+          setFormValues({
+            ...formValues,
+            email: e.target.value,
+          });
+        }}
+      />
     </StyledAddUserForm>
   );
 };
