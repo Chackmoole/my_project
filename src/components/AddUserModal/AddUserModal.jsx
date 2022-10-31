@@ -10,7 +10,11 @@ import CrossButton from 'src/ui/CrossButton/CrossButton';
 import AddUserForm from 'src/components/AddUserForm/AddUserForm';
 
 const AddUserModal = ({ isModalOpen, closeModal }) => {
-  const [formValues, setFormValues] = useState({ firstName: '1', secondName: '2', email: '3' });
+  const [formValues, setFormValues] = useState({
+    firstName: 'Имя',
+    lastName: 'Фамилия',
+    mail: 'почта',
+  });
 
   const printFormData = () => {
     console.log(formValues);

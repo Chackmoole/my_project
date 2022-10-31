@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import {
   StyledAddUserBackdrop,
   StyledEditingUserModal,
+  StyledH3,
+  StyledModalActions,
 } from 'components/EditingUserModal/EditingUserModal.styled';
 import CrossButton from 'src/ui/CrossButton/CrossButton';
-import { StyledH3, StyledModalActions } from 'components/AddUserModal/AddUserModal.styled';
 import Button from 'src/ui/Button/Button';
 import EditingUserForm from 'components/EditingUserForm/EditingUserForm';
 

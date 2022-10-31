@@ -18,22 +18,22 @@ const AddUserForm = ({ formValues, setFormValues }) => {
 
       <TextField
         label="Фамилия"
-        value={formValues.secondName}
+        value={formValues.lastName}
         onChange={(e) => {
           setFormValues({
             ...formValues,
-            secondName: e.target.value,
+            lastName: e.target.value,
           });
         }}
       />
 
       <TextField
         label="Почта"
-        value={formValues.email}
+        value={formValues.mail}
         onChange={(e) => {
           setFormValues({
             ...formValues,
-            email: e.target.value,
+            mail: e.target.value,
           });
         }}
       />
