@@ -15,6 +15,11 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
     mail: currentUser.mail,
   });
 
+  const printEditionalUser = () => {
+    console.log(editingFormValues);
+    closeModal();
+  };
+
   if (!isModalOpen) {
     return null;
   }
@@ -31,7 +36,7 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
           <Button onClick={closeModal} variant="outlined">
             Отменить
           </Button>
-          <Button onClick={closeModal}>Сохранить</Button>
+          <Button onClick={printEditionalUser}>Сохранить</Button>
         </StyledModalActions>
       </StyledEditingUserModal>
     </StyledAddUserBackdrop>
