@@ -12,7 +12,7 @@ import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
 
-const UsersTable = ({ openModal }) => {
+const UsersTable = ({ openModal, openEditingModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
   const onTabClick = (value) => {
     setCurrentStatus(value);
@@ -64,7 +64,7 @@ const UsersTable = ({ openModal }) => {
                   <StyledCell>{user.mail}</StyledCell>
                   <StyledCell>{user.registrationDate}</StyledCell>
                   <StyledCell>
-                    <Button>Редактировать</Button>
+                    <Button onClick={() => openEditingModal(user)}>Редактировать</Button>
                   </StyledCell>
                 </tr>
               );

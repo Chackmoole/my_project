@@ -13,7 +13,7 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
   const [formValues, setFormValues] = useState({ firstName: '1', secondName: '2', email: '3' });
 
   const printFormData = () => {
-    console.log(form);
+    console.log(formValues);
     closeModal();
   };
 
