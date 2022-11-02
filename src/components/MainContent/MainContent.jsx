@@ -2,10 +2,14 @@ import React from 'react';
 import { StyledMainContent } from 'components/MainContent/StyledMainContent';
 import UsersTable from 'components/UsersTable/UsersTable';
 
-const MainContent = ({ openModal, openEditingModal }) => {
+const MainContent = ({ openModal, openEditingModal, openDeleteModal }) => {
   return (
     <StyledMainContent>
-      <UsersTable openModal={openModal} openEditingModal={openEditingModal} />
+      <UsersTable
+        openModal={openModal}
+        openEditingModal={openEditingModal}
+        openDeleteModal={openDeleteModal}
+      />
     </StyledMainContent>
   );
 };

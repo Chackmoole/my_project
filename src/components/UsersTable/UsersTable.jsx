@@ -12,7 +12,7 @@ import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
 
-const UsersTable = ({ openModal, openEditingModal }) => {
+const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
   const onTabClick = (value) => {
     setCurrentStatus(value);
@@ -52,6 +52,7 @@ const UsersTable = ({ openModal, openEditingModal }) => {
               <StyledHeadCell>Почта</StyledHeadCell>
               <StyledHeadCell>Дата регистрации</StyledHeadCell>
               <StyledHeadCell></StyledHeadCell>
+              <StyledHeadCell></StyledHeadCell>
             </tr>
           </thead>
           <tbody>
@@ -65,6 +66,9 @@ const UsersTable = ({ openModal, openEditingModal }) => {
                   <StyledCell>{user.registrationDate}</StyledCell>
                   <StyledCell>
                     <Button onClick={() => openEditingModal(user)}>Редактировать</Button>
+                  </StyledCell>
+                  <StyledCell>
+                    <Button onClick={() => openDeleteModal(user)}>Удалить</Button>
                   </StyledCell>
                 </tr>
               );
