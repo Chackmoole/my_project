@@ -10,7 +10,7 @@ export const StyledAddUserBackdrop = styled.div`
   z-index: 100;
 `;
 
-export const StyledAddUserModal = styled.div`
+export const StyledEditingUserModal = styled.div`
   position: fixed;
   background-color: #fff;
   top: 50%;

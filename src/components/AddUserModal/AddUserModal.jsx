@@ -10,10 +10,14 @@ import CrossButton from 'src/ui/CrossButton/CrossButton';
 import AddUserForm from 'src/components/AddUserForm/AddUserForm';
 
 const AddUserModal = ({ isModalOpen, closeModal }) => {
-  const [form, setForm] = useState({ firstName: '', secondName: '', email: '' });
+  const [formValues, setFormValues] = useState({
+    firstName: 'Имя',
+    lastName: 'Фамилия',
+    mail: 'почта',
+  });
 
   const printFormData = () => {
-    console.log(form);
+    console.log(formValues);
     closeModal();
   };
 
@@ -27,7 +31,7 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
         <StyledAddUserModal onClick={(e) => e.stopPropagation()}>
           <CrossButton onClick={closeModal} />
           <StyledH3>Добавление пользователя</StyledH3>
-          <AddUserForm form={form} setForm={setForm} />
+          <AddUserForm formValues={formValues} setFormValues={setFormValues} />
           <StyledModalActions>
             <Button onClick={closeModal} variant="outlined">
               Отменить
