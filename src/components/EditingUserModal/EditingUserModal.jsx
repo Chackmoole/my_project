@@ -13,6 +13,7 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
   const [editingFormValues, setEditingFormValues] = useState({
     firstName: currentUser.firstName,
     lastName: currentUser.lastName,
+    status: currentUser.status,
     mail: currentUser.mail,
   });
 

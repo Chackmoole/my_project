@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from 'src/ui/TextField/TextField';
 import { StyledEditingUserForm } from 'components/EditingUserForm/EditingUserForm.styled';
+import EditingUserSelect from 'components/EditingUserSelect/EditingUserSelect';
 
 const EditingUserForm = ({ editingFormValues, setEditingFormValues }) => {
   return (
@@ -36,6 +37,11 @@ const EditingUserForm = ({ editingFormValues, setEditingFormValues }) => {
             mail: e.target.value,
           });
         }}
+      />
+
+      <EditingUserSelect
+        editingFormValues={editingFormValues}
+        setEditingFormValues={setEditingFormValues}
       />
     </StyledEditingUserForm>
   );
