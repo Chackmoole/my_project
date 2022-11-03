@@ -26,8 +26,3 @@ export const StyledModal = styled.div`
   border-radius: 4px;
   z-index: 101;
 `;
-
-export const StyledModalActions = styled.div`
-  display: flex;
-  gap: 24px;
-`;
