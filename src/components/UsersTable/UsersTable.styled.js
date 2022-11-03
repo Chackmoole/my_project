@@ -37,7 +37,6 @@ export const StyledHeadCell = styled.th`
   padding: 16px;
   border-bottom: 1px solid #e7ebf0;
   text-align: left;
-  font-family: 'Arial', sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -47,7 +46,6 @@ export const StyledHeadCell = styled.th`
 export const StyledCell = styled.td`
   padding: 16px;
   border-bottom: 1px solid #e7ebf0;
-  font-family: 'Arial', sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.43;
