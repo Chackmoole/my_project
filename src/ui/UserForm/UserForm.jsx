@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledUserForm } from 'src/ui/UserForm/UserForm.styled';
 import TextField from 'src/ui/TextField/TextField';
 
-const UserForm = ({ formValues, setFormValues, children }) => {
+const UserForm = ({ formValues, setFormValues }) => {
   return (
     <StyledUserForm>
       <TextField
@@ -37,7 +37,6 @@ const UserForm = ({ formValues, setFormValues, children }) => {
           });
         }}
       />
-      {children}
     </StyledUserForm>
   );
 };

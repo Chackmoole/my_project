@@ -24,7 +24,7 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
       title="Редактирование пользователя"
       onClickAction={printEditionalUser}
     >
-      <UserForm formValues={editingFormValues} setFormValues={setEditingFormValues}></UserForm>
+      <UserForm formValues={editingFormValues} setFormValues={setEditingFormValues} />
     </Modal>
   );
 };
