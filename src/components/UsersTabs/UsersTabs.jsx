@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyledUsersTab, StyledUsersTabs } from 'components/UsersTabs/UsersTabs.styled';
+import { StyledUsersTab } from 'components/UsersTabs/UsersTabs.styled';
 import { statusTitle } from 'src/constants';
+import Box from '@mui/material/Box';
 
 const options = [
   {
@@ -23,7 +24,7 @@ const options = [
 
 const UsersTabs = (props) => {
   return (
-    <StyledUsersTabs>
+    <Box mb="8px">
       {options.map((item) => (
         <StyledUsersTab
           key={item.label}
@@ -33,7 +34,7 @@ const UsersTabs = (props) => {
           {item.label}
         </StyledUsersTab>
       ))}
-    </StyledUsersTabs>
+    </Box>
   );
 };
 

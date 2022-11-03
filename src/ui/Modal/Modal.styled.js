@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const StyledModalBackdrop = styled.div`
   position: fixed;
@@ -25,14 +25,4 @@ export const StyledModal = styled.div`
   padding: 36px;
   border-radius: 4px;
   z-index: 101;
-`;
-
-export const StyledModalActions = styled.div`
-  display: flex;
-  gap: 24px;
-`;
-
-export const StyledH3 = styled.h3`
-  font-size: 20px;
-  margin-bottom: 24px;
 `;

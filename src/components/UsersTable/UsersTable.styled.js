@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const StyledTableBox = styled.div`
   border-radius: 10px;
@@ -37,21 +37,11 @@ export const StyledHeadCell = styled.th`
   padding: 16px;
   border-bottom: 1px solid #e7ebf0;
   text-align: left;
-  font-family: 'Arial', sans-serif;
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  letter-spacing: 0.01071em;
 `;
 
 export const StyledCell = styled.td`
   padding: 16px;
   border-bottom: 1px solid #e7ebf0;
-  font-family: 'Arial', sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.43;
-  letter-spacing: 0.01071em;
   text-align: left;
   color: rgba(0, 0, 0, 0.87);
 `;

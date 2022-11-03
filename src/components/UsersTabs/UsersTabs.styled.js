@@ -1,8 +1,4 @@
-import styled from 'styled-components';
-
-export const StyledUsersTabs = styled.div`
-  margin-bottom: 8px;
-`;
+import styled from '@emotion/styled';
 
 export const StyledUsersTab = styled.button`
   min-height: 40px;
