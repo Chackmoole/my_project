@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
-import {
-  StyledAddUserBackdrop,
-  StyledEditingUserModal,
-  StyledH3,
-  StyledModalActions,
-} from 'components/EditingUserModal/EditingUserModal.styled';
-import CrossButton from 'src/ui/CrossButton/CrossButton';
-import Button from 'src/ui/Button/Button';
-import EditingUserForm from 'components/EditingUserForm/EditingUserForm';
+import Modal from 'src/ui/Modal/Modal';
+import UserForm from 'src/ui/UserForm/UserForm';
 
 const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
   const [editingFormValues, setEditingFormValues] = useState({
@@ -26,22 +19,13 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
     return null;
   }
   return (
-    <StyledAddUserBackdrop onClick={closeModal}>
-      <StyledEditingUserModal onClick={(e) => e.stopPropagation()}>
-        <CrossButton onClick={closeModal} />
-        <StyledH3>Редактирование пользователя</StyledH3>
-        <EditingUserForm
-          editingFormValues={editingFormValues}
-          setEditingFormValues={setEditingFormValues}
-        />
-        <StyledModalActions>
-          <Button onClick={closeModal} variant="outlined">
-            Отменить
-          </Button>
-          <Button onClick={printEditionalUser}>Сохранить</Button>
-        </StyledModalActions>
-      </StyledEditingUserModal>
-    </StyledAddUserBackdrop>
+    <Modal
+      closeModal={closeModal}
+      title="Редактирование пользователя"
+      onClickAction={printEditionalUser}
+    >
+      <UserForm formValues={editingFormValues} setFormValues={setEditingFormValues} />
+    </Modal>
   );
 };
 

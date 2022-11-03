@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
-import {
-  StyledAddUserBackdrop,
-  StyledAddUserModal,
-  StyledH3,
-  StyledModalActions,
-} from 'components/AddUserModal/AddUserModal.styled';
-import Button from 'src/ui/Button/Button';
-import CrossButton from 'src/ui/CrossButton/CrossButton';
-import AddUserForm from 'src/components/AddUserForm/AddUserForm';
+import Modal from 'src/ui/Modal/Modal';
+import UserForm from 'src/ui/UserForm/UserForm';
 
 const AddUserModal = ({ isModalOpen, closeModal }) => {
   const [formValues, setFormValues] = useState({
@@ -26,21 +19,9 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
   }
 
   return (
-    <>
-      <StyledAddUserBackdrop onClick={closeModal}>
-        <StyledAddUserModal onClick={(e) => e.stopPropagation()}>
-          <CrossButton onClick={closeModal} />
-          <StyledH3>Добавление пользователя</StyledH3>
-          <AddUserForm formValues={formValues} setFormValues={setFormValues} />
-          <StyledModalActions>
-            <Button onClick={closeModal} variant="outlined">
-              Отменить
-            </Button>
-            <Button onClick={printFormData}>Сохранить</Button>
-          </StyledModalActions>
-        </StyledAddUserModal>
-      </StyledAddUserBackdrop>
-    </>
+    <Modal title="Добавление пользователя" closeModal={closeModal} onClickAction={printFormData}>
+      <UserForm formValues={formValues} setFormValues={setFormValues} />
+    </Modal>
   );
 };
 
