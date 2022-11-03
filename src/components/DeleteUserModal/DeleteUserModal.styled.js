@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const StyledText = styled.p`
   margin-bottom: 16px;
