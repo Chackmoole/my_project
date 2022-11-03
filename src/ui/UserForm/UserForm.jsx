@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyledAddUserForm } from 'components/AddUserForm/AddUserForm.styled';
+import { StyledUserForm } from 'src/ui/UserForm/UserForm.styled';
 import TextField from 'src/ui/TextField/TextField';
 
-const AddUserForm = ({ formValues, setFormValues }) => {
+const UserForm = ({ formValues, setFormValues, children }) => {
   return (
-    <StyledAddUserForm>
+    <StyledUserForm>
       <TextField
         label="Имя"
         value={formValues.firstName}
@@ -37,8 +37,9 @@ const AddUserForm = ({ formValues, setFormValues }) => {
           });
         }}
       />
-    </StyledAddUserForm>
+      {children}
+    </StyledUserForm>
   );
 };
 
-export default AddUserForm;
+export default UserForm;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import AddUserForm from 'src/components/AddUserForm/AddUserForm';
 import Modal from 'src/ui/Modal/Modal';
+import UserForm from 'src/ui/UserForm/UserForm';
 
 const AddUserModal = ({ isModalOpen, closeModal }) => {
   const [formValues, setFormValues] = useState({
@@ -20,7 +20,7 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
 
   return (
     <Modal title="Добавление пользователя" closeModal={closeModal} onClickAction={printFormData}>
-      <AddUserForm formValues={formValues} setFormValues={setFormValues} />
+      <UserForm formValues={formValues} setFormValues={setFormValues} />
     </Modal>
   );
 };
