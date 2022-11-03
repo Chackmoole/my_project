@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledAddUserBackdrop = styled.div`
+export const StyledModalBackdrop = styled.div`
   position: fixed;
   top: 0;
   right: 0;
@@ -10,7 +10,7 @@ export const StyledAddUserBackdrop = styled.div`
   z-index: 100;
 `;
 
-export const StyledEditingUserModal = styled.div`
+export const StyledModal = styled.div`
   position: fixed;
   background-color: #fff;
   top: 50%;
