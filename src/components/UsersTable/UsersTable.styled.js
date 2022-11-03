@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
 
-export const StyledTableBox = styled.div`
-  border-radius: 10px;
-  margin: auto;
-  padding: 24px;
-  background-color: #e7ebf0;
-`;
-
 export const StyledTableContainer = styled.div`
   display: flex;
   align-items: center;
@@ -22,26 +15,4 @@ export const StyledTableInner = styled.div`
     0px 1px 3px 0px rgb(0 0 0 / 12%);
   width: 100%;
   overflow-x: auto;
-`;
-
-export const StyledUsersTable = styled.table`
-  display: table;
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-export const StyledHeadCell = styled.th`
-  padding: 16px;
-  border-bottom: 1px solid #e7ebf0;
-  text-align: left;
-`;
-
-export const StyledCell = styled.td`
-  padding: 16px;
-  border-bottom: 1px solid #e7ebf0;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.87);
 `;

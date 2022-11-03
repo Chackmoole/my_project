@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import {
-  StyledTableBox,
-  StyledTableInner,
-  StyledCell,
-  StyledHeadCell,
-  StyledUsersTable,
-  StyledTableContainer,
-} from 'components/UsersTable/UsersTable.styled';
+import { StyledTableInner, StyledTableContainer } from 'components/UsersTable/UsersTable.styled';
 import { statusTitle, USERS } from 'src/constants';
 import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
+import Table from '@mui/material/Table';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
+import TableBody from '@mui/material/TableBody';
+import Box from '@mui/material/Box';
 
 const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
@@ -35,7 +34,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   );
 
   return (
-    <StyledTableBox>
+    <Box br="10px" p="24px" m="auto" bgcolor="#e7ebf0">
       <StyledTableContainer>
         <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
         <Button onClick={openModal}>Добавить пользователя</Button>
@@ -43,40 +42,40 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
       <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
 
       <StyledTableInner>
-        <StyledUsersTable>
-          <thead>
-            <tr>
-              <StyledHeadCell>Имя</StyledHeadCell>
-              <StyledHeadCell>Фамилия</StyledHeadCell>
-              <StyledHeadCell>Статус</StyledHeadCell>
-              <StyledHeadCell>Почта</StyledHeadCell>
-              <StyledHeadCell>Дата регистрации</StyledHeadCell>
-              <StyledHeadCell></StyledHeadCell>
-              <StyledHeadCell></StyledHeadCell>
-            </tr>
-          </thead>
-          <tbody>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Имя</TableCell>
+              <TableCell>Фамилия</TableCell>
+              <TableCell>Статус</TableCell>
+              <TableCell>Почта</TableCell>
+              <TableCell>Дата регистрации</TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
             {filteredUsersBySearchText.map((user) => {
               return (
-                <tr key={user.id}>
-                  <StyledCell>{user.firstName}</StyledCell>
-                  <StyledCell>{user.lastName}</StyledCell>
-                  <StyledCell>{statusTitle[user.status]}</StyledCell>
-                  <StyledCell>{user.mail}</StyledCell>
-                  <StyledCell>{user.registrationDate}</StyledCell>
-                  <StyledCell>
+                <TableRow key={user.id}>
+                  <TableCell>{user.firstName}</TableCell>
+                  <TableCell>{user.lastName}</TableCell>
+                  <TableCell>{statusTitle[user.status]}</TableCell>
+                  <TableCell>{user.mail}</TableCell>
+                  <TableCell>{user.registrationDate}</TableCell>
+                  <TableCell>
                     <Button onClick={() => openEditingModal(user)}>Редактировать</Button>
-                  </StyledCell>
-                  <StyledCell>
+                  </TableCell>
+                  <TableCell>
                     <Button onClick={() => openDeleteModal(user)}>Удалить</Button>
-                  </StyledCell>
-                </tr>
+                  </TableCell>
+                </TableRow>
               );
             })}
-          </tbody>
-        </StyledUsersTable>
+          </TableBody>
+        </Table>
       </StyledTableInner>
-    </StyledTableBox>
+    </Box>
   );
 };
 
