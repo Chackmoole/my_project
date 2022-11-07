@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 
 export const StyledCrossButton = styled.button`
   position: absolute;
-  top: 30px;
-  right: 20px;
+  top: 20px;
+  right: 8px;
   width: 24px;
   height: 24px;
   opacity: 0.2;

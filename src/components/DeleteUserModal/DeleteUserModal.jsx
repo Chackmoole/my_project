@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledAllotted } from 'components/DeleteUserModal/DeleteUserModal.styled';
-import Dialog from 'src/ui/Modal/Dialog';
+import Modal from 'src/ui/Modal/Modal';
 import Typography from '@mui/material/Typography';
 
 const DeleteUserModal = ({ isModalOpen, closeModal, currentUser }) => {
@@ -14,7 +14,7 @@ const DeleteUserModal = ({ isModalOpen, closeModal, currentUser }) => {
   }
 
   return (
-    <Dialog
+    <Modal
       onClickAction={printFormData}
       closeModal={closeModal}
       title="Удаление пользователя"
@@ -26,7 +26,7 @@ const DeleteUserModal = ({ isModalOpen, closeModal, currentUser }) => {
           {currentUser.firstName} {currentUser.lastName}?
         </StyledAllotted>
       </Typography>
-    </Dialog>
+    </Modal>
   );
 };
 

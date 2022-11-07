@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const StyledLabel = styled.label`
   margin-bottom: 16px;
+  min-width: 400px;
 `;
 
 export const StyledInput = styled.input`
