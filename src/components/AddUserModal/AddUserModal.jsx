@@ -19,7 +19,12 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
   }
 
   return (
-    <Modal title="Добавление пользователя" closeModal={closeModal} onClickAction={printFormData}>
+    <Modal
+      title="Добавление пользователя"
+      closeModal={closeModal}
+      onClickAction={printFormData}
+      open={isModalOpen}
+    >
       <UserForm formValues={formValues} setFormValues={setFormValues} />
     </Modal>
   );

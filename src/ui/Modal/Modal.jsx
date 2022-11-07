@@ -1,27 +1,26 @@
 import React from 'react';
 import CrossButton from 'src/ui/CrossButton/CrossButton';
-import { StyledModal, StyledModalBackdrop } from 'src/ui/Modal/Modal.styled';
 import Button from 'src/ui/Button/Button';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import MuiDialog from '@mui/material/Dialog';
+import MuiDialogTitle from '@mui/material/DialogTitle';
+import MuiDialogContent from '@mui/material/DialogContent';
+import MuiDialogActions from '@mui/material/DialogActions';
 
-const Modal = ({ closeModal, title, children, onClickAction }) => {
+const Modal = ({ closeModal, title, children, onClickAction, open }) => {
   return (
-    <StyledModalBackdrop onClick={closeModal}>
-      <StyledModal onClick={(e) => e.stopPropagation()}>
-        <CrossButton onClick={closeModal} />
-        <Typography variant="h6" mb="24px">
-          {title}
-        </Typography>
-        {children}
-        <Box display="flex" gap="24px">
-          <Button onClick={closeModal} variant="outlined">
-            Отменить
-          </Button>
-          <Button onClick={onClickAction}>Сохранить</Button>
-        </Box>
-      </StyledModal>
-    </StyledModalBackdrop>
+    <MuiDialog open={open} onClose={closeModal}>
+      <CrossButton onClick={closeModal} />
+      <MuiDialogTitle variant="h6" mb="24px">
+        {title}
+      </MuiDialogTitle>
+      <MuiDialogContent>{children}</MuiDialogContent>
+      <MuiDialogActions sx={{ justifyContent: 'center', pb: '16px' }}>
+        <Button onClick={closeModal} variant="outlined">
+          Отменить
+        </Button>
+        <Button onClick={onClickAction}>Сохранить</Button>
+      </MuiDialogActions>
+    </MuiDialog>
   );
 };
 

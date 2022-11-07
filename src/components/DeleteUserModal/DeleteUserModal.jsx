@@ -14,7 +14,12 @@ const DeleteUserModal = ({ isModalOpen, closeModal, currentUser }) => {
   }
 
   return (
-    <Modal onClickAction={printFormData} closeModal={closeModal} title="Удаление пользователя">
+    <Modal
+      onClickAction={printFormData}
+      closeModal={closeModal}
+      title="Удаление пользователя"
+      open={isModalOpen}
+    >
       <Typography mb="36px">
         Вы действительно хотите удалить пользователя{' '}
         <StyledAllotted>

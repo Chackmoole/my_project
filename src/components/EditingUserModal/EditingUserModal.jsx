@@ -23,6 +23,7 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
       closeModal={closeModal}
       title="Редактирование пользователя"
       onClickAction={printEditionalUser}
+      open={isModalOpen}
     >
       <UserForm formValues={editingFormValues} setFormValues={setEditingFormValues} />
     </Modal>
