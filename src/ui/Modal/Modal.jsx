@@ -8,7 +8,7 @@ import MuiDialogActions from '@mui/material/DialogActions';
 
 const Modal = ({ closeModal, title, children, onClickAction, open }) => {
   return (
-    <MuiDialog open={open}>
+    <MuiDialog open={open} onClose={closeModal}>
       <CrossButton onClick={closeModal} />
       <MuiDialogTitle variant="h6" mb="24px">
         {title}
