@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from 'src/ui/Modal/Modal';
+import Dialog from 'src/ui/Modal/Dialog';
 import UserForm from 'src/ui/UserForm/UserForm';
 
 const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
@@ -19,13 +19,14 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
     return null;
   }
   return (
-    <Modal
+    <Dialog
       closeModal={closeModal}
       title="Редактирование пользователя"
       onClickAction={printEditionalUser}
+      open={isModalOpen}
     >
       <UserForm formValues={editingFormValues} setFormValues={setEditingFormValues} />
-    </Modal>
+    </Dialog>
   );
 };
 

@@ -1,18 +1,19 @@
 import React from 'react';
 import CrossButton from 'src/ui/CrossButton/CrossButton';
-import { StyledModal, StyledModalBackdrop } from 'src/ui/Modal/Modal.styled';
+import { StyledModal } from 'src/ui/Modal/Modal.styled';
 import Button from 'src/ui/Button/Button';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import MuiDialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
 
-const Modal = ({ closeModal, title, children, onClickAction }) => {
+const Dialog = ({ closeModal, title, children, onClickAction, open }) => {
   return (
-    <StyledModalBackdrop onClick={closeModal}>
+    <MuiDialog onClick={closeModal} open={open}>
       <StyledModal onClick={(e) => e.stopPropagation()}>
         <CrossButton onClick={closeModal} />
-        <Typography variant="h6" mb="24px">
+        <DialogTitle variant="h6" mb="24px">
           {title}
-        </Typography>
+        </DialogTitle>
         {children}
         <Box display="flex" gap="24px">
           <Button onClick={closeModal} variant="outlined">
@@ -21,8 +22,8 @@ const Modal = ({ closeModal, title, children, onClickAction }) => {
           <Button onClick={onClickAction}>Сохранить</Button>
         </Box>
       </StyledModal>
-    </StyledModalBackdrop>
+    </MuiDialog>
   );
 };
 
-export default Modal;
+export default Dialog;
