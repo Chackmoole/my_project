@@ -41,9 +41,28 @@ export const USERS = [
   },
 ];
 
-export const statusTitle = {
+export const STATUS_TITLE = {
   all: 'Все',
   active: 'Активный',
   blocked: 'Заблокирован',
   frozen: 'Заморожен',
 };
+
+export const OPTIONS_TABS = [
+  {
+    label: 'Все',
+    value: null,
+  },
+  {
+    label: STATUS_TITLE['active'],
+    value: 'active',
+  },
+  {
+    label: STATUS_TITLE['frozen'],
+    value: 'frozen',
+  },
+  {
+    label: STATUS_TITLE['blocked'],
+    value: 'blocked',
+  },
+];

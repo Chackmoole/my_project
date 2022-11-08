@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyledTableInner, StyledTableContainer } from 'components/UsersTable/UsersTable.styled';
-import { statusTitle, USERS } from 'src/constants';
+import { STATUS_TITLE, USERS } from 'src/constants';
 import UsersTabs from 'components/UsersTabs/UsersTabs';
 import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
@@ -60,7 +60,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
                 <TableRow key={user.id}>
                   <TableCell>{user.firstName}</TableCell>
                   <TableCell>{user.lastName}</TableCell>
-                  <TableCell>{statusTitle[user.status]}</TableCell>
+                  <TableCell>{STATUS_TITLE[user.status]}</TableCell>
                   <TableCell>{user.mail}</TableCell>
                   <TableCell>{user.registrationDate}</TableCell>
                   <TableCell>
