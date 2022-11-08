@@ -14,6 +14,7 @@ const UserForm = ({ formValues, setFormValues }) => {
             firstName: e.target.value,
           });
         }}
+        sx={{ mb: '16px', minWidth: '400px' }}
       />
 
       <TextField
@@ -25,6 +26,7 @@ const UserForm = ({ formValues, setFormValues }) => {
             lastName: e.target.value,
           });
         }}
+        sx={{ mb: '16px', minWidth: '400px' }}
       />
 
       <TextField
@@ -36,6 +38,7 @@ const UserForm = ({ formValues, setFormValues }) => {
             mail: e.target.value,
           });
         }}
+        sx={{ mb: '16px', minWidth: '400px' }}
       />
     </StyledUserForm>
   );

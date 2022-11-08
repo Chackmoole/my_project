@@ -1,14 +1,16 @@
 import React from 'react';
 import MuiTextField from '@mui/material/TextField';
 
-const TextField = ({ value, label, onChange }) => {
+const TextField = ({
+  variant = 'outlined',
+  size = 'small',
+  fullWidth = 'true',
+  margin = 'margin',
+  ...props
+}) => {
+  // value, label, onChange & sx идут через ...props
   return (
-    <MuiTextField
-      value={value}
-      onChange={onChange}
-      label={label}
-      sx={{ mb: '16px', minWidth: '400px' }}
-    />
+    <MuiTextField variant={variant} size={size} fullWidth={fullWidth} margin={margin} {...props} />
   );
 };
 
