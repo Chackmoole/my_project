@@ -1,12 +1,16 @@
 import React from 'react';
-import { StyledInput, StyledLabel } from 'src/ui/TextField/TextField.styled';
+import MuiTextField from '@mui/material/TextField';
 
-const TextField = ({ value, label, onChange }) => {
+const TextField = ({
+  variant = 'outlined',
+  size = 'small',
+  fullWidth = 'true',
+  margin = 'margin',
+  ...props
+}) => {
+  // value, label, onChange & sx идут через ...props
   return (
-    <StyledLabel>
-      {label}
-      <StyledInput value={value} onChange={onChange} />
-    </StyledLabel>
+    <MuiTextField variant={variant} size={size} fullWidth={fullWidth} margin={margin} {...props} />
   );
 };
 
