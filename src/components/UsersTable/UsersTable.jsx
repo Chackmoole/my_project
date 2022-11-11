@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyledTableInner, StyledTableContainer } from 'components/UsersTable/UsersTable.styled';
 import { STATUS_TITLE, USERS, OPTIONS_TABS } from 'src/constants';
-import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
 import Table from '@mui/material/Table';
 import TableHead from '@mui/material/TableHead';
@@ -10,6 +9,7 @@ import TableCell from '@mui/material/TableCell';
 import TableBody from '@mui/material/TableBody';
 import Box from '@mui/material/Box';
 import Filters from 'src/ui/Filters/Filters';
+import TextField from 'src/ui/TextField/TextField';
 
 const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
@@ -36,7 +36,13 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   return (
     <Box br="10px" p="24px" m="auto" bgcolor="#e7ebf0">
       <StyledTableContainer>
-        <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
+        <TextField
+          searchText={searchText}
+          onSearchChange={onSearchChange}
+          fullWidth={false}
+          label="Поиск"
+          sx={{ mr: '24px' }}
+        />
         <Button onClick={openModal}>Добавить пользователя</Button>
       </StyledTableContainer>
       <Filters
