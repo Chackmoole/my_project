@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { StyledTableInner, StyledTableContainer } from 'components/UsersTable/UsersTable.styled';
-import { STATUS_TITLE, USERS } from 'src/constants';
-import UsersTabs from 'components/UsersTabs/UsersTabs';
+import { STATUS_TITLE, USERS, OPTIONS_TABS } from 'src/constants';
 import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
 import Table from '@mui/material/Table';
@@ -10,10 +9,11 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import TableBody from '@mui/material/TableBody';
 import Box from '@mui/material/Box';
+import Filters from 'src/ui/Filters/Filters';
 
 const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
-  const onTabClick = (value) => {
+  const onFilterChange = (value) => {
     setCurrentStatus(value);
   };
   const [searchText, setSearchText] = useState('');
@@ -39,8 +39,11 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
         <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
         <Button onClick={openModal}>Добавить пользователя</Button>
       </StyledTableContainer>
-      <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
-
+      <Filters
+        onChange={onFilterChange}
+        currentStatus={currentStatus}
+        options={OPTIONS_TABS}
+      ></Filters>
       <StyledTableInner>
         <Table>
           <TableHead>
