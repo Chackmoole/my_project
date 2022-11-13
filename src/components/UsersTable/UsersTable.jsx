@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { StyledTableInner, StyledTableContainer } from 'components/UsersTable/UsersTable.styled';
-import { USERS, OPTIONS_TABS } from 'src/constants';
+import { USERS, OPTIONS_TABS, STATUS_TITLE } from 'src/constants';
 import Button from 'src/ui/Button/Button';
 import Box from '@mui/material/Box';
 import Filters from 'src/ui/Filters/Filters';
 import TextField from 'src/ui/TextField/TextField';
-import Table from 'src/ui/Table/Table';
+import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
 
 const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
@@ -43,11 +43,38 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
       </StyledTableContainer>
       <Filters onChange={onFilterChange} currentStatus={currentStatus} options={OPTIONS_TABS} />
       <StyledTableInner>
-        <Table
-          filteredUsersBySearchText={filteredUsersBySearchText}
-          openEditingModal={openEditingModal}
-          openDeleteModal={openDeleteModal}
-        />
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Имя</TableCell>
+              <TableCell>Фамилия</TableCell>
+              <TableCell>Статус</TableCell>
+              <TableCell>Почта</TableCell>
+              <TableCell>Дата регистрации</TableCell>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {filteredUsersBySearchText.map((user) => {
+              return (
+                <TableRow key={user.id}>
+                  <TableCell>{user.firstName}</TableCell>
+                  <TableCell>{user.lastName}</TableCell>
+                  <TableCell>{STATUS_TITLE[user.status]}</TableCell>
+                  <TableCell>{user.mail}</TableCell>
+                  <TableCell>{user.registrationDate}</TableCell>
+                  <TableCell>
+                    <Button onClick={() => openEditingModal(user)}>Редактировать</Button>
+                  </TableCell>
+                  <TableCell>
+                    <Button onClick={() => openDeleteModal(user)}>Удалить</Button>
+                  </TableCell>
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
       </StyledTableInner>
     </Box>
   );
