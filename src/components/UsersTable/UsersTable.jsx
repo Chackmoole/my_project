@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { StyledTableInner, StyledTableContainer } from 'components/UsersTable/UsersTable.styled';
 import { USERS, OPTIONS_TABS, STATUS_TITLE } from 'src/constants';
+import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
 import Box from '@mui/material/Box';
 import Filters from 'src/ui/Filters/Filters';
-import TextField from 'src/ui/TextField/TextField';
 import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
 
 const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
@@ -32,7 +32,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   return (
     <Box br="10px" p="24px" m="auto" bgcolor="#e7ebf0">
       <StyledTableContainer>
-        <TextField
+        <SearchInput
           searchText={searchText}
           onSearchChange={onSearchChange}
           fullWidth={false}
