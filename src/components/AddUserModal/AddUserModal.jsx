@@ -4,9 +4,9 @@ import UserForm from 'src/ui/UserForm/UserForm';
 
 const AddUserModal = ({ isModalOpen, closeModal }) => {
   const [formValues, setFormValues] = useState({
-    firstName: 'Имя',
-    lastName: 'Фамилия',
-    mail: 'почта',
+    firstName: '',
+    lastName: '',
+    mail: '',
   });
 
   const printFormData = () => {
