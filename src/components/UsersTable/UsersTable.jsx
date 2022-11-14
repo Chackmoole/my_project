@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 import { StyledTableInner, StyledTableContainer } from 'components/UsersTable/UsersTable.styled';
-import { statusTitle, USERS } from 'src/constants';
-import UsersTabs from 'components/UsersTabs/UsersTabs';
+import { USERS, OPTIONS_TABS, STATUS_TITLE } from 'src/constants';
 import SearchInput from 'components/SearchInput/SearchInput';
 import Button from 'src/ui/Button/Button';
-import Table from '@mui/material/Table';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import TableCell from '@mui/material/TableCell';
-import TableBody from '@mui/material/TableBody';
 import Box from '@mui/material/Box';
+import Filters from 'src/ui/Filters/Filters';
+import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
 
 const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);
-  const onTabClick = (value) => {
+  const onFilterChange = (value) => {
     setCurrentStatus(value);
   };
   const [searchText, setSearchText] = useState('');
@@ -36,11 +32,21 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   return (
     <Box br="10px" p="24px" m="auto" bgcolor="#e7ebf0">
       <StyledTableContainer>
-        <SearchInput searchText={searchText} onSearchChange={onSearchChange} />
+        <SearchInput
+          searchText={searchText}
+          onSearchChange={onSearchChange}
+          fullWidth={false}
+          label="Поиск"
+          sx={{ mr: '24px' }}
+        />
         <Button onClick={openModal}>Добавить пользователя</Button>
       </StyledTableContainer>
-      <UsersTabs onTabClick={onTabClick} currentStatus={currentStatus} />
-
+      <Filters
+        onChange={onFilterChange}
+        value={currentStatus}
+        options={OPTIONS_TABS}
+        sx={{ mb: '16px' }}
+      />
       <StyledTableInner>
         <Table>
           <TableHead>
@@ -50,8 +56,8 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
               <TableCell>Статус</TableCell>
               <TableCell>Почта</TableCell>
               <TableCell>Дата регистрации</TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
+              <TableCell />
+              <TableCell />
             </TableRow>
           </TableHead>
           <TableBody>
@@ -60,7 +66,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
                 <TableRow key={user.id}>
                   <TableCell>{user.firstName}</TableCell>
                   <TableCell>{user.lastName}</TableCell>
-                  <TableCell>{statusTitle[user.status]}</TableCell>
+                  <TableCell>{STATUS_TITLE[user.status]}</TableCell>
                   <TableCell>{user.mail}</TableCell>
                   <TableCell>{user.registrationDate}</TableCell>
                   <TableCell>

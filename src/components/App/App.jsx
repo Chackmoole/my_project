@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledAppWrapper } from 'src/App.styled';
+import { StyledAppWrapper } from 'components/App/App.styled';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import MainContent from 'components/MainContent/MainContent';
@@ -45,18 +45,18 @@ function App() {
         openDeleteModal={openDeleteModal}
       />
       <Footer />
-      <AddUserModal isModalOpen={isModalOpen} closeModal={closeModal} />
+      <AddUserModal isModalOpen={isModalOpen} onClose={closeModal} />
       {currentUser && (
         <EditingUserModal
           isModalOpen={isEditingModalOpen}
-          closeModal={closeEditingModal}
+          onClose={closeEditingModal}
           currentUser={currentUser}
         />
       )}
       {currentUser && (
         <DeleteUserModal
           isModalOpen={isDeleteModalOpen}
-          closeModal={closeDeleteModal}
+          onClose={closeDeleteModal}
           currentUser={currentUser}
         />
       )}

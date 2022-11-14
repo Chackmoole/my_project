@@ -3,10 +3,10 @@ import { StyledAllotted } from 'components/DeleteUserModal/DeleteUserModal.style
 import Modal from 'src/ui/Modal/Modal';
 import Typography from '@mui/material/Typography';
 
-const DeleteUserModal = ({ isModalOpen, closeModal, currentUser }) => {
+const DeleteUserModal = ({ isModalOpen, onClose, currentUser }) => {
   const printFormData = () => {
     console.log(currentUser.id);
-    closeModal();
+    onClose();
   };
 
   if (!isModalOpen) {
@@ -16,7 +16,7 @@ const DeleteUserModal = ({ isModalOpen, closeModal, currentUser }) => {
   return (
     <Modal
       onClickAction={printFormData}
-      closeModal={closeModal}
+      onClose={onClose}
       title="Удаление пользователя"
       open={isModalOpen}
     >

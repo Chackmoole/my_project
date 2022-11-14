@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyledSearchInput } from 'components/SearchInput/SearchInput.styled';
+import TextField from 'src/ui/TextField/TextField';
 
-const SearchInput = (props) => {
-  return <StyledSearchInput value={props.searchText} onChange={props.onSearchChange} />;
+const SearchInput = ({ searchText, onSearchChange, ...props }) => {
+  return <TextField value={searchText} onChange={onSearchChange} {...props} />;
 };
 
 export default SearchInput;

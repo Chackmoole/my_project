@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import Modal from 'src/ui/Modal/Modal';
 import UserForm from 'src/ui/UserForm/UserForm';
 
-const AddUserModal = ({ isModalOpen, closeModal }) => {
+const AddUserModal = ({ isModalOpen, onClose }) => {
   const [formValues, setFormValues] = useState({
-    firstName: 'Имя',
-    lastName: 'Фамилия',
-    mail: 'почта',
+    firstName: '',
+    lastName: '',
+    mail: '',
   });
 
   const printFormData = () => {
     console.log(formValues);
-    closeModal();
+    onClose();
   };
 
   if (!isModalOpen) {
@@ -21,7 +21,7 @@ const AddUserModal = ({ isModalOpen, closeModal }) => {
   return (
     <Modal
       title="Добавление пользователя"
-      closeModal={closeModal}
+      onClose={onClose}
       onClickAction={printFormData}
       open={isModalOpen}
     >
