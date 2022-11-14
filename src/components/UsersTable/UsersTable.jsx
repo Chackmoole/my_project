@@ -41,7 +41,12 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
         />
         <Button onClick={openModal}>Добавить пользователя</Button>
       </StyledTableContainer>
-      <Filters onChange={onFilterChange} currentStatus={currentStatus} options={OPTIONS_TABS} />
+      <Filters
+        onChange={onFilterChange}
+        value={currentStatus}
+        options={OPTIONS_TABS}
+        sx={{ mb: '16px' }}
+      />
       <StyledTableInner>
         <Table>
           <TableHead>
