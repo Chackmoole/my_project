@@ -1,7 +1,10 @@
 import React from 'react';
-import { StyledAllotted } from 'components/DeleteUserModal/DeleteUserModal.styled';
-import Modal from 'src/ui/Modal/Modal';
+
 import Typography from '@mui/material/Typography';
+
+import Modal from 'src/ui/Modal/Modal';
+
+import { StyledAllotted } from 'components/DeleteUserModal/DeleteUserModal.styled';
 
 const DeleteUserModal = ({ isModalOpen, onClose, currentUser }) => {
   const printFormData = () => {

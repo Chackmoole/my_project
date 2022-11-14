@@ -1,4 +1,5 @@
 import React from 'react';
+
 import MuiButton from '@mui/material/Button';
 
 const Button = ({ children, variant = 'contained', size = 'small', ...props }) => {

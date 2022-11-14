@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyledUserForm } from 'src/ui/UserForm/UserForm.styled';
+
 import TextField from 'src/ui/TextField/TextField';
+import { StyledUserForm } from 'src/ui/UserForm/UserForm.styled';
 
 const UserForm = ({ formValues, setFormValues }) => {
   return (

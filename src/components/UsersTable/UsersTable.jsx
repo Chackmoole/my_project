@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { StyledTableInner, StyledTableContainer } from 'components/UsersTable/UsersTable.styled';
-import { USERS, OPTIONS_TABS, STATUS_TITLE } from 'src/constants';
-import SearchInput from 'components/SearchInput/SearchInput';
-import Button from 'src/ui/Button/Button';
+
 import Box from '@mui/material/Box';
+
+import { OPTIONS_TABS, STATUS_TITLE, USERS } from 'src/constants';
+import Button from 'src/ui/Button/Button';
 import Filters from 'src/ui/Filters/Filters';
 import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
+
+import SearchInput from 'components/SearchInput/SearchInput';
+import { StyledTableContainer, StyledTableInner } from 'components/UsersTable/UsersTable.styled';
 
 const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   const [currentStatus, setCurrentStatus] = useState(null);

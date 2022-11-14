@@ -1,9 +1,11 @@
 import React from 'react';
-import Button from 'src/ui/Button/Button';
+
 import MuiDialog from '@mui/material/Dialog';
-import MuiDialogTitle from '@mui/material/DialogTitle';
-import MuiDialogContent from '@mui/material/DialogContent';
 import MuiDialogActions from '@mui/material/DialogActions';
+import MuiDialogContent from '@mui/material/DialogContent';
+import MuiDialogTitle from '@mui/material/DialogTitle';
+
+import Button from 'src/ui/Button/Button';
 import { StyledCrossButton } from 'src/ui/Modal/Modal.styled';
 
 const Modal = ({ onClose, title, children, onClickAction, open }) => {

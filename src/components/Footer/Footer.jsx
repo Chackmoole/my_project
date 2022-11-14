@@ -1,6 +1,8 @@
 import React from 'react';
-import { StyledFooter } from 'components/Footer/Footer.styled';
+
 import Typography from '@mui/material/Typography';
+
+import { StyledFooter } from 'components/Footer/Footer.styled';
 
 const Footer = () => {
   return (
