@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'src/ui/Modal/Modal';
 import UserForm from 'src/ui/UserForm/UserForm';
 
-const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
+const EditingUserModal = ({ isModalOpen, onClose, currentUser }) => {
   const [editingFormValues, setEditingFormValues] = useState({
     firstName: currentUser.firstName,
     lastName: currentUser.lastName,
@@ -12,7 +12,7 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
 
   const printEditionalUser = () => {
     console.log(editingFormValues);
-    closeModal();
+    onClose();
   };
 
   if (!isModalOpen) {
@@ -20,7 +20,7 @@ const EditingUserModal = ({ isModalOpen, closeModal, currentUser }) => {
   }
   return (
     <Modal
-      closeModal={closeModal}
+      onClose={onClose}
       title="Редактирование пользователя"
       onClickAction={printEditionalUser}
       open={isModalOpen}

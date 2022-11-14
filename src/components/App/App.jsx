@@ -45,18 +45,18 @@ function App() {
         openDeleteModal={openDeleteModal}
       />
       <Footer />
-      <AddUserModal isModalOpen={isModalOpen} closeModal={closeModal} />
+      <AddUserModal isModalOpen={isModalOpen} onClose={closeModal} />
       {currentUser && (
         <EditingUserModal
           isModalOpen={isEditingModalOpen}
-          closeModal={closeEditingModal}
+          onClose={closeEditingModal}
           currentUser={currentUser}
         />
       )}
       {currentUser && (
         <DeleteUserModal
           isModalOpen={isDeleteModalOpen}
-          closeModal={closeDeleteModal}
+          onClose={closeDeleteModal}
           currentUser={currentUser}
         />
       )}
