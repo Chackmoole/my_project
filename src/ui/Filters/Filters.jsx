@@ -1,6 +1,7 @@
 import React from 'react';
-import MuiTabs from '@mui/material/Tabs';
+
 import MuiTab from '@mui/material/Tab';
+import MuiTabs from '@mui/material/Tabs';
 
 const Filters = ({ onChange, options, value, ...props }) => {
   return (

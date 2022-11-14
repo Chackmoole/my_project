@@ -1,7 +1,7 @@
 module.exports = {
   extends: ['prettier', 'plugin:prettier/recommended'],
-  plugins: ['react'],
-  parser: '@babel/eslint-parser',
+  plugins: ['@typescript-eslint', 'react', 'prettier', 'unused-imports'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,

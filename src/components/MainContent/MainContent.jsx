@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { StyledMainContent } from 'components/MainContent/StyledMainContent';
 import UsersTable from 'components/UsersTable/UsersTable';
 

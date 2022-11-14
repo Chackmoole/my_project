@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { StyledAppWrapper } from 'components/App/App.styled';
-import Header from 'components/Header/Header';
-import Footer from 'components/Footer/Footer';
-import MainContent from 'components/MainContent/MainContent';
+
 import AddUserModal from 'components/AddUserModal/AddUserModal';
-import EditingUserModal from 'components/EditingUserModal/EditingUserModal';
+import { StyledAppWrapper } from 'components/App/App.styled';
 import DeleteUserModal from 'components/DeleteUserModal/DeleteUserModal';
+import EditingUserModal from 'components/EditingUserModal/EditingUserModal';
+import Footer from 'components/Footer/Footer';
+import Header from 'components/Header/Header';
+import MainContent from 'components/MainContent/MainContent';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);

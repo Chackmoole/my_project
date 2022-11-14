@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "components/*": ["components/*"],
+      "ui/*": ["ui/*"],
+      "types/*": ["types/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

@@ -1,7 +1,10 @@
 import React from 'react';
-import { StyledHeader } from 'components/Header/Header.styled';
+
 import Typography from '@mui/material/Typography';
+
 import logo from 'src/img/logo.png';
+
+import { StyledHeader } from 'components/Header/Header.styled';
 
 const Header = () => {
   return (
