@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledAppWrapper } from 'src/App.styled';
+import { StyledAppWrapper } from 'components/App/App.styled';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import MainContent from 'components/MainContent/MainContent';
