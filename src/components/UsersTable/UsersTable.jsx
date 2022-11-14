@@ -51,8 +51,8 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
               <TableCell>Статус</TableCell>
               <TableCell>Почта</TableCell>
               <TableCell>Дата регистрации</TableCell>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
+              <TableCell />
+              <TableCell />
             </TableRow>
           </TableHead>
           <TableBody>
