@@ -7,11 +7,12 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "components/*": ["components/*"],
-      "ui/*": ["ui/*"],
-      "types/*": ["types/*"]
+      "src/*": ["src/*"],
+      "components/*": ["src/components/*"],
+      "ui/*": ["src/ui/*"],
+      "types/*": ["src/types/*"]
     }
   },
   "include": ["src"],

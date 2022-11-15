@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 
-import Modal from 'src/ui/Modal/Modal';
-import UserForm from 'src/ui/UserForm/UserForm';
+import Modal from 'ui/Modal/Modal';
+import UserForm from 'ui/UserForm/UserForm';
 
-const AddUserModal = ({ isModalOpen, onClose }) => {
+interface IProps {
+  isModalOpen: boolean;
+  onClose: () => void;
+}
+
+const AddUserModal = ({ isModalOpen, onClose }: IProps) => {
   const [formValues, setFormValues] = useState({
     firstName: '',
     lastName: '',
