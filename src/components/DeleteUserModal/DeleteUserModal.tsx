@@ -2,11 +2,18 @@ import React from 'react';
 
 import Typography from '@mui/material/Typography';
 
+import { IUser } from 'src/types';
 import Modal from 'src/ui/Modal/Modal';
 
 import { StyledAllotted } from 'components/DeleteUserModal/DeleteUserModal.styled';
 
-const DeleteUserModal = ({ isModalOpen, onClose, currentUser }) => {
+interface IProps {
+  isModalOpen: boolean;
+  onClose: () => void;
+  currentUser: IUser;
+}
+
+const DeleteUserModal = ({ isModalOpen, onClose, currentUser }: IProps) => {
   const printFormData = () => {
     console.log(currentUser.id);
     onClose();
