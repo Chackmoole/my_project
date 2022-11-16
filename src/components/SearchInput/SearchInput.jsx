@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TextField from 'src/ui/TextField/TextField';
+import TextField from 'ui/TextField/TextField';
 
 const SearchInput = ({ searchText, onSearchChange, ...props }) => {
   return <TextField value={searchText} onChange={onSearchChange} {...props} />;
