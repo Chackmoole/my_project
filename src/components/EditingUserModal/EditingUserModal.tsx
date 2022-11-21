@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 import { IUser } from 'src/types';
-import Modal from 'src/ui/Modal/Modal';
 import UserForm from 'src/ui/UserForm/UserForm';
+
+import Modal from 'ui/Modal/Modal';
 
 interface IProps {
   isModalOpen: boolean;

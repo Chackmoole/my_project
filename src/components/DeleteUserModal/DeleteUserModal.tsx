@@ -3,9 +3,10 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 
 import { IUser } from 'src/types';
-import Modal from 'src/ui/Modal/Modal';
 
 import { StyledAllotted } from 'components/DeleteUserModal/DeleteUserModal.styled';
+
+import Modal from 'ui/Modal/Modal';
 
 interface IProps {
   isModalOpen: boolean;
