@@ -3,24 +3,32 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 
 import { OPTIONS_TABS, STATUS_TITLE, USERS } from 'src/constants';
+import { IUser } from 'src/types';
 import Button from 'src/ui/Button/Button';
 import Filters from 'src/ui/Filters/Filters';
 import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
 
-import SearchInput from 'components/SearchInput/SearchInput';
 import { StyledTableContainer, StyledTableInner } from 'components/UsersTable/UsersTable.styled';
 
-const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
+import TextField from 'ui/TextField/TextField';
+
+interface IProps {
+  openModal: (user: IUser) => void;
+  openEditingModal: (user: IUser) => void;
+  openDeleteModal: (user: IUser) => void;
+}
+
+const UsersTable = ({ openModal, openEditingModal, openDeleteModal }: IProps) => {
   const [currentStatus, setCurrentStatus] = useState(null);
-  const onFilterChange = (value) => {
+  const onFilterChange = (value: string) => {
     setCurrentStatus(value);
   };
   const [searchText, setSearchText] = useState('');
-  const onSearchChange = (e) => {
+  const onSearchTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
   };
 
-  const isInclude = (searchValue, stringValue) => {
+  const isInclude = (searchValue: string, stringValue: string) => {
     return stringValue.toLowerCase().includes(searchValue.toLowerCase());
   };
 
@@ -33,11 +41,11 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   );
 
   return (
-    <Box br="10px" p="24px" m="auto" bgcolor="#e7ebf0">
+    <Box p="24px" m="auto" bgcolor="#e7ebf0">
       <StyledTableContainer>
-        <SearchInput
-          searchText={searchText}
-          onSearchChange={onSearchChange}
+        <TextField
+          value={searchText}
+          onChange={onSearchTextChange}
           fullWidth={false}
           label="Поиск"
           sx={{ mr: '24px' }}
@@ -64,7 +72,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredUsersBySearchText.map((user) => {
+            {filteredUsersBySearchText.map((user: IUser) => {
               return (
                 <TableRow key={user.id}>
                   <TableCell>{user.firstName}</TableCell>
