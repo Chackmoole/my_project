@@ -2,6 +2,7 @@ import React from 'react';
 
 import Typography from '@mui/material/Typography';
 
+//TODO разобраться с png
 // import logo from 'img/logo.png';
 import { StyledHeader } from 'components/Header/Header.styled';
 

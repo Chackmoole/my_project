@@ -4,16 +4,16 @@ import Box from '@mui/material/Box';
 
 import { OPTIONS_TABS, STATUS_TITLE, USERS } from 'src/constants';
 import { IUser } from 'src/types';
-import Button from 'src/ui/Button/Button';
 import Filters from 'src/ui/Filters/Filters';
 import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
 
 import { StyledTableContainer, StyledTableInner } from 'components/UsersTable/UsersTable.styled';
 
+import Button from 'ui/Button/Button';
 import TextField from 'ui/TextField/TextField';
 
 interface IProps {
-  openModal: (user: IUser) => void;
+  openModal: () => void;
   openEditingModal: (user: IUser) => void;
   openDeleteModal: (user: IUser) => void;
 }
