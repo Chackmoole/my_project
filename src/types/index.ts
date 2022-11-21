@@ -1,4 +1,4 @@
-export type IUserStatus = 'blocked' | 'active' | 'frozen';
+export type IUserStatus = 'all' | 'blocked' | 'active' | 'frozen';
 
 export interface IUser {
   id: number;

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 
 import Box from '@mui/material/Box';
 
 import { OPTIONS_TABS, STATUS_TITLE, USERS } from 'src/constants';
-import { IUser } from 'src/types';
-import Filters from 'src/ui/Filters/Filters';
+import { IUser, IUserStatus } from 'src/types';
 import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
 
 import { StyledTableContainer, StyledTableInner } from 'components/UsersTable/UsersTable.styled';
 
 import Button from 'ui/Button/Button';
+import Filters from 'ui/Filters/Filters';
 import TextField from 'ui/TextField/TextField';
 
 interface IProps {
@@ -20,7 +20,7 @@ interface IProps {
 
 const UsersTable = ({ openModal, openEditingModal, openDeleteModal }: IProps) => {
   const [currentStatus, setCurrentStatus] = useState(null);
-  const onFilterChange = (value: string) => {
+  const onFilterChange = (e: SyntheticEvent, value: IUserStatus) => {
     setCurrentStatus(value);
   };
   const [searchText, setSearchText] = useState('');
