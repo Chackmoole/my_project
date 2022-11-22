@@ -8,3 +8,9 @@ export interface IUser {
   mail: string;
   registrationDate: string;
 }
+
+export interface IUSerFormValue {
+  firstName: string;
+  lastName: string;
+  mail: string;
+}

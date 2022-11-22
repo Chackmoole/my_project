@@ -1,10 +1,16 @@
 import React from 'react';
 
-import { StyledUserForm } from 'src/ui/UserForm/UserForm.styled';
+import { IUSerFormValue } from 'src/types';
 
 import TextField from 'ui/TextField/TextField';
+import { StyledUserForm } from 'ui/UserForm/UserForm.styled';
 
-const UserForm = ({ formValues, setFormValues }) => {
+interface IUserForm {
+  formValues: IUSerFormValue;
+  setFormValues: (formValues: IUSerFormValue) => void;
+}
+
+const UserForm = ({ formValues, setFormValues }: IUserForm) => {
   return (
     <StyledUserForm>
       <TextField
