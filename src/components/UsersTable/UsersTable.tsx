@@ -4,12 +4,12 @@ import Box from '@mui/material/Box';
 
 import { OPTIONS_TABS, STATUS_TITLE, USERS } from 'src/constants';
 import { IUser, IUserStatus } from 'src/types';
-import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
 
 import { StyledTableContainer, StyledTableInner } from 'components/UsersTable/UsersTable.styled';
 
 import Button from 'ui/Button/Button';
 import Filters from 'ui/Filters/Filters';
+import { Table, TableBody, TableCell, TableHead, TableRow } from 'ui/Table/Table';
 import TextField from 'ui/TextField/TextField';
 
 interface IProps {
