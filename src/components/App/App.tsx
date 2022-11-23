@@ -43,8 +43,8 @@ function App() {
     <StyledAppWrapper>
       <Header />
       <MainContent
-        openModal={openModal}
-        openEditingModal={openEditingModal}
+        openCreateModal={openModal}
+        openEditModal={openEditingModal}
         openDeleteModal={openDeleteModal}
       />
       <Footer />

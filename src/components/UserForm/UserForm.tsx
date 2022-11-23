@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { IUSerFormValue } from 'src/types';
+import { IUSerFormValues } from 'src/types';
+
+import { StyledUserForm } from 'components/UserForm/UserForm.styled';
 
 import TextField from 'ui/TextField/TextField';
-import { StyledUserForm } from 'ui/UserForm/UserForm.styled';
 
 interface IUserForm {
-  formValues: IUSerFormValue;
-  setFormValues: (formValues: IUSerFormValue) => void;
+  formValues: IUSerFormValues;
+  setFormValues: (formValues: IUSerFormValues) => void;
 }
 
 const UserForm = ({ formValues, setFormValues }: IUserForm) => {

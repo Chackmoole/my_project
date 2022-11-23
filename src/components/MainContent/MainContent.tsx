@@ -6,17 +6,17 @@ import { StyledMainContent } from 'components/MainContent/StyledMainContent';
 import UsersTable from 'components/UsersTable/UsersTable';
 
 interface IProps {
-  openModal: () => void;
-  openEditingModal: (user: IUser) => void;
+  openCreateModal: () => void;
+  openEditModal: (user: IUser) => void;
   openDeleteModal: (user: IUser) => void;
 }
 
-const MainContent = ({ openModal, openEditingModal, openDeleteModal }: IProps) => {
+const MainContent = ({ openCreateModal, openEditModal, openDeleteModal }: IProps) => {
   return (
     <StyledMainContent>
       <UsersTable
-        openModal={openModal}
-        openEditingModal={openEditingModal}
+        openCreateModal={openCreateModal}
+        openEditModal={openEditModal}
         openDeleteModal={openDeleteModal}
       />
     </StyledMainContent>

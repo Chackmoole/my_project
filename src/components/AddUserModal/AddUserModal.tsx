@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
+import UserForm from 'components/UserForm/UserForm';
+
 import Modal from 'ui/Modal/Modal';
-import UserForm from 'ui/UserForm/UserForm';
 
 interface IProps {
   isModalOpen: boolean;

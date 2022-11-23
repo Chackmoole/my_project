@@ -13,12 +13,12 @@ import { Table, TableBody, TableCell, TableHead, TableRow } from 'ui/Table/Table
 import TextField from 'ui/TextField/TextField';
 
 interface IProps {
-  openModal: () => void;
-  openEditingModal: (user: IUser) => void;
+  openCreateModal: () => void;
+  openEditModal: (user: IUser) => void;
   openDeleteModal: (user: IUser) => void;
 }
 
-const UsersTable = ({ openModal, openEditingModal, openDeleteModal }: IProps) => {
+const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps) => {
   const [currentStatus, setCurrentStatus] = useState(null);
   const onFilterChange = (e: SyntheticEvent, value: IUserStatus) => {
     setCurrentStatus(value);
@@ -50,7 +50,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }: IProps) =>
           label="Поиск"
           sx={{ mr: '24px' }}
         />
-        <Button onClick={openModal}>Добавить пользователя</Button>
+        <Button onClick={openCreateModal}>Добавить пользователя</Button>
       </StyledTableContainer>
       <Filters
         onChange={onFilterChange}
@@ -81,7 +81,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }: IProps) =>
                   <TableCell>{user.mail}</TableCell>
                   <TableCell>{user.registrationDate}</TableCell>
                   <TableCell>
-                    <Button onClick={() => openEditingModal(user)}>Редактировать</Button>
+                    <Button onClick={() => openEditModal(user)}>Редактировать</Button>
                   </TableCell>
                   <TableCell>
                     <Button onClick={() => openDeleteModal(user)}>Удалить</Button>

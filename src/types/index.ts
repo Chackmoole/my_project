@@ -1,4 +1,4 @@
-export type IUserStatus = 'all' | 'blocked' | 'active' | 'frozen';
+export type IUserStatus = 'blocked' | 'active' | 'frozen';
 
 export interface IUser {
   id: number;
@@ -9,7 +9,7 @@ export interface IUser {
   registrationDate: string;
 }
 
-export interface IUSerFormValue {
+export interface IUSerFormValues {
   firstName: string;
   lastName: string;
   mail: string;
