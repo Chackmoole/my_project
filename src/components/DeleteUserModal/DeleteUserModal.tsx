@@ -20,10 +20,6 @@ const DeleteUserModal = ({ isModalOpen, onClose, currentUser }: IProps) => {
     onClose();
   };
 
-  if (!isModalOpen) {
-    return null;
-  }
-
   return (
     <Modal
       onClickAction={printFormData}

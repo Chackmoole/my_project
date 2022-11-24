@@ -21,10 +21,6 @@ const AddUserModal = ({ isModalOpen, onClose }: IProps) => {
     onClose();
   };
 
-  if (!isModalOpen) {
-    return null;
-  }
-
   return (
     <Modal
       title="Добавление пользователя"

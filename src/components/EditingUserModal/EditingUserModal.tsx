@@ -24,9 +24,6 @@ const EditingUserModal = ({ isModalOpen, onClose, currentUser }: IProps) => {
     onClose();
   };
 
-  if (!isModalOpen) {
-    return null;
-  }
   return (
     <Modal
       onClose={onClose}
