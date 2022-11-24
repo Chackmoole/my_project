@@ -2,7 +2,7 @@ import React from 'react';
 
 import { IUser } from 'src/types';
 
-import { StyledMainContent } from 'components/MainContent/StyledMainContent';
+import { MainContentStyled } from 'components/MainContent/MainContent.styled';
 import UsersTable from 'components/UsersTable/UsersTable';
 
 interface IProps {
@@ -13,13 +13,13 @@ interface IProps {
 
 const MainContent = ({ openCreateModal, openEditModal, openDeleteModal }: IProps) => {
   return (
-    <StyledMainContent>
+    <MainContentStyled>
       <UsersTable
         openCreateModal={openCreateModal}
         openEditModal={openEditModal}
         openDeleteModal={openDeleteModal}
       />
-    </StyledMainContent>
+    </MainContentStyled>
   );
 };
 
