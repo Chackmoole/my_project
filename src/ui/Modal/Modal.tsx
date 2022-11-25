@@ -5,10 +5,12 @@ import MuiDialogActions from '@mui/material/DialogActions';
 import MuiDialogContent from '@mui/material/DialogContent';
 import MuiDialogTitle from '@mui/material/DialogTitle';
 
-import Button from 'src/ui/Button/Button';
 import { StyledCrossButton } from 'src/ui/Modal/Modal.styled';
 
-const Modal = ({ onClose, title, children, onClickAction, open }) => {
+import Button from 'ui/Button/Button';
+import { IDialogsProps } from 'ui/Modal/types';
+
+const Modal = ({ onClose, title, children, onClickAction, open }: IDialogsProps) => {
   return (
     <MuiDialog open={open} onClose={onClose}>
       <StyledCrossButton onClick={onClose} />

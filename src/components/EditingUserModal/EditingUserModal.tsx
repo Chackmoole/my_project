@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 
-import Modal from 'src/ui/Modal/Modal';
-import UserForm from 'src/ui/UserForm/UserForm';
+import { IUser } from 'src/types';
 
-const EditingUserModal = ({ isModalOpen, onClose, currentUser }) => {
+import UserForm from 'components/UserForm/UserForm';
+
+import Modal from 'ui/Modal/Modal';
+
+interface IProps {
+  isModalOpen: boolean;
+  onClose: () => void;
+  currentUser: IUser;
+}
+
+const EditingUserModal = ({ isModalOpen, onClose, currentUser }: IProps) => {
   const [editingFormValues, setEditingFormValues] = useState({
     firstName: currentUser.firstName,
     lastName: currentUser.lastName,
-    status: currentUser.status,
     mail: currentUser.mail,
   });
 
@@ -16,9 +24,6 @@ const EditingUserModal = ({ isModalOpen, onClose, currentUser }) => {
     onClose();
   };
 
-  if (!isModalOpen) {
-    return null;
-  }
   return (
     <Modal
       onClose={onClose}

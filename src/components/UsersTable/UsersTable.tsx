@@ -1,26 +1,34 @@
-import React, { useState } from 'react';
+import React, { SyntheticEvent, useState } from 'react';
 
 import Box from '@mui/material/Box';
 
 import { OPTIONS_TABS, STATUS_TITLE, USERS } from 'src/constants';
-import Button from 'src/ui/Button/Button';
-import Filters from 'src/ui/Filters/Filters';
-import { Table, TableBody, TableCell, TableHead, TableRow } from 'src/ui/Table/Table';
+import { IUser, IUserStatus } from 'src/types';
 
-import SearchInput from 'components/SearchInput/SearchInput';
 import { StyledTableContainer, StyledTableInner } from 'components/UsersTable/UsersTable.styled';
 
-const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
+import Button from 'ui/Button/Button';
+import Filters from 'ui/Filters/Filters';
+import { Table, TableBody, TableCell, TableHead, TableRow } from 'ui/Table/Table';
+import TextField from 'ui/TextField/TextField';
+
+interface IProps {
+  openCreateModal: () => void;
+  openEditModal: (user: IUser) => void;
+  openDeleteModal: (user: IUser) => void;
+}
+
+const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps) => {
   const [currentStatus, setCurrentStatus] = useState(null);
-  const onFilterChange = (value) => {
+  const onFilterChange = (e: SyntheticEvent, value: IUserStatus) => {
     setCurrentStatus(value);
   };
   const [searchText, setSearchText] = useState('');
-  const onSearchChange = (e) => {
+  const onSearchTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
   };
 
-  const isInclude = (searchValue, stringValue) => {
+  const isInclude = (searchValue: string, stringValue: string) => {
     return stringValue.toLowerCase().includes(searchValue.toLowerCase());
   };
 
@@ -33,16 +41,16 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
   );
 
   return (
-    <Box br="10px" p="24px" m="auto" bgcolor="#e7ebf0">
+    <Box p="24px" m="auto" bgcolor="#e7ebf0">
       <StyledTableContainer>
-        <SearchInput
-          searchText={searchText}
-          onSearchChange={onSearchChange}
+        <TextField
+          value={searchText}
+          onChange={onSearchTextChange}
           fullWidth={false}
           label="Поиск"
           sx={{ mr: '24px' }}
         />
-        <Button onClick={openModal}>Добавить пользователя</Button>
+        <Button onClick={openCreateModal}>Добавить пользователя</Button>
       </StyledTableContainer>
       <Filters
         onChange={onFilterChange}
@@ -64,7 +72,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredUsersBySearchText.map((user) => {
+            {filteredUsersBySearchText.map((user: IUser) => {
               return (
                 <TableRow key={user.id}>
                   <TableCell>{user.firstName}</TableCell>
@@ -73,7 +81,7 @@ const UsersTable = ({ openModal, openEditingModal, openDeleteModal }) => {
                   <TableCell>{user.mail}</TableCell>
                   <TableCell>{user.registrationDate}</TableCell>
                   <TableCell>
-                    <Button onClick={() => openEditingModal(user)}>Редактировать</Button>
+                    <Button onClick={() => openEditModal(user)}>Редактировать</Button>
                   </TableCell>
                   <TableCell>
                     <Button onClick={() => openDeleteModal(user)}>Удалить</Button>

@@ -5,6 +5,12 @@ export interface IUser {
   firstName: string;
   lastName: string;
   status: IUserStatus;
-  email: string;
+  mail: string;
   registrationDate: string;
+}
+
+export interface IUSerFormValues {
+  firstName: string;
+  lastName: string;
+  mail: string;
 }

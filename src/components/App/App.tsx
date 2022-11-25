@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { IUser } from 'src/types';
+
 import AddUserModal from 'components/AddUserModal/AddUserModal';
 import { StyledAppWrapper } from 'components/App/App.styled';
 import DeleteUserModal from 'components/DeleteUserModal/DeleteUserModal';
@@ -19,7 +21,7 @@ function App() {
   };
 
   const [isEditingModalOpen, setEditingModalOpen] = useState(false);
-  const openEditingModal = (user) => {
+  const openEditingModal = (user: IUser) => {
     setCurrentUser(user);
     setEditingModalOpen(true);
   };
@@ -29,7 +31,7 @@ function App() {
   };
 
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
-  const openDeleteModal = (user) => {
+  const openDeleteModal = (user: IUser) => {
     setCurrentUser(user);
     setDeleteModalOpen(true);
   };
@@ -41,8 +43,8 @@ function App() {
     <StyledAppWrapper>
       <Header />
       <MainContent
-        openModal={openModal}
-        openEditingModal={openEditingModal}
+        openCreateModal={openModal}
+        openEditModal={openEditingModal}
         openDeleteModal={openDeleteModal}
       />
       <Footer />

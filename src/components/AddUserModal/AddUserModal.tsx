@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 
-import Modal from 'src/ui/Modal/Modal';
-import UserForm from 'src/ui/UserForm/UserForm';
+import UserForm from 'components/UserForm/UserForm';
 
-const AddUserModal = ({ isModalOpen, onClose }) => {
+import Modal from 'ui/Modal/Modal';
+
+interface IProps {
+  isModalOpen: boolean;
+  onClose: () => void;
+}
+
+const AddUserModal = ({ isModalOpen, onClose }: IProps) => {
   const [formValues, setFormValues] = useState({
     firstName: '',
     lastName: '',
@@ -14,10 +20,6 @@ const AddUserModal = ({ isModalOpen, onClose }) => {
     console.log(formValues);
     onClose();
   };
-
-  if (!isModalOpen) {
-    return null;
-  }
 
   return (
     <Modal
