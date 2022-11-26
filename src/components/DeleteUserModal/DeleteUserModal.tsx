@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import Typography from '@mui/material/Typography';
 
@@ -15,10 +15,10 @@ interface IProps {
 }
 
 const DeleteUserModal = ({ isModalOpen, onClose, currentUser }: IProps) => {
-  const printFormData = () => {
+  const printFormData = useCallback(() => {
     console.log(currentUser.id);
     onClose();
-  };
+  }, [currentUser.id]);
 
   return (
     <Modal
