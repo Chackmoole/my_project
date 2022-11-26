@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { IUser } from 'src/types';
 
@@ -19,10 +19,10 @@ const EditingUserModal = ({ isModalOpen, onClose, currentUser }: IProps) => {
     mail: currentUser.mail,
   });
 
-  const printEditionalUser = () => {
+  const printEditionalUser = useCallback(() => {
     console.log(editingFormValues);
     onClose();
-  };
+  }, [editingFormValues]);
 
   return (
     <Modal
