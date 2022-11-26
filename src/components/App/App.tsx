@@ -21,24 +21,24 @@ function App() {
   }, []);
 
   const [isEditingModalOpen, setEditingModalOpen] = useState(false);
-  const openEditingModal = (user: IUser) => {
+  const openEditingModal = useCallback((user: IUser) => {
     setCurrentUser(user);
     setEditingModalOpen(true);
-  };
-  const closeEditingModal = () => {
+  }, []);
+  const closeEditingModal = useCallback(() => {
     setCurrentUser(null);
     setEditingModalOpen(false);
-  };
+  }, []);
 
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
-  const openDeleteModal = (user: IUser) => {
+  const openDeleteModal = useCallback((user: IUser) => {
     setCurrentUser(user);
     setDeleteModalOpen(true);
-  };
-  const closeDeleteModal = () => {
+  }, []);
+  const closeDeleteModal = useCallback(() => {
     setCurrentUser(null);
     setDeleteModalOpen(false);
-  };
+  }, []);
   return (
     <StyledAppWrapper>
       <Header />
