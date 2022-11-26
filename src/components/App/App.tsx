@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { IUser } from 'src/types';
 
@@ -13,12 +13,12 @@ import MainContent from 'components/MainContent/MainContent';
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => {
+  const openModal = useCallback(() => {
     setIsModalOpen(true);
-  };
-  const closeModal = () => {
+  }, []);
+  const closeModal = useCallback(() => {
     setIsModalOpen(false);
-  };
+  }, []);
 
   const [isEditingModalOpen, setEditingModalOpen] = useState(false);
   const openEditingModal = (user: IUser) => {

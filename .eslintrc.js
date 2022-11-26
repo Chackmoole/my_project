@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['prettier', 'plugin:prettier/recommended'],
+  extends: ['prettier', 'plugin:prettier/recommended', 'plugin:react-hooks/recommended'],
   plugins: ['@typescript-eslint', 'react', 'prettier', 'unused-imports'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
