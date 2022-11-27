@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import UserForm from 'components/UserForm/UserForm';
 
@@ -16,10 +16,10 @@ const AddUserModal = ({ isModalOpen, onClose }: IProps) => {
     mail: '',
   });
 
-  const printFormData = () => {
+  const printFormData = useCallback(() => {
     console.log(formValues);
     onClose();
-  };
+  }, [formValues]);
 
   return (
     <Modal
