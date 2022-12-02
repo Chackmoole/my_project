@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { SyntheticEvent, useMemo, useState } from 'react';
 
 import Box from '@mui/material/Box';
 
@@ -32,13 +32,15 @@ const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps)
     return stringValue.toLowerCase().includes(searchValue.toLowerCase());
   };
 
-  const filteredUsersBySearchText = USERS.filter(
-    (element) =>
-      (!currentStatus &&
-        (isInclude(searchText, element.firstName) || isInclude(searchText, element.lastName))) ||
-      (element.status === currentStatus && isInclude(searchText, element.firstName)) ||
-      (element.status === currentStatus && isInclude(searchText, element.lastName))
-  );
+  const filteredUsersBySearchText = useMemo(() => {
+    return USERS.filter(
+      (element) =>
+        (!currentStatus &&
+          (isInclude(searchText, element.firstName) || isInclude(searchText, element.lastName))) ||
+        (element.status === currentStatus && isInclude(searchText, element.firstName)) ||
+        (element.status === currentStatus && isInclude(searchText, element.lastName))
+    );
+  }, [currentStatus, searchText]);
 
   return (
     <Box p="24px" m="auto" bgcolor="#e7ebf0">
