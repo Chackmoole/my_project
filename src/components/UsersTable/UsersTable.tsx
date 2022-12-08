@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from 'react';
+import React, { SyntheticEvent, useCallback, useMemo, useState } from 'react';
 
 import Box from '@mui/material/Box';
 
@@ -20,25 +20,27 @@ interface IProps {
 
 const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps) => {
   const [currentStatus, setCurrentStatus] = useState(null);
-  const onFilterChange = (e: SyntheticEvent, value: IUserStatus) => {
+  const onFilterChange = useCallback((e: SyntheticEvent, value: IUserStatus) => {
     setCurrentStatus(value);
-  };
+  }, []);
   const [searchText, setSearchText] = useState('');
-  const onSearchTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onSearchTextChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
-  };
+  }, []);
 
-  const isInclude = (searchValue: string, stringValue: string) => {
+  const isInclude = useCallback((searchValue: string, stringValue: string) => {
     return stringValue.toLowerCase().includes(searchValue.toLowerCase());
-  };
+  }, []);
 
-  const filteredUsersBySearchText = USERS.filter(
-    (element) =>
-      (!currentStatus &&
-        (isInclude(searchText, element.firstName) || isInclude(searchText, element.lastName))) ||
-      (element.status === currentStatus && isInclude(searchText, element.firstName)) ||
-      (element.status === currentStatus && isInclude(searchText, element.lastName))
-  );
+  const filteredUsersBySearchText = useMemo(() => {
+    return USERS.filter(
+      (element) =>
+        (!currentStatus &&
+          (isInclude(searchText, element.firstName) || isInclude(searchText, element.lastName))) ||
+        (element.status === currentStatus && isInclude(searchText, element.firstName)) ||
+        (element.status === currentStatus && isInclude(searchText, element.lastName))
+    );
+  }, [currentStatus, isInclude, searchText]);
 
   return (
     <Box p="24px" m="auto" bgcolor="#e7ebf0">

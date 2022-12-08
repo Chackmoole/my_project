@@ -6,6 +6,7 @@ import MuiTabs from '@mui/material/Tabs';
 import { IFiltersProps } from 'ui/Filters/types';
 
 const Filters = ({ onChange, options, value, ...props }: IFiltersProps) => {
+  console.log('run filters');
   return (
     <MuiTabs value={value} onChange={onChange} {...props}>
       {options.map((option) => (
