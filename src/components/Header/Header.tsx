@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Typography from '@mui/material/Typography';
 
@@ -11,6 +12,8 @@ const Header = () => {
     <StyledHeader>
       <img src={logo} alt="react logo" width={40} height={40} />
       <Typography variant="subtitle1">Страница пользователей</Typography>
+      <Link to="/">Главная страница</Link>
+      <Link to="/users">Страница пользователей</Link>
     </StyledHeader>
   );
 };
