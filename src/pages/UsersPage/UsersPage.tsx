@@ -1,16 +1,16 @@
 import React, { useCallback, useState } from 'react';
 
+import { StyledUsersPageWrapper } from 'src/pages/UsersPage/UsersPage.styled';
 import { IUser } from 'src/types';
 
 import AddUserModal from 'components/AddUserModal/AddUserModal';
-import { StyledAppWrapper } from 'components/App/App.styled';
 import DeleteUserModal from 'components/DeleteUserModal/DeleteUserModal';
 import EditingUserModal from 'components/EditingUserModal/EditingUserModal';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import MainContent from 'components/MainContent/MainContent';
 
-function App() {
+const UsersPage = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = useCallback(() => {
@@ -40,7 +40,7 @@ function App() {
     setDeleteModalOpen(false);
   }, []);
   return (
-    <StyledAppWrapper>
+    <StyledUsersPageWrapper>
       <Header />
       <MainContent
         openCreateModal={openModal}
@@ -63,8 +63,8 @@ function App() {
           currentUser={currentUser}
         />
       )}
-    </StyledAppWrapper>
+    </StyledUsersPageWrapper>
   );
-}
+};
 
-export default App;
+export default UsersPage;
