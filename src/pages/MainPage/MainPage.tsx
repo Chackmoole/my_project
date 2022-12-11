@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import PageLayout from 'components/PageLayout/PageLayout';
 
 const MainPage = () => {
-  return <Link to="/users">Страница пользователей</Link>;
+  return <PageLayout />;
 };
 
 export default MainPage;

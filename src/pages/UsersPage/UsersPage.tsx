@@ -1,14 +1,12 @@
 import React, { useCallback, useState } from 'react';
 
-import { StyledUsersPageWrapper } from 'src/pages/UsersPage/UsersPage.styled';
 import { IUser } from 'src/types';
 
 import AddUserModal from 'components/AddUserModal/AddUserModal';
 import DeleteUserModal from 'components/DeleteUserModal/DeleteUserModal';
 import EditingUserModal from 'components/EditingUserModal/EditingUserModal';
-import Footer from 'components/Footer/Footer';
-import Header from 'components/Header/Header';
 import MainContent from 'components/MainContent/MainContent';
+import PageLayout from 'components/PageLayout/PageLayout';
 
 const UsersPage = () => {
   const [currentUser, setCurrentUser] = useState(null);
@@ -40,14 +38,12 @@ const UsersPage = () => {
     setDeleteModalOpen(false);
   }, []);
   return (
-    <StyledUsersPageWrapper>
-      <Header />
+    <PageLayout>
       <MainContent
         openCreateModal={openModal}
         openEditModal={openEditingModal}
         openDeleteModal={openDeleteModal}
       />
-      <Footer />
       <AddUserModal isModalOpen={isModalOpen} onClose={closeModal} />
       {currentUser && (
         <EditingUserModal
@@ -63,7 +59,7 @@ const UsersPage = () => {
           currentUser={currentUser}
         />
       )}
-    </StyledUsersPageWrapper>
+    </PageLayout>
   );
 };
 
