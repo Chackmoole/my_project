@@ -13,6 +13,7 @@ module.exports = {
   entry: `./index.tsx`,
   output: {
     filename: filename('js'),
+    publicPath: '/',
     path: path.resolve(__dirname, `build`),
   },
   devServer: {
@@ -58,6 +59,7 @@ module.exports = {
   resolve: {
     alias: {
       src: path.resolve(__dirname, `src`),
+      pages: path.resolve(__dirname, `src/pages`),
       components: path.resolve(__dirname, `src/components`),
       ui: path.resolve(__dirname, `src/ui`),
       types: path.resolve(__dirname, `src/types`),
