@@ -5,7 +5,7 @@ import Header from 'components/Header/Header';
 import { StyledPageLayout } from 'components/PageLayout/PageLayout.styled';
 
 interface IProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const PageLayout = ({ children }: IProps) => {
