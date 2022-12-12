@@ -44,9 +44,12 @@ const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps)
     );
   }, [currentStatus, isInclude, searchText]);
 
-  const onRowClick = (userId: number) => {
-    navigate(`${userId}`);
-  };
+  const onRowClick = useCallback(
+    (userId: number) => {
+      navigate(`${userId}`);
+    },
+    [navigate]
+  );
 
   return (
     <Box p="24px" m="auto" bgcolor="#e7ebf0">
