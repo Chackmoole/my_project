@@ -3,14 +3,12 @@ import React, { useCallback, useState } from 'react';
 import { IUser } from 'src/types';
 
 import AddUserModal from 'components/AddUserModal/AddUserModal';
-import { StyledAppWrapper } from 'components/App/App.styled';
 import DeleteUserModal from 'components/DeleteUserModal/DeleteUserModal';
 import EditingUserModal from 'components/EditingUserModal/EditingUserModal';
-import Footer from 'components/Footer/Footer';
-import Header from 'components/Header/Header';
 import MainContent from 'components/MainContent/MainContent';
+import PageLayout from 'components/PageLayout/PageLayout';
 
-function App() {
+const UsersPage = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = useCallback(() => {
@@ -40,14 +38,12 @@ function App() {
     setDeleteModalOpen(false);
   }, []);
   return (
-    <StyledAppWrapper>
-      <Header />
+    <PageLayout>
       <MainContent
         openCreateModal={openModal}
         openEditModal={openEditingModal}
         openDeleteModal={openDeleteModal}
       />
-      <Footer />
       <AddUserModal isModalOpen={isModalOpen} onClose={closeModal} />
       {currentUser && (
         <EditingUserModal
@@ -63,8 +59,8 @@ function App() {
           currentUser={currentUser}
         />
       )}
-    </StyledAppWrapper>
+    </PageLayout>
   );
-}
+};
 
-export default App;
+export default UsersPage;

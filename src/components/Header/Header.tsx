@@ -1,16 +1,19 @@
 import React from 'react';
-
-import Typography from '@mui/material/Typography';
+import { NavLink } from 'react-router-dom';
 
 import logo from 'src/img/logo.png';
 
-import { StyledHeader } from 'components/Header/Header.styled';
+import { StyledHeader, StyledNav } from 'components/Header/Header.styled';
 
 const Header = () => {
   return (
     <StyledHeader>
       <img src={logo} alt="react logo" width={40} height={40} />
-      <Typography variant="subtitle1">Страница пользователей</Typography>
+
+      <StyledNav>
+        <NavLink to="/">Главная страница</NavLink>
+        <NavLink to="/users">Страница пользователей</NavLink>
+      </StyledNav>
     </StyledHeader>
   );
 };

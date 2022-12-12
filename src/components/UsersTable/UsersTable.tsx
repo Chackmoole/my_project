@@ -1,4 +1,5 @@
 import React, { SyntheticEvent, useCallback, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 
@@ -20,6 +21,7 @@ interface IProps {
 
 const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps) => {
   const [currentStatus, setCurrentStatus] = useState(null);
+  const navigate = useNavigate();
   const onFilterChange = useCallback((e: SyntheticEvent, value: IUserStatus) => {
     setCurrentStatus(value);
   }, []);
@@ -41,6 +43,13 @@ const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps)
         (element.status === currentStatus && isInclude(searchText, element.lastName))
     );
   }, [currentStatus, isInclude, searchText]);
+
+  const onRowClick = useCallback(
+    (userId: number) => {
+      navigate(`${userId}`);
+    },
+    [navigate]
+  );
 
   return (
     <Box p="24px" m="auto" bgcolor="#e7ebf0">
@@ -76,7 +85,7 @@ const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps)
           <TableBody>
             {filteredUsersBySearchText.map((user: IUser) => {
               return (
-                <TableRow key={user.id}>
+                <TableRow key={user.id} onClick={() => onRowClick(user.id)}>
                   <TableCell>{user.firstName}</TableCell>
                   <TableCell>{user.lastName}</TableCell>
                   <TableCell>{STATUS_TITLE[user.status]}</TableCell>
