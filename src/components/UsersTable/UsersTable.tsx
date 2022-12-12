@@ -45,7 +45,6 @@ const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps)
   }, [currentStatus, isInclude, searchText]);
 
   const onRowClick = (userId: number) => {
-    console.log(userId);
     navigate(`${userId}`);
   };
 
