@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { StyledCurrentUserBox } from 'pages/CurrentUser/CurrentUser.styled';
@@ -7,6 +7,7 @@ import { USERS } from 'src/constants';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
+import Select from 'ui/Select/Select';
 import TextField from 'ui/TextField/TextField';
 
 const CurrentUser = () => {
@@ -18,6 +19,16 @@ const CurrentUser = () => {
     status: currentUser[0].status,
     mail: currentUser[0].mail,
   });
+  const [statusCurrentUser, setStatusCurrentUser] = useState(currentUser[0].status);
+  const inputProps = {
+    name: 'Статус',
+    id: 'currentUserLabelId',
+  };
+
+  const onChangeSelect = useCallback(() => {
+    console.log(statusCurrentUser);
+    setStatusCurrentUser('false');
+  }, [statusCurrentUser]);
 
   return (
     <PageLayout>
@@ -41,6 +52,15 @@ const CurrentUser = () => {
           value={currentUserValues.mail}
           onChange={(e) => {
             setCurrentUserValues({ ...currentUserValues, mail: e.target.value });
+          }}
+        />
+        <Select
+          label="Статус"
+          id="currentUserLabelId"
+          value={currentUserValues.status}
+          inputProps={inputProps}
+          onChange={(e) => {
+            onChangeSelect();
           }}
         />
       </StyledCurrentUserBox>
