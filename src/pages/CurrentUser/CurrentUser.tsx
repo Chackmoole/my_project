@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import MuiBox from '@mui/material/Box';
@@ -15,7 +15,9 @@ import TextField from 'ui/TextField/TextField';
 
 const CurrentUser = () => {
   const { userId } = useParams();
-  const currentUser = USERS.find((user) => user.id == +userId);
+  const currentUser = useMemo(() => {
+    return USERS.find((user) => user.id == +userId);
+  }, [userId]);
   const [currentUserValues, setCurrentUserValues] = useState({
     firstName: currentUser.firstName,
     lastName: currentUser.lastName,
@@ -23,7 +25,7 @@ const CurrentUser = () => {
     mail: currentUser.mail,
   });
 
-  const [value, setValue] = useState(currentUser.status);
+  const [value, setValue] = useState(currentUser?.status);
 
   const onSelectChange = (event: SelectChangeEvent) => {
     setValue(event.target.value as IUserStatus);
