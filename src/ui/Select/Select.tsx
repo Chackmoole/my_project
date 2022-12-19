@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { FormControl, InputLabel, MenuItem, SelectChangeEvent } from '@mui/material';
-import MuiSelect, { SelectProps } from '@mui/material/Select';
+import MuiFormControl from '@mui/material/FormControl';
+import MuiInputLabel from '@mui/material/InputLabel';
+import MuiMenuItem from '@mui/material/MenuItem';
+import MuiSelect, { SelectChangeEvent, SelectProps } from '@mui/material/Select';
 
-const Select = ({ value, id, inputProps, onChange, ...props }: SelectProps) => {
-  const [selectValue, setSelectValue] = useState(value);
+interface ISelectProps extends SelectProps {
+  options: { value: string; label: string }[];
+}
 
-  const onChangeSelect = (e: SelectChangeEvent) => {
-    setSelectValue(e.target.value as string);
-    console.log(e.target.value);
-  };
+const Select = ({ label = '', options, value, onChange, id }: ISelectProps) => {
   return (
-    <FormControl>
-      <InputLabel id={`${id}-label`}>Статус</InputLabel>
-      <MuiSelect
-        labelId={`${id}-label`}
-        id={id}
-        value={selectValue}
-        label="Статус"
-        onChange={onChangeSelect}
-      >
-        <MenuItem value="active">active</MenuItem>
-        <MenuItem value="frozen">frozen</MenuItem>
-        <MenuItem value="blocked">blocked</MenuItem>
+    <MuiFormControl fullWidth>
+      <MuiInputLabel id={`${id}-label`}>{label}</MuiInputLabel>
+      <MuiSelect labelId={`${id}-label`} id={id} value={value} label={label} onChange={onChange}>
+        {options.map((option) => (
+          <MuiMenuItem value={option.value} key={option.value}>
+            {option.label}
+          </MuiMenuItem>
+        ))}
       </MuiSelect>
-    </FormControl>
+    </MuiFormControl>
   );
 };
 

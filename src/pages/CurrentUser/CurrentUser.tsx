@@ -1,9 +1,12 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import MuiBox from '@mui/material/Box';
+import { SelectChangeEvent } from '@mui/material/Select';
 import { StyledCurrentUserBox } from 'pages/CurrentUser/CurrentUser.styled';
 
-import { USERS } from 'src/constants';
+import { STATUS_VARIANTS, USERS } from 'src/constants';
+import { IUserStatus } from 'src/types';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
@@ -12,6 +15,7 @@ import TextField from 'ui/TextField/TextField';
 
 const CurrentUser = () => {
   const { userId } = useParams();
+  //TODO find
   const currentUser = USERS.filter((user) => user.id == +userId);
   const [currentUserValues, setCurrentUserValues] = useState({
     firstName: currentUser[0].firstName,
@@ -19,16 +23,12 @@ const CurrentUser = () => {
     status: currentUser[0].status,
     mail: currentUser[0].mail,
   });
-  const [statusCurrentUser, setStatusCurrentUser] = useState(currentUser[0].status);
-  const inputProps = {
-    name: 'Статус',
-    id: 'currentUserLabelId',
-  };
 
-  const onChangeSelect = useCallback(() => {
-    console.log(statusCurrentUser);
-    setStatusCurrentUser('false');
-  }, [statusCurrentUser]);
+  const [value, setValue] = useState(currentUser[0].status);
+
+  const onSelectChange = (event: SelectChangeEvent) => {
+    setValue(event.target.value as IUserStatus);
+  };
 
   return (
     <PageLayout>
@@ -54,15 +54,15 @@ const CurrentUser = () => {
             setCurrentUserValues({ ...currentUserValues, mail: e.target.value });
           }}
         />
-        <Select
-          label="Статус"
-          id="currentUserLabelId"
-          value={currentUserValues.status}
-          inputProps={inputProps}
-          onChange={(e) => {
-            onChangeSelect();
-          }}
-        />
+        <MuiBox sx={{ minWidth: 120 }}>
+          <Select
+            label="Статус"
+            options={STATUS_VARIANTS}
+            onChange={onSelectChange}
+            value={value}
+            id="status"
+          />
+        </MuiBox>
       </StyledCurrentUserBox>
     </PageLayout>
   );

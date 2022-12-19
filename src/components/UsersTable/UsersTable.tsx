@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 
-import { OPTIONS_TABS, STATUS_TITLE, USERS } from 'src/constants';
+import { STATUS_OPTIONS, STATUS_TITLE, USERS } from 'src/constants';
 import { IUser, IUserStatus } from 'src/types';
 
 import { StyledTableContainer, StyledTableInner } from 'components/UsersTable/UsersTable.styled';
@@ -66,7 +66,7 @@ const UsersTable = ({ openCreateModal, openEditModal, openDeleteModal }: IProps)
       <Filters
         onChange={onFilterChange}
         value={currentStatus}
-        options={OPTIONS_TABS}
+        options={STATUS_OPTIONS}
         sx={{ mb: '16px' }}
       />
       <StyledTableInner>

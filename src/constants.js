@@ -48,11 +48,26 @@ export const STATUS_TITLE = {
   frozen: 'Заморожен',
 };
 
-export const OPTIONS_TABS = [
+export const STATUS_OPTIONS = [
   {
     label: 'Все',
     value: null,
   },
+  {
+    label: STATUS_TITLE['active'],
+    value: 'active',
+  },
+  {
+    label: STATUS_TITLE['frozen'],
+    value: 'frozen',
+  },
+  {
+    label: STATUS_TITLE['blocked'],
+    value: 'blocked',
+  },
+];
+
+export const STATUS_VARIANTS = [
   {
     label: STATUS_TITLE['active'],
     value: 'active',
