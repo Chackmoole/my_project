@@ -15,16 +15,15 @@ import TextField from 'ui/TextField/TextField';
 
 const CurrentUser = () => {
   const { userId } = useParams();
-  //TODO find
-  const currentUser = USERS.filter((user) => user.id == +userId);
+  const currentUser = USERS.find((user) => user.id == +userId);
   const [currentUserValues, setCurrentUserValues] = useState({
-    firstName: currentUser[0].firstName,
-    lastName: currentUser[0].lastName,
-    status: currentUser[0].status,
-    mail: currentUser[0].mail,
+    firstName: currentUser.firstName,
+    lastName: currentUser.lastName,
+    status: currentUser.status,
+    mail: currentUser.mail,
   });
 
-  const [value, setValue] = useState(currentUser[0].status);
+  const [value, setValue] = useState(currentUser.status);
 
   const onSelectChange = (event: SelectChangeEvent) => {
     setValue(event.target.value as IUserStatus);
