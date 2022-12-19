@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import MuiBox from '@mui/material/Box';
@@ -10,9 +10,9 @@ import { IUserStatus } from 'src/types';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
+import Button from 'ui/Button/Button';
 import EditableRow from 'ui/EditableRow/EditableRow';
 import Select from 'ui/Select/Select';
-import TextField from 'ui/TextField/TextField';
 
 const CurrentUser = () => {
   const { userId } = useParams();
@@ -25,12 +25,17 @@ const CurrentUser = () => {
     status: currentUser.status,
     mail: currentUser.mail,
   });
+  //del
+  const [selectValue, setSelectValue] = useState(currentUser?.status);
 
-  const [value, setValue] = useState(currentUser?.status);
+  const onSelectChange = useCallback((e: SelectChangeEvent) => {
+    setSelectValue(e.target.value as IUserStatus);
+  }, []);
 
-  const onSelectChange = (e: SelectChangeEvent) => {
-    setValue(e.target.value as IUserStatus);
-  };
+  const onSaveButtonClick = useCallback(() => {
+    console.log(currentUserValues);
+    console.log(selectValue);
+  }, [selectValue, currentUserValues]);
 
   return (
     <PageLayout>
@@ -59,10 +64,11 @@ const CurrentUser = () => {
             label="Статус"
             options={STATUS_VARIANTS}
             onChange={onSelectChange}
-            value={value}
+            value={selectValue}
             id="status"
           />
         </MuiBox>
+        <Button onClick={onSaveButtonClick}>Сохранить</Button>
       </StyledCurrentUserBox>
     </PageLayout>
   );

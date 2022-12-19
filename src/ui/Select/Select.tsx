@@ -3,7 +3,7 @@ import React from 'react';
 import MuiFormControl from '@mui/material/FormControl';
 import MuiInputLabel from '@mui/material/InputLabel';
 import MuiMenuItem from '@mui/material/MenuItem';
-import MuiSelect, { SelectChangeEvent, SelectProps } from '@mui/material/Select';
+import MuiSelect, { SelectProps } from '@mui/material/Select';
 
 interface ISelectProps extends SelectProps {
   options: { value: string; label: string }[];
