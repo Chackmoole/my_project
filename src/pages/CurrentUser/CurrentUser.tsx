@@ -25,17 +25,17 @@ const CurrentUser = () => {
     status: currentUser.status,
     mail: currentUser.mail,
   });
-  //del
-  const [selectValue, setSelectValue] = useState(currentUser?.status);
 
-  const onSelectChange = useCallback((e: SelectChangeEvent) => {
-    setSelectValue(e.target.value as IUserStatus);
-  }, []);
+  const onSelectChange = useCallback(
+    (e: SelectChangeEvent) => {
+      setCurrentUserValues({ ...currentUserValues, status: e.target.value });
+    },
+    [currentUserValues]
+  );
 
   const onSaveButtonClick = useCallback(() => {
     console.log(currentUserValues);
-    console.log(selectValue);
-  }, [selectValue, currentUserValues]);
+  }, [currentUserValues]);
 
   return (
     <PageLayout>
@@ -64,7 +64,7 @@ const CurrentUser = () => {
             label="Статус"
             options={STATUS_VARIANTS}
             onChange={onSelectChange}
-            value={selectValue}
+            value={currentUser.status}
             id="status"
           />
         </MuiBox>
