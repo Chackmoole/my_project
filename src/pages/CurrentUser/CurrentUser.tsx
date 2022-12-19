@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { ChangeEvent, useMemo, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import MuiBox from '@mui/material/Box';
@@ -10,6 +10,7 @@ import { IUserStatus } from 'src/types';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
+import EditableRow from 'ui/EditableRow/EditableRow';
 import Select from 'ui/Select/Select';
 import TextField from 'ui/TextField/TextField';
 
@@ -27,34 +28,32 @@ const CurrentUser = () => {
 
   const [value, setValue] = useState(currentUser?.status);
 
-  const onSelectChange = (event: SelectChangeEvent) => {
-    setValue(event.target.value as IUserStatus);
+  const onSelectChange = (e: SelectChangeEvent) => {
+    setValue(e.target.value as IUserStatus);
   };
 
   return (
     <PageLayout>
       <StyledCurrentUserBox>
-        <TextField
-          label="Имя"
-          value={currentUserValues.firstName}
+        <EditableRow
           onChange={(e) => {
             setCurrentUserValues({ ...currentUserValues, firstName: e.target.value });
           }}
+          value={currentUserValues.firstName}
         />
-        <TextField
-          label="Фамилия"
-          value={currentUserValues.lastName}
+        <EditableRow
           onChange={(e) => {
             setCurrentUserValues({ ...currentUserValues, lastName: e.target.value });
           }}
+          value={currentUserValues.lastName}
         />
-        <TextField
-          label="Почта"
-          value={currentUserValues.mail}
+        <EditableRow
           onChange={(e) => {
             setCurrentUserValues({ ...currentUserValues, mail: e.target.value });
           }}
+          value={currentUserValues.mail}
         />
+
         <MuiBox sx={{ minWidth: 120 }}>
           <Select
             label="Статус"
