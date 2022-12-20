@@ -6,12 +6,15 @@ import TextField from 'ui/TextField/TextField';
 interface IProps {
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  label: string;
 }
 
-const EditableRow = ({ onChange, value }: IProps) => {
+const EditableRow = ({ onChange, value, label }: IProps) => {
   return (
     <StyledEditableRow>
-      <TextField label="Имя" value={value} onChange={onChange} />
+      <div></div>
+
+      <TextField label={label} value={value} onChange={onChange} />
     </StyledEditableRow>
   );
 };

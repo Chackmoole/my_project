@@ -56,18 +56,21 @@ const CurrentUser = () => {
             setCurrentUserValues({ ...currentUserValues, firstName: e.target.value });
           }}
           value={currentUserValues.firstName}
+          label="Имя"
         />
         <EditableRow
           onChange={(e) => {
             setCurrentUserValues({ ...currentUserValues, lastName: e.target.value });
           }}
           value={currentUserValues.lastName}
+          label="Фамилия"
         />
         <EditableRow
           onChange={(e) => {
             setCurrentUserValues({ ...currentUserValues, mail: e.target.value });
           }}
           value={currentUserValues.mail}
+          label="Почта"
         />
 
         <MuiBox sx={{ minWidth: 120 }}>
