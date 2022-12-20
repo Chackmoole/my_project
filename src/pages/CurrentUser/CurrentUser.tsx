@@ -1,12 +1,12 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import MuiBox from '@mui/material/Box';
+import Box from '@mui/material/Box';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { StyledCurrentUserBox } from 'pages/CurrentUser/CurrentUser.styled';
 
 import { STATUS_VARIANTS, USERS } from 'src/constants';
-import { IUserStatus } from 'src/types';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
@@ -33,9 +33,20 @@ const CurrentUser = () => {
     [currentUserValues]
   );
 
+  //navigation
+  const navigate = useNavigate();
+
+  const backRedirect = useCallback(() => {
+    navigate(-1);
+  }, []);
+
   const onSaveButtonClick = useCallback(() => {
     console.log(currentUserValues);
   }, [currentUserValues]);
+
+  const onBackButtonClick = useCallback(() => {
+    backRedirect();
+  }, []);
 
   return (
     <PageLayout>
@@ -68,7 +79,12 @@ const CurrentUser = () => {
             id="status"
           />
         </MuiBox>
-        <Button onClick={onSaveButtonClick}>Сохранить</Button>
+        <Box sx={{ display: 'flex', gap: '16px' }}>
+          <Button onClick={onSaveButtonClick}>Сохранить</Button>
+          <Button onClick={onBackButtonClick} variant="outlined">
+            Назад
+          </Button>
+        </Box>
       </StyledCurrentUserBox>
     </PageLayout>
   );
