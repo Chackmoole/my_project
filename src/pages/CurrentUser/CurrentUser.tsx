@@ -13,6 +13,7 @@ import PageLayout from 'components/PageLayout/PageLayout';
 import Button from 'ui/Button/Button';
 import EditableRow from 'ui/EditableRow/EditableRow';
 import Select from 'ui/Select/Select';
+import Typography from 'ui/Typography/Typography';
 
 const CurrentUser = () => {
   const { userId } = useParams();
@@ -73,7 +74,8 @@ const CurrentUser = () => {
           label="Почта"
         />
 
-        <MuiBox sx={{ minWidth: 120 }}>
+        <MuiBox sx={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
+          <Typography sx={{ minWidth: '100px' }}>Статус</Typography>
           <Select
             label="Статус"
             options={STATUS_VARIANTS}
@@ -82,7 +84,7 @@ const CurrentUser = () => {
             id="status"
           />
         </MuiBox>
-        <Box sx={{ display: 'flex', gap: '16px' }}>
+        <Box sx={{ display: 'flex', gap: '40px' }}>
           <Button onClick={onSaveButtonClick}>Сохранить</Button>
           <Button onClick={onBackButtonClick} variant="outlined">
             Назад
