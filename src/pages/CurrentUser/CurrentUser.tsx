@@ -73,12 +73,11 @@ const CurrentUser = () => {
 
         <Box sx={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
           <Typography sx={{ minWidth: '100px' }}>Статус</Typography>
-          {/*TODO баг с отображением статуса в Select*/}
           <Select
             label="Статус"
             options={STATUS_VARIANTS}
             onChange={onSelectChange}
-            value={currentUser.status}
+            value={currentUserValues.status}
             id="status"
           />
         </Box>
