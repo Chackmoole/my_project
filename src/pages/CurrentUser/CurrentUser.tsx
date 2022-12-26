@@ -1,7 +1,6 @@
 import React, { ChangeEvent, useCallback, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import Box from '@mui/material/Box';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { StyledCurrentUserBox } from 'pages/CurrentUser/CurrentUser.styled';
 
@@ -9,9 +8,11 @@ import { STATUS_VARIANTS, USERS } from 'src/constants';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
+import { Box } from 'ui/Box/Box';
 import Button from 'ui/Button/Button';
 import EditableRow from 'ui/EditableRow/EditableRow';
 import Select from 'ui/Select/Select';
+import TextField from 'ui/TextField/TextField';
 import Typography from 'ui/Typography/Typography';
 
 const CurrentUser = () => {
@@ -72,22 +73,36 @@ const CurrentUser = () => {
           currentUserValues={currentUserValues}
           value={currentUserValues.firstName}
           label="Имя"
-        />
+        >
+          <TextField label="Имя" value={currentUserValues.firstName} onChange={onFirstNameChange} />
+        </EditableRow>
         <EditableRow
           onChange={onLastNameChange}
           currentUserValues={currentUserValues}
           value={currentUserValues.lastName}
           label="Фамилия"
-        />
+        >
+          <TextField
+            label="Фамилия"
+            value={currentUserValues.lastName}
+            onChange={onLastNameChange}
+          />
+        </EditableRow>
         <EditableRow
           onChange={onMailChange}
           currentUserValues={currentUserValues}
           value={currentUserValues.mail}
           label="Почта"
-        />
+        >
+          <TextField label="Почта" value={currentUserValues.mail} onChange={onMailChange} />
+        </EditableRow>
 
-        <Box sx={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
-          <Typography sx={{ minWidth: '100px' }}>Статус</Typography>
+        <EditableRow
+          value={currentUserValues.status}
+          onChange={onSelectChange}
+          label="Статус"
+          currentUserValues={currentUserValues}
+        >
           <Select
             label="Статус"
             options={STATUS_VARIANTS}
@@ -95,7 +110,7 @@ const CurrentUser = () => {
             value={currentUserValues.status}
             id="status"
           />
-        </Box>
+        </EditableRow>
         <Box sx={{ display: 'flex', gap: '40px' }}>
           <Button onClick={onSaveButtonClick}>Сохранить</Button>
           <Button onClick={onBackButtonClick} variant="outlined">
