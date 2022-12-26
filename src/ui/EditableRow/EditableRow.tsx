@@ -9,9 +9,10 @@ interface IProps {
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   label: string;
+  currentUserValues: object;
 }
 
-const EditableRow = ({ onChange, value, label }: IProps) => {
+const EditableRow = ({ currentUserValues, onChange, value, label }: IProps) => {
   const [isInputVisible, setInputVisible] = useState(false);
 
   const onEditButtonClick = useCallback(() => {
@@ -24,15 +25,15 @@ const EditableRow = ({ onChange, value, label }: IProps) => {
 
   const onCheckButtonClick = useCallback(() => {
     setInputVisible(false);
-    console.log(value);
-  }, [value]);
+    console.log(currentUserValues);
+  }, [currentUserValues]);
 
   return (
     <StyledEditableRow>
       <Typography sx={{ minWidth: '100px' }}>{label}</Typography>
       {!isInputVisible ? (
         <>
-          <Typography sx={{ minWidth: '100px' }}>{label}</Typography>
+          <Typography sx={{ minWidth: '100px' }}>{value}</Typography>
           <IconButton name="edit" onClick={onEditButtonClick} />
         </>
       ) : (

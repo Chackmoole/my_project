@@ -67,13 +67,24 @@ const CurrentUser = () => {
   return (
     <PageLayout>
       <StyledCurrentUserBox>
-        <EditableRow onChange={onFirstNameChange} value={currentUserValues.firstName} label="Имя" />
+        <EditableRow
+          onChange={onFirstNameChange}
+          currentUserValues={currentUserValues}
+          value={currentUserValues.firstName}
+          label="Имя"
+        />
         <EditableRow
           onChange={onLastNameChange}
+          currentUserValues={currentUserValues}
           value={currentUserValues.lastName}
           label="Фамилия"
         />
-        <EditableRow onChange={onMailChange} value={currentUserValues.mail} label="Почта" />
+        <EditableRow
+          onChange={onMailChange}
+          currentUserValues={currentUserValues}
+          value={currentUserValues.mail}
+          label="Почта"
+        />
 
         <Box sx={{ display: 'flex', gap: '40px', alignItems: 'center' }}>
           <Typography sx={{ minWidth: '100px' }}>Статус</Typography>
