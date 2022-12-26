@@ -13,19 +13,35 @@ interface IProps {
 
 const EditableRow = ({ onChange, value, label }: IProps) => {
   const [isInputVisible, setInputVisible] = useState(false);
-  const [isLabeleVisible, setLabeleVisible] = useState(true);
 
-  const onEditClick = useCallback(() => {
+  const onEditButtonClick = useCallback(() => {
     setInputVisible(true);
-    setLabeleVisible(false);
   }, []);
+
+  const onCloseButtonClick = useCallback(() => {
+    setInputVisible(false);
+  }, []);
+
+  const onCheckButtonClick = useCallback(() => {
+    setInputVisible(false);
+    console.log(value);
+  }, [value]);
 
   return (
     <StyledEditableRow>
       <Typography sx={{ minWidth: '100px' }}>{label}</Typography>
-      {isLabeleVisible ? <Typography sx={{ minWidth: '100px' }}>{label}</Typography> : null}
-      {!isInputVisible ? null : <TextField label={label} value={value} onChange={onChange} />}
-      <IconButton name="edit" onClick={onEditClick} />
+      {!isInputVisible ? (
+        <>
+          <Typography sx={{ minWidth: '100px' }}>{label}</Typography>
+          <IconButton name="edit" onClick={onEditButtonClick} />
+        </>
+      ) : (
+        <>
+          <TextField label={label} value={value} onChange={onChange} />
+          <IconButton name="check" onClick={onCheckButtonClick} />
+          <IconButton name="close" onClick={onCloseButtonClick} />
+        </>
+      )}
     </StyledEditableRow>
   );
 };
