@@ -4,7 +4,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { SelectChangeEvent } from '@mui/material/Select';
 import { StyledCurrentUserBox } from 'pages/CurrentUser/CurrentUser.styled';
 
-import { STATUS_VARIANTS, USERS } from 'src/constants';
+import { STATUS_TITLE, STATUS_VARIANTS, USERS } from 'src/constants';
+import { IUserStatus } from 'src/types';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
@@ -13,13 +14,14 @@ import Button from 'ui/Button/Button';
 import EditableRow from 'ui/EditableRow/EditableRow';
 import Select from 'ui/Select/Select';
 import TextField from 'ui/TextField/TextField';
-import Typography from 'ui/Typography/Typography';
 
 const CurrentUser = () => {
   const { userId } = useParams();
+
   const currentUser = useMemo(() => {
     return USERS.find((user) => user.id == Number(userId));
   }, [userId]);
+
   const [currentUserValues, setCurrentUserValues] = useState({
     firstName: currentUser.firstName,
     lastName: currentUser.lastName,
@@ -29,7 +31,7 @@ const CurrentUser = () => {
 
   const onSelectChange = useCallback(
     (e: SelectChangeEvent) => {
-      setCurrentUserValues({ ...currentUserValues, status: e.target.value });
+      setCurrentUserValues({ ...currentUserValues, status: e.target.value as IUserStatus });
     },
     [currentUserValues]
   );
@@ -68,46 +70,21 @@ const CurrentUser = () => {
   return (
     <PageLayout>
       <StyledCurrentUserBox>
-        <EditableRow
-          onChange={onFirstNameChange}
-          currentUserValues={currentUserValues}
-          value={currentUserValues.firstName}
-          label="Имя"
-        >
-          <TextField label="Имя" value={currentUserValues.firstName} onChange={onFirstNameChange} />
+        <EditableRow value={currentUserValues.firstName} label="Имя">
+          <TextField value={currentUserValues.firstName} onChange={onFirstNameChange} />
         </EditableRow>
-        <EditableRow
-          onChange={onLastNameChange}
-          currentUserValues={currentUserValues}
-          value={currentUserValues.lastName}
-          label="Фамилия"
-        >
-          <TextField
-            label="Фамилия"
-            value={currentUserValues.lastName}
-            onChange={onLastNameChange}
-          />
+        <EditableRow value={currentUserValues.lastName} label="Фамилия">
+          <TextField value={currentUserValues.lastName} onChange={onLastNameChange} />
         </EditableRow>
-        <EditableRow
-          onChange={onMailChange}
-          currentUserValues={currentUserValues}
-          value={currentUserValues.mail}
-          label="Почта"
-        >
-          <TextField label="Почта" value={currentUserValues.mail} onChange={onMailChange} />
+        <EditableRow value={currentUserValues.mail} label="Почта">
+          <TextField value={currentUserValues.mail} onChange={onMailChange} />
         </EditableRow>
 
-        <EditableRow
-          value={currentUserValues.status}
-          onChange={onSelectChange}
-          label="Статус"
-          currentUserValues={currentUserValues}
-        >
+        <EditableRow value={currentUserValues.status} label="Статус">
           <Select
-            label="Статус"
             options={STATUS_VARIANTS}
             onChange={onSelectChange}
-            value={currentUserValues.status}
+            value={STATUS_TITLE[currentUserValues.status]}
             id="status"
           />
         </EditableRow>

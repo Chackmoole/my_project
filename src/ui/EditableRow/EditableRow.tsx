@@ -1,5 +1,7 @@
 import React, { ChangeEvent, ReactNode, useCallback, useState } from 'react';
 
+import { IUserStatus } from 'src/types';
+
 import { Box } from 'ui/Box/Box';
 import { StyledEditableRow } from 'ui/EditableRow/EditableRow.styled';
 import IconButton from 'ui/IconButton/IconButton';
@@ -7,13 +9,11 @@ import Typography from 'ui/Typography/Typography';
 
 interface IProps {
   value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   label: string;
-  currentUserValues: object;
   children?: ReactNode;
 }
 
-const EditableRow = ({ currentUserValues, onChange, value, label, children }: IProps) => {
+const EditableRow = ({ value, label, children }: IProps) => {
   const [isActive, setActive] = useState(false);
 
   const onEditButtonClick = useCallback(() => {
@@ -26,8 +26,7 @@ const EditableRow = ({ currentUserValues, onChange, value, label, children }: IP
 
   const onCheckButtonClick = useCallback(() => {
     setActive(false);
-    console.log(currentUserValues);
-  }, [currentUserValues]);
+  }, []);
 
   return (
     <StyledEditableRow>
