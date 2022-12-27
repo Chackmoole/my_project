@@ -10,6 +10,7 @@ interface ISelectProps extends SelectProps {
 }
 
 const Select = ({ label = '', options, value, onChange, id }: ISelectProps) => {
+  console.log(options);
   return (
     <MuiFormControl fullWidth>
       <MuiInputLabel id={`${id}-label`}>{label}</MuiInputLabel>

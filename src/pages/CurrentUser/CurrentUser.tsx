@@ -80,11 +80,11 @@ const CurrentUser = () => {
           <TextField value={currentUserValues.mail} onChange={onMailChange} />
         </EditableRow>
 
-        <EditableRow value={currentUserValues.status} label="Статус">
+        <EditableRow value={STATUS_TITLE[currentUserValues.status]} label="Статус">
           <Select
             options={STATUS_VARIANTS}
             onChange={onSelectChange}
-            value={STATUS_TITLE[currentUserValues.status]}
+            value={currentUserValues.status}
             id="status"
           />
         </EditableRow>
