@@ -33,15 +33,15 @@ const EditableRow = ({ value, label, children }: IProps) => {
       <Typography sx={{ minWidth: '100px' }}>{label}</Typography>
       {!isActive ? (
         <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '100px' }}>
-          <Typography sx={{ minWidth: '100px' }}>{value}</Typography>
+          <Typography sx={{ minWidth: '214px', padding: '0 14px' }}>{value}</Typography>
           <IconButton name="edit" onClick={onEditButtonClick} />
         </Box>
       ) : (
-        <>
+        <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '100px' }}>
           {children}
           <IconButton name="check" onClick={onCheckButtonClick} />
           <IconButton name="close" onClick={onCloseButtonClick} />
-        </>
+        </Box>
       )}
     </StyledEditableRow>
   );

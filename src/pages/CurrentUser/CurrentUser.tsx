@@ -3,13 +3,13 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { SelectChangeEvent } from '@mui/material/Select';
-import { StyledCurrentUserBox } from 'pages/CurrentUser/CurrentUser.styled';
 
 import { STATUS_TITLE, STATUS_VARIANTS, USERS } from 'src/constants';
 import { IUserStatus } from 'src/types';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
+import { Box } from 'ui/Box/Box';
 import Button from 'ui/Button/Button';
 import EditableRow from 'ui/EditableRow/EditableRow';
 import Select from 'ui/Select/Select';
@@ -64,20 +64,29 @@ const CurrentUser = () => {
     [currentUserValues]
   );
 
+  //TODO Сделать всплывающее окно(toast message) об успешном сохранении.
+
   return (
     <PageLayout>
-      <Stack>
-        <Button onClick={onBackButtonClick} variant="outlined" startIcon={<ArrowBackIcon />}>
+      <Box sx={{ padding: '40px 0' }}>
+        <Button
+          onClick={onBackButtonClick}
+          variant="outlined"
+          startIcon={<ArrowBackIcon />}
+          sx={{ minWidth: '100px' }}
+        >
           Назад
         </Button>
+      </Box>
+      <Stack sx={{ display: 'flex', minHeight: '100vh', flexDirection: 'reverse', gap: '16px' }}>
         <EditableRow value={currentUserValues.firstName} label="Имя">
-          <TextField value={currentUserValues.firstName} onChange={onFirstNameChange} />
+          <TextField value={currentUserValues.firstName} onChange={onFirstNameChange} autoFocus />
         </EditableRow>
         <EditableRow value={currentUserValues.lastName} label="Фамилия">
-          <TextField value={currentUserValues.lastName} onChange={onLastNameChange} />
+          <TextField value={currentUserValues.lastName} onChange={onLastNameChange} autoFocus />
         </EditableRow>
         <EditableRow value={currentUserValues.mail} label="Почта">
-          <TextField value={currentUserValues.mail} onChange={onMailChange} />
+          <TextField value={currentUserValues.mail} onChange={onMailChange} autoFocus />
         </EditableRow>
         <EditableRow value={STATUS_TITLE[currentUserValues.status]} label="Статус">
           <Select
@@ -85,6 +94,7 @@ const CurrentUser = () => {
             onChange={onSelectChange}
             value={currentUserValues.status}
             id="status"
+            sx={{ minWidth: '214px' }}
           />
         </EditableRow>
       </Stack>
