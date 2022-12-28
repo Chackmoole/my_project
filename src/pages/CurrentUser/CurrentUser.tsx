@@ -58,22 +58,9 @@ const CurrentUser = () => {
     navigate(-1);
   }, [navigate]);
 
-  //TODO Объединить в одну функцию
-  const onFirstNameChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      setCurrentUserValues({ ...currentUserValues, firstName: e.target.value });
-    },
-    [currentUserValues]
-  );
-  const onLastNameChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      setCurrentUserValues({ ...currentUserValues, lastName: e.target.value });
-    },
-    [currentUserValues]
-  );
-  const onMailChange = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      setCurrentUserValues({ ...currentUserValues, mail: e.target.value });
+  const onValueChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, name: keyof IUser) => {
+      setCurrentUserValues({ ...currentUserValues, [name]: e.target.value });
     },
     [currentUserValues]
   );
@@ -101,7 +88,13 @@ const CurrentUser = () => {
             onCancel('firstName');
           }}
         >
-          <TextField value={currentUserValues.firstName} onChange={onFirstNameChange} autoFocus />
+          <TextField
+            value={currentUserValues.firstName}
+            onChange={(e) => {
+              onValueChange(e, 'firstName');
+            }}
+            autoFocus
+          />
         </EditableRow>
         <EditableRow
           value={currentUserValues.lastName}
@@ -111,7 +104,13 @@ const CurrentUser = () => {
             onCancel('lastName');
           }}
         >
-          <TextField value={currentUserValues.lastName} onChange={onLastNameChange} autoFocus />
+          <TextField
+            value={currentUserValues.lastName}
+            onChange={(e) => {
+              onValueChange(e, 'lastName');
+            }}
+            autoFocus
+          />
         </EditableRow>
         <EditableRow
           value={currentUserValues.mail}
@@ -121,7 +120,13 @@ const CurrentUser = () => {
             onCancel('mail');
           }}
         >
-          <TextField value={currentUserValues.mail} onChange={onMailChange} autoFocus />
+          <TextField
+            value={currentUserValues.mail}
+            onChange={(e) => {
+              onValueChange(e, 'mail');
+            }}
+            autoFocus
+          />
         </EditableRow>
         <EditableRow
           value={STATUS_TITLE[currentUserValues.status]}
