@@ -37,6 +37,20 @@ const CurrentUser = () => {
     [currentUserValues]
   );
 
+  const onCancel = useCallback(
+    (name: keyof IUser) => {
+      setCurrentUserValues({ ...currentUserValues, [name]: currentUser[name] });
+    },
+    [currentUser, currentUserValues]
+  );
+
+  const onSave = useCallback(
+    (name: keyof IUser) => {
+      console.log(currentUser[name]);
+    },
+    [currentUser]
+  );
+
   //navigation
   const navigate = useNavigate();
 
@@ -64,13 +78,6 @@ const CurrentUser = () => {
     [currentUserValues]
   );
 
-  const onCancel = useCallback(
-    (name: keyof IUser) => {
-      setCurrentUserValues({ ...currentUserValues, [name]: currentUser[name] });
-    },
-    [currentUser, currentUserValues]
-  );
-
   //TODO Сделать всплывающее окно(toast message) об успешном сохранении.
 
   return (
@@ -89,6 +96,7 @@ const CurrentUser = () => {
         <EditableRow
           value={currentUserValues.firstName}
           label="Имя"
+          onSave={() => onSave('firstName')}
           onCancel={() => {
             onCancel('firstName');
           }}
@@ -98,6 +106,7 @@ const CurrentUser = () => {
         <EditableRow
           value={currentUserValues.lastName}
           label="Фамилия"
+          onSave={() => onSave('lastName')}
           onCancel={() => {
             onCancel('lastName');
           }}
@@ -107,13 +116,21 @@ const CurrentUser = () => {
         <EditableRow
           value={currentUserValues.mail}
           label="Почта"
+          onSave={() => onSave('mail')}
           onCancel={() => {
             onCancel('mail');
           }}
         >
           <TextField value={currentUserValues.mail} onChange={onMailChange} autoFocus />
         </EditableRow>
-        <EditableRow value={STATUS_TITLE[currentUserValues.status]} label="Статус">
+        <EditableRow
+          value={STATUS_TITLE[currentUserValues.status]}
+          label="Статус"
+          onSave={() => onSave('status')}
+          onCancel={() => {
+            onCancel('status');
+          }}
+        >
           <Select
             options={STATUS_VARIANTS}
             onChange={onSelectChange}

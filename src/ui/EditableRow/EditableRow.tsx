@@ -8,10 +8,11 @@ interface IProps {
   value: string;
   label: string;
   children?: ReactNode;
+  onSave?: () => void;
   onCancel?: () => void;
 }
 
-const EditableRow = ({ value, label, children, onCancel }: IProps) => {
+const EditableRow = ({ value, label, children, onCancel, onSave }: IProps) => {
   const [isActive, setActive] = useState(false);
 
   const onEditButtonClick = useCallback(() => {
@@ -25,7 +26,8 @@ const EditableRow = ({ value, label, children, onCancel }: IProps) => {
 
   const onCheckButtonClick = useCallback(() => {
     setActive(false);
-  }, []);
+    onSave();
+  }, [onSave]);
 
   return (
     <StyledEditableRow>
