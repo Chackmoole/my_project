@@ -1,7 +1,6 @@
 import React, { ReactNode, useCallback, useState } from 'react';
 
-import { Box } from 'ui/Box/Box';
-import { StyledEditableRow } from 'ui/EditableRow/EditableRow.styled';
+import { StyledEditableRow, StyledEditableRowBox } from 'ui/EditableRow/EditableRow.styled';
 import IconButton from 'ui/IconButton/IconButton';
 import Typography from 'ui/Typography/Typography';
 
@@ -31,18 +30,20 @@ const EditableRow = ({ value, label, children, onCancel }: IProps) => {
   return (
     <StyledEditableRow>
       <Typography sx={{ minWidth: '100px' }}>{label}</Typography>
-      {!isActive ? (
-        <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '100px' }}>
-          <Typography sx={{ minWidth: '214px', padding: '0 14px' }}>{value}</Typography>
-          <IconButton name="edit" onClick={onEditButtonClick} />
-        </Box>
-      ) : (
-        <Box sx={{ display: 'flex', alignItems: 'center', minWidth: '100px' }}>
-          {children}
-          <IconButton name="check" onClick={onCheckButtonClick} />
-          <IconButton name="close" onClick={onCloseButtonClick} />
-        </Box>
-      )}
+      <StyledEditableRowBox>
+        {!isActive ? (
+          <>
+            <Typography sx={{ minWidth: '214px', padding: '0 14px' }}>{value}</Typography>
+            <IconButton name="edit" onClick={onEditButtonClick} />
+          </>
+        ) : (
+          <>
+            {children}
+            <IconButton name="check" onClick={onCheckButtonClick} />
+            <IconButton name="close" onClick={onCloseButtonClick} />
+          </>
+        )}
+      </StyledEditableRowBox>
     </StyledEditableRow>
   );
 };
