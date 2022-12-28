@@ -1,6 +1,4 @@
-import React, { ChangeEvent, ReactNode, useCallback, useState } from 'react';
-
-import { IUserStatus } from 'src/types';
+import React, { ReactNode, useCallback, useState } from 'react';
 
 import { Box } from 'ui/Box/Box';
 import { StyledEditableRow } from 'ui/EditableRow/EditableRow.styled';
@@ -11,9 +9,10 @@ interface IProps {
   value: string;
   label: string;
   children?: ReactNode;
+  onCancel?: () => void;
 }
 
-const EditableRow = ({ value, label, children }: IProps) => {
+const EditableRow = ({ value, label, children, onCancel }: IProps) => {
   const [isActive, setActive] = useState(false);
 
   const onEditButtonClick = useCallback(() => {
@@ -22,7 +21,8 @@ const EditableRow = ({ value, label, children }: IProps) => {
 
   const onCloseButtonClick = useCallback(() => {
     setActive(false);
-  }, []);
+    onCancel();
+  }, [onCancel]);
 
   const onCheckButtonClick = useCallback(() => {
     setActive(false);

@@ -5,7 +5,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { SelectChangeEvent } from '@mui/material/Select';
 
 import { STATUS_TITLE, STATUS_VARIANTS, USERS } from 'src/constants';
-import { IUserStatus } from 'src/types';
+import { IUser, IUserStatus } from 'src/types';
 
 import PageLayout from 'components/PageLayout/PageLayout';
 
@@ -64,6 +64,13 @@ const CurrentUser = () => {
     [currentUserValues]
   );
 
+  const onCancel = useCallback(
+    (name: keyof IUser) => {
+      setCurrentUserValues({ ...currentUserValues, [name]: currentUser[name] });
+    },
+    [currentUser, currentUserValues]
+  );
+
   //TODO Сделать всплывающее окно(toast message) об успешном сохранении.
 
   return (
@@ -79,13 +86,31 @@ const CurrentUser = () => {
         </Button>
       </Box>
       <Stack sx={{ display: 'flex', minHeight: '100vh', flexDirection: 'reverse', gap: '16px' }}>
-        <EditableRow value={currentUserValues.firstName} label="Имя">
+        <EditableRow
+          value={currentUserValues.firstName}
+          label="Имя"
+          onCancel={() => {
+            onCancel('firstName');
+          }}
+        >
           <TextField value={currentUserValues.firstName} onChange={onFirstNameChange} autoFocus />
         </EditableRow>
-        <EditableRow value={currentUserValues.lastName} label="Фамилия">
+        <EditableRow
+          value={currentUserValues.lastName}
+          label="Фамилия"
+          onCancel={() => {
+            onCancel('lastName');
+          }}
+        >
           <TextField value={currentUserValues.lastName} onChange={onLastNameChange} autoFocus />
         </EditableRow>
-        <EditableRow value={currentUserValues.mail} label="Почта">
+        <EditableRow
+          value={currentUserValues.mail}
+          label="Почта"
+          onCancel={() => {
+            onCancel('mail');
+          }}
+        >
           <TextField value={currentUserValues.mail} onChange={onMailChange} autoFocus />
         </EditableRow>
         <EditableRow value={STATUS_TITLE[currentUserValues.status]} label="Статус">
