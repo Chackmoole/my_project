@@ -1,6 +1,6 @@
 import React, { ReactNode, useCallback, useState } from 'react';
 
-import { StyledEditableRow, StyledEditableRowBox } from 'ui/EditableRow/EditableRow.styled';
+import { StyledBox, StyledEditableRow } from 'ui/EditableRow/EditableRow.styled';
 import IconButton from 'ui/IconButton/IconButton';
 import Typography from 'ui/Typography/Typography';
 
@@ -32,7 +32,7 @@ const EditableRow = ({ value, label, children, onCancel, onSave }: IProps) => {
   return (
     <StyledEditableRow>
       <Typography sx={{ minWidth: '100px' }}>{label}</Typography>
-      <StyledEditableRowBox>
+      <StyledBox>
         {!isActive ? (
           <>
             <Typography sx={{ minWidth: '214px', padding: '0 14px' }}>{value}</Typography>
@@ -45,7 +45,7 @@ const EditableRow = ({ value, label, children, onCancel, onSave }: IProps) => {
             <IconButton name="close" onClick={onCloseButtonClick} />
           </>
         )}
-      </StyledEditableRowBox>
+      </StyledBox>
     </StyledEditableRow>
   );
 };

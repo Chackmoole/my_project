@@ -6,7 +6,7 @@ export const StyledEditableRow = styled.div`
   gap: 40px;
 `;
 
-export const StyledEditableRowBox = styled.div`
+export const StyledBox = styled.div`
   display: flex;
   align-items: center;
   min-width: 100px;
