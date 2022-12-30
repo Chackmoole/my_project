@@ -5,5 +5,5 @@ export const StyledFooter = styled.footer`
   align-items: center;
   justify-content: end;
   min-height: 80px;
-  padding: 40px;
+  padding: 40px 0;
 `;
