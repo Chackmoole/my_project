@@ -5,13 +5,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import CurrentUser from 'pages/CurrentUser/CurrentUser';
 
-import MainPage from 'src/pages/MainPage/MainPage';
+import Portfolio from 'src/modules/portfolio/Portfolio';
 import UsersPage from 'src/pages/UsersPage/UsersPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainPage />,
+    element: <Portfolio />,
   },
   {
     path: '/users',
