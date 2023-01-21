@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledDisplayBox } from 'components/DisplayBox/DisplayBox.styled';
+import { StyledDisplayBox } from 'src/modules/portfolio/components/DisplayBox/DisplayBox.styled';
 
 interface IProps {
   children: React.ReactNode;
