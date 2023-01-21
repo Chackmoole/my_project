@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const StyledPageLayout = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
