@@ -13,7 +13,8 @@
       "pages/*": ["src/pages/*"],
       "components/*": ["src/components/*"],
       "ui/*": ["src/ui/*"],
-      "types/*": ["src/types/*"]
+      "types/*": ["src/types/*"],
+      "modules/*": ["src/modules/*"]
     },
     "typeRoots": ["node_modules/@types", "src/@types"]
   },
