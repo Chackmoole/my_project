@@ -1,8 +1,6 @@
 import React from 'react';
 
-import mainPhoto from 'src/img/mainPhoto.jpg';
-import qrCode from 'src/img/qr_telegram.jpg';
-import Header from 'src/modules/portfolio/components/Header/Header';
+import Header from 'modules/portfolio/components/Header/Header';
 import {
   StyledButton,
   StyledContactBox,
@@ -12,7 +10,10 @@ import {
   StyledTitle,
   StyledTitleBlock,
   StyledWrapper,
-} from 'src/modules/portfolio/components/TitleBlock/TitleBlock.styled';
+} from 'modules/portfolio/components/TitleBlock/TitleBlock.styled';
+
+import mainPhoto from 'src/img/mainPhoto.jpg';
+import qrCode from 'src/img/qr_telegram.jpg';
 
 const TitleBlock = () => {
   return (

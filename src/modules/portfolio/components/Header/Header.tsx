@@ -5,8 +5,8 @@ import {
   StyledHeaderInner,
   StyledHeaderNav,
   StyledLink,
-} from 'src/modules/portfolio/components/Header/Header.styled';
-import Logo from 'src/modules/portfolio/components/Logo/Logo';
+} from 'modules/portfolio/components/Header/Header.styled';
+import Logo from 'modules/portfolio/components/Logo/Logo';
 
 const Header = () => {
   return (
