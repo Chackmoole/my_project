@@ -7,9 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --mode=production",
     "start:develop": "cross-env NODE_ENV=development webpack-dev-server",
     "lint:js": "eslint src/**/*.js src/**/*.jsx  src/**/*.ts src/**/*.tsx",
-    "lint:fix": "npm run lint:js -- --fix",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "lint:fix": "npm run lint:js -- --fix"
   },
   "dependencies": {
     "@emotion/react": "11.10.5",
@@ -18,7 +16,7 @@
     "@mui/material": "5.10.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-router-dom": "^6.4.3"
+    "react-router-dom": "6.4.3"
   },
   "devDependencies": {
     "@babel/core": "7.20.2",
@@ -28,8 +26,8 @@
     "@emotion/babel-plugin": "11.10.5",
     "@trivago/prettier-plugin-sort-imports": "3.4.0",
     "@types/react-dom": "18.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.42.1",
-    "@typescript-eslint/parser": "^5.42.1",
+    "@typescript-eslint/eslint-plugin": "5.42.1",
+    "@typescript-eslint/parser": "5.42.1",
     "babel-loader": "9.1.0",
     "clean-webpack-plugin": "4.0.0",
     "copy-webpack-plugin": "11.0.0",
@@ -40,10 +38,9 @@
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-unused-imports": "2.0.0",
     "file-loader": "6.2.0",
-    "gh-pages": "4.0.0",
     "html-webpack-plugin": "5.5.0",
     "prettier": "2.7.1",
     "terser-webpack-plugin": "5.3.6",
