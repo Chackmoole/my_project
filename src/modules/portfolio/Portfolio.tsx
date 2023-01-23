@@ -1,12 +1,12 @@
 import React from 'react';
 
-import MainPage from 'src/modules/portfolio/components/MainPage/MainPage';
+import TitleBlock from 'src/modules/portfolio/components/TitleBlock/TitleBlock';
 
+//TODO сделать минимальную ширину.
 const Portfolio = () => {
   return (
     <>
-      //TODO сделать минимальную ширину.
-      <MainPage />
+      <TitleBlock />
     </>
   );
 };

@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 
 import Button from 'ui/Button/Button';
 
-export const StyledMainPage = styled.section`
+export const StyledTitleBlock = styled.section`
   background: linear-gradient(
     90deg,
     rgba(18, 14, 61, 1) 0%,
-    rgba(18, 14, 61, 1) 44%,
-    rgba(255, 255, 255, 1) 44%
+    rgba(18, 14, 61, 1) 705px,
+    rgba(255, 255, 255, 1) 705px
   );
 `;
 
@@ -20,7 +20,7 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledImg = styled.img`
-  margin-right: 38px;
+  margin-right: 120px;
 `;
 
 export const StyledTitileBox = styled.div`

@@ -1,5 +1,3 @@
-import { NavLink } from 'react-router-dom';
-
 import styled from '@emotion/styled';
 
 export const StyledHeader = styled.div`
@@ -17,22 +15,12 @@ export const StyledHeaderInner = styled.div`
   align-items: center;
 `;
 
-export const StyledLogoText = styled.span`
-  font-family: 'Merriweather', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 30px;
-  color: #ffffff;
-  margin-left: 16px;
-`;
-
 export const StyledHeaderNav = styled.nav`
   display: flex;
   gap: 54px;
 `;
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledLink = styled.a`
   font-family: 'PT Sans', 'serif';
   font-style: normal;
   font-weight: 700;

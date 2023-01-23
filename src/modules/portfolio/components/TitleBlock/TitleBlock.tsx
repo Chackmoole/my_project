@@ -7,31 +7,31 @@ import {
   StyledButton,
   StyledContactBox,
   StyledImg,
-  StyledMainPage,
   StyledStrong,
   StyledTitileBox,
   StyledTitle,
+  StyledTitleBlock,
   StyledWrapper,
-} from 'src/modules/portfolio/components/MainPage/MainPage.styled';
+} from 'src/modules/portfolio/components/TitleBlock/TitleBlock.styled';
 
-const MainPage = () => {
+const TitleBlock = () => {
   return (
-    <StyledMainPage>
+    <StyledTitleBlock>
       <Header />
       <StyledWrapper>
         <StyledTitileBox>
           <StyledTitle>Ильин Евгений</StyledTitle>
           <img src={qrCode} alt="QR code for telegram" width={91} height={105} />
         </StyledTitileBox>
-        <StyledImg src={mainPhoto} alt="фото Ильин Евгений" width={411} height={553} />
+        <StyledImg src={mainPhoto} alt="фото Ильин Евгений" width={330} height={444} />
         <StyledContactBox>
           <StyledStrong>UX designer</StyledStrong>
           <StyledStrong>Frontend developer</StyledStrong>
           <StyledButton size="large">Написать мне</StyledButton>
         </StyledContactBox>
       </StyledWrapper>
-    </StyledMainPage>
+    </StyledTitleBlock>
   );
 };
 
-export default MainPage;
+export default TitleBlock;

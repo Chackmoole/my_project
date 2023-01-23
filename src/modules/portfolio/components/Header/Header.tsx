@@ -4,8 +4,7 @@ import {
   StyledHeader,
   StyledHeaderInner,
   StyledHeaderNav,
-  StyledLogoText,
-  StyledNavLink,
+  StyledLink,
 } from 'src/modules/portfolio/components/Header/Header.styled';
 import Logo from 'src/modules/portfolio/components/Logo/Logo';
 
@@ -14,12 +13,11 @@ const Header = () => {
     <StyledHeader>
       <StyledHeaderInner>
         <Logo />
-        <StyledLogoText>Ильин</StyledLogoText>
       </StyledHeaderInner>
       <StyledHeaderNav>
-        <StyledNavLink to="/">Обо мне</StyledNavLink>
-        <StyledNavLink to="/">Портфолио</StyledNavLink>
-        <StyledNavLink to="/">Навыки</StyledNavLink>
+        <StyledLink href="#">Обо мне</StyledLink>
+        <StyledLink href="#">Портфолио</StyledLink>
+        <StyledLink href="#">Навыки</StyledLink>
       </StyledHeaderNav>
     </StyledHeader>
   );
