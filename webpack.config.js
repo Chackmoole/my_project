@@ -34,12 +34,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx|ts)$/,
-        exclude: /node_modules/,
-        use: ['ts-loader'],
-      },
-      {
-        test: /\.(jsx|js)$/,
+        test: /\.(tsx|ts|jsx|js)$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
@@ -63,6 +58,7 @@ module.exports = {
       components: path.resolve(__dirname, `src/components`),
       ui: path.resolve(__dirname, `src/ui`),
       types: path.resolve(__dirname, `src/types`),
+      modules: path.resolve(__dirname, `src/modules`),
     },
     extensions: [`.js`, `.jsx`, `.ts`, `.tsx`],
   },
