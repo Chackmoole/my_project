@@ -1,12 +1,14 @@
 import React from 'react';
 
-import TitleBlock from 'modules/portfolio/components/TitleBlock/TitleBlock';
+import Header from 'modules/portfolio/components/Header/Header';
+import Main from 'modules/portfolio/components/Main/Main';
 
 //TODO сделать минимальную ширину.
 const Portfolio = () => {
   return (
     <>
-      <TitleBlock />
+      <Header />
+      <Main />
     </>
   );
 };

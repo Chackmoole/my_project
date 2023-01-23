@@ -1,13 +1,15 @@
 import styled from '@emotion/styled';
 
-export const StyledHeader = styled.div`
-  position: absolute;
+export const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 80px;
-  width: 100%;
-  padding: 0 24px;
+  min-width: 320px;
+  max-width: 959px;
+  padding: 0 16px;
+  margin: 0 auto;
+  background-color: #120e3d;
 `;
 
 export const StyledHeaderInner = styled.div`
@@ -16,7 +18,8 @@ export const StyledHeaderInner = styled.div`
 `;
 
 export const StyledHeaderNav = styled.nav`
-  display: flex;
+  //display: flex;
+  display: none;
   gap: 54px;
 `;
 

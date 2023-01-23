@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Header from 'modules/portfolio/components/Header/Header';
 import {
   StyledButton,
   StyledContactBox,
-  StyledImg,
+  StyledInner,
+  StyledPhoto,
+  StyledQrCode,
   StyledStrong,
   StyledTitileBox,
   StyledTitle,
@@ -12,24 +13,28 @@ import {
   StyledWrapper,
 } from 'modules/portfolio/components/TitleBlock/TitleBlock.styled';
 
-import mainPhoto from 'src/img/mainPhoto.jpg';
+import mainPhotoMobile from 'src/img/mainPhotoMobile.jpg';
 import qrCode from 'src/img/qr_telegram.jpg';
 
+// тут нужен  центровщик для каждого вложенного блока страницы, я так понимаю StyledWrapper - это центровщик, а StyledTitleBlock тянется на весь экран
+// он должен включать в себя и хэдер по логике
 const TitleBlock = () => {
   return (
     <StyledTitleBlock>
-      <Header />
+      {/* тут тег хэдер 1) див - враппер имя + картинка 2) див - блок с профами 3) кнопка*/}
       <StyledWrapper>
-        <StyledTitileBox>
-          <StyledTitle>Ильин Евгений</StyledTitle>
-          <img src={qrCode} alt="QR code for telegram" width={91} height={105} />
-        </StyledTitileBox>
-        <StyledImg src={mainPhoto} alt="фото Ильин Евгений" width={330} height={444} />
+        <StyledInner>
+          <StyledTitileBox>
+            <StyledTitle>Ильин Евгений</StyledTitle>
+            <StyledQrCode src={qrCode} alt="QR code for telegram" width={91} height={105} />
+          </StyledTitileBox>
+          <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={186} height={304} />
+        </StyledInner>
         <StyledContactBox>
           <StyledStrong>UX designer</StyledStrong>
           <StyledStrong>Frontend developer</StyledStrong>
-          <StyledButton size="large">Написать мне</StyledButton>
         </StyledContactBox>
+        <StyledButton size="large">Написать мне</StyledButton>
       </StyledWrapper>
     </StyledTitleBlock>
   );

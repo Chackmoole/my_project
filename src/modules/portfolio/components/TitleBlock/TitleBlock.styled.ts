@@ -3,44 +3,59 @@ import styled from '@emotion/styled';
 import Button from 'ui/Button/Button';
 
 export const StyledTitleBlock = styled.section`
-  background: linear-gradient(
-    90deg,
-    rgba(18, 14, 61, 1) 0%,
-    rgba(18, 14, 61, 1) 705px,
-    rgba(255, 255, 255, 1) 705px
-  );
+  //background: linear-gradient(
+  //  90deg,
+  //  rgba(18, 14, 61, 1) 0%,
+  //  rgba(18, 14, 61, 1) 705px,
+  //  rgba(255, 255, 255, 1) 705px
+  //);
+  min-height: 80px;
+  min-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+  background-color: #120e3d;
 `;
 
 export const StyledWrapper = styled.div`
   display: flex;
-  min-height: 100vh;
-  padding: 0 24px;
-  gap: 24px;
-  align-items: center;
-`;
-
-export const StyledImg = styled.img`
-  margin-right: 120px;
-`;
-
-export const StyledTitileBox = styled.div`
-  display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 80px);
+  margin: 0 auto;
+  align-items: center;
   justify-content: space-between;
-  padding: 240px 10px 80px 118px;
-  height: 100vh;
+`;
+
+export const StyledInner = styled.div`
+  display: flex;
+  align-items: end;
+  margin-bottom: 40px;
 `;
 
 export const StyledTitle = styled.h1`
   font-family: 'Merriweather', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 44px;
-  line-height: 55px;
-  letter-spacing: 4.5px;
-  width: 329px;
+  font-size: 24px;
+  line-height: 30px;
   color: #ffffff;
   margin: 0;
+  width: 120px;
+  margin-bottom: 40px;
+`;
+
+export const StyledQrCode = styled.img`
+  display: none;
+`;
+
+export const StyledPhoto = styled.img`
+  margin-left: -40px;
+`;
+
+export const StyledTitileBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
 `;
 
 export const StyledContactBox = styled.div`
@@ -56,7 +71,7 @@ export const StyledStrong = styled.strong`
   font-size: 20px;
   line-height: 25px;
   letter-spacing: 0.03em;
-  color: #120e3d;
+  color: #ffffff;
   width: 166px;
 
   &:last-of-type {
@@ -66,6 +81,8 @@ export const StyledStrong = styled.strong`
 
 export const StyledButton = styled(Button)`
   background-color: #ff7f11;
+  width: 100%;
+  margin-bottom: 24px;
 
   &:hover {
     background-color: #e27f29;

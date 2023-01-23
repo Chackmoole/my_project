@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderInner>
-        <Logo />
+        <Logo size="36" />
       </StyledHeaderInner>
       <StyledHeaderNav>
         <StyledLink href="#">Обо мне</StyledLink>
