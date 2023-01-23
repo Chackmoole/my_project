@@ -7,5 +7,9 @@ module.exports = {
   useTabs: false,
   jsxSingleQuote: false,
   bracketSpacing: true,
-  bracketSameLine: false
+  bracketSameLine: false,
+  importOrder: ["react", "<THIRD_PARTY_MODULES>", "^src/(.*)", "^components/(.*)", "^ui/(.*)", "^[./]"],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  importOrderCaseInsensitive: true
 };

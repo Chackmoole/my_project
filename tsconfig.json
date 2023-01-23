@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "pages/*": ["src/pages/*"],
+      "components/*": ["src/components/*"],
+      "ui/*": ["src/ui/*"],
+      "types/*": ["src/types/*"],
+      "modules/*": ["src/modules/*"]
+    },
+    "typeRoots": ["node_modules/@types", "src/@types"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
