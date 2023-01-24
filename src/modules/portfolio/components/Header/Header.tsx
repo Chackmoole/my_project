@@ -11,9 +11,9 @@ import Logo from 'modules/portfolio/components/Logo/Logo';
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledHeaderInner>
+      <a href="#">
         <Logo size="36" />
-      </StyledHeaderInner>
+      </a>
       <StyledHeaderNav>
         <StyledLink href="#">Обо мне</StyledLink>
         <StyledLink href="#">Портфолио</StyledLink>

@@ -1,12 +1,13 @@
 import React from 'react';
 
+import Layout from 'modules/portfolio/components/Layout/Layout';
 import {
   StyledButton,
   StyledContactBox,
   StyledInner,
   StyledPhoto,
   StyledQrCode,
-  StyledStrong,
+  StyledSubtitle,
   StyledTitileBox,
   StyledTitle,
   StyledTitleBlock,
@@ -16,26 +17,25 @@ import {
 import mainPhotoMobile from 'src/img/mainPhotoMobile.jpg';
 import qrCode from 'src/img/qr_telegram.jpg';
 
-// тут нужен  центровщик для каждого вложенного блока страницы, я так понимаю StyledWrapper - это центровщик, а StyledTitleBlock тянется на весь экран
-// он должен включать в себя и хэдер по логике
 const TitleBlock = () => {
   return (
     <StyledTitleBlock>
-      {/* тут тег хэдер 1) див - враппер имя + картинка 2) див - блок с профами 3) кнопка*/}
-      <StyledWrapper>
-        <StyledInner>
-          <StyledTitileBox>
-            <StyledTitle>Ильин Евгений</StyledTitle>
-            <StyledQrCode src={qrCode} alt="QR code for telegram" width={91} height={105} />
-          </StyledTitileBox>
-          <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={186} height={304} />
-        </StyledInner>
-        <StyledContactBox>
-          <StyledStrong>UX designer</StyledStrong>
-          <StyledStrong>Frontend developer</StyledStrong>
-        </StyledContactBox>
-        <StyledButton size="large">Написать мне</StyledButton>
-      </StyledWrapper>
+      <Layout>
+        <StyledWrapper>
+          <StyledInner>
+            <StyledTitileBox>
+              <StyledTitle>Ильин Евгений</StyledTitle>
+              <StyledQrCode src={qrCode} alt="QR code for telegram" width={91} height={105} />
+            </StyledTitileBox>
+            <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={186} height={304} />
+          </StyledInner>
+          <StyledContactBox>
+            <StyledSubtitle>UX designer</StyledSubtitle>
+            <StyledSubtitle>Frontend developer</StyledSubtitle>
+          </StyledContactBox>
+          <StyledButton size="large">Написать мне</StyledButton>
+        </StyledWrapper>
+      </Layout>
     </StyledTitleBlock>
   );
 };

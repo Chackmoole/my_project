@@ -9,20 +9,16 @@ export const StyledTitleBlock = styled.section`
   //  rgba(18, 14, 61, 1) 705px,
   //  rgba(255, 255, 255, 1) 705px
   //);
-  min-height: 80px;
-  min-width: 320px;
-  padding: 0 16px;
-  margin: 0 auto;
   background-color: #120e3d;
 `;
 
 export const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 80px);
-  margin: 0 auto;
+  min-height: 100vh;
   align-items: center;
   justify-content: space-between;
+  padding-top: 80px;
 `;
 
 export const StyledInner = styled.div`
@@ -64,7 +60,7 @@ export const StyledContactBox = styled.div`
   gap: 24px;
 `;
 
-export const StyledStrong = styled.strong`
+export const StyledSubtitle = styled.strong`
   font-family: 'Merriweather', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -81,7 +77,6 @@ export const StyledStrong = styled.strong`
 
 export const StyledButton = styled(Button)`
   background-color: #ff7f11;
-  width: 100%;
   margin-bottom: 24px;
 
   &:hover {

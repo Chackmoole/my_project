@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const StyledHeader = styled.header`
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,7 +10,6 @@ export const StyledHeader = styled.header`
   max-width: 959px;
   padding: 0 16px;
   margin: 0 auto;
-  background-color: #120e3d;
 `;
 
 export const StyledHeaderInner = styled.div`
