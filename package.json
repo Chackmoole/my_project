@@ -1,7 +1,8 @@
 {
   "name": "my-project",
   "version": "1.1.0",
-  "private": true,
+  "homepage": "https://chackmoole.github.io/my_project/",
+  "private": false,
   "description": "My project",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
