@@ -13,7 +13,7 @@ module.exports = {
   entry: `./index.tsx`,
   output: {
     filename: filename('js'),
-    publicPath: '/',
+    publicPath: isDev ? '/' : './',
     path: path.resolve(__dirname, `build`),
   },
   devServer: {
