@@ -3,13 +3,7 @@ import styled from '@emotion/styled';
 import Button from 'ui/Button/Button';
 
 export const StyledTitleBlock = styled.section`
-  //background: linear-gradient(
-  //  90deg,
-  //  rgba(18, 14, 61, 1) 0%,
-  //  rgba(18, 14, 61, 1) 705px,
-  //  rgba(255, 255, 255, 1) 705px
-  //);
-  background-color: #120e3d;
+  background-color: #ff7f11;
 `;
 
 export const StyledWrapper = styled.div`
@@ -24,10 +18,10 @@ export const StyledWrapper = styled.div`
 export const StyledInner = styled.div`
   display: flex;
   align-items: end;
-  margin-bottom: 40px;
 `;
 
 export const StyledTitle = styled.h1`
+  display: none;
   font-family: 'Merriweather', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -44,7 +38,7 @@ export const StyledQrCode = styled.img`
 `;
 
 export const StyledPhoto = styled.img`
-  margin-left: -40px;
+  border-radius: 4px;
 `;
 
 export const StyledTitileBox = styled.div`
@@ -55,35 +49,33 @@ export const StyledTitileBox = styled.div`
 `;
 
 export const StyledContactBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  position: absolute;
+  top: 400px;
 `;
 
 export const StyledSubtitle = styled.strong`
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 25px;
-  letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
   color: #ffffff;
-  width: 166px;
 
   &:last-of-type {
     margin-bottom: 56px;
   }
 `;
 
-export const StyledButton = styled(Button)`
-  background-color: #ff7f11;
-  margin-bottom: 24px;
-
-  &:hover {
-    background-color: #e27f29;
-  }
-
-  &:active {
-    opacity: 0.75;
-  }
+export const StyledText = styled.p`
+  font-family: 'PT Sans', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150.7%;
+  letter-spacing: 0.04em;
+  margin: 0;
+  color: #120e3d;
+  width: 300px;
 `;

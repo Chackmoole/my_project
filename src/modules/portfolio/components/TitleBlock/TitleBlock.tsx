@@ -1,13 +1,14 @@
 import React from 'react';
 
+import Button from 'modules/portfolio/components/Button/Button';
 import Layout from 'modules/portfolio/components/Layout/Layout';
 import {
-  StyledButton,
   StyledContactBox,
   StyledInner,
   StyledPhoto,
   StyledQrCode,
   StyledSubtitle,
+  StyledText,
   StyledTitileBox,
   StyledTitle,
   StyledTitleBlock,
@@ -27,17 +28,18 @@ const TitleBlock = () => {
               <StyledTitle>Ильин Евгений</StyledTitle>
               <StyledQrCode src={qrCode} alt="QR code for telegram" width={91} height={105} />
             </StyledTitileBox>
-            <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={186} height={304} />
+            <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={252} height={370} />
           </StyledInner>
           <StyledContactBox>
-            <StyledSubtitle>UX designer</StyledSubtitle>
-            <StyledSubtitle>Frontend developer</StyledSubtitle>
+            <StyledSubtitle>
+              UX designer <br /> Frontend developer
+            </StyledSubtitle>
           </StyledContactBox>
-          <StyledButton size="large">Написать мне</StyledButton>
+          <StyledText>Я — Ильин Евгений, web дизайнер, обучаюсь frontend разработке.</StyledText>
+          <Button>Написать мне</Button>
         </StyledWrapper>
       </Layout>
     </StyledTitleBlock>
   );
 };
-
 export default TitleBlock;

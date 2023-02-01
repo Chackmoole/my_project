@@ -2,18 +2,18 @@ import React from 'react';
 
 import {
   StyledHeader,
-  StyledHeaderInner,
   StyledHeaderNav,
   StyledLink,
+  StyledLogoLink,
 } from 'modules/portfolio/components/Header/Header.styled';
-import Logo from 'modules/portfolio/components/Logo/Logo';
+import LogoWithText from 'modules/portfolio/components/LogoWithText/LogoWithText';
 
 const Header = () => {
   return (
     <StyledHeader>
-      <a href="#">
-        <Logo size="36" />
-      </a>
+      <StyledLogoLink href="#">
+        <LogoWithText size="36" />
+      </StyledLogoLink>
       <StyledHeaderNav>
         <StyledLink href="#">Обо мне</StyledLink>
         <StyledLink href="#">Портфолио</StyledLink>
