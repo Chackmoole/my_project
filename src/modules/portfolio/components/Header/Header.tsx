@@ -6,13 +6,13 @@ import {
   StyledLink,
   StyledLogoLink,
 } from 'modules/portfolio/components/Header/Header.styled';
-import LogoWithText from 'modules/portfolio/components/LogoWithText/LogoWithText';
+import Logo from 'modules/portfolio/components/Logo/Logo';
 
 const Header = () => {
   return (
     <StyledHeader>
       <StyledLogoLink href="#">
-        <LogoWithText size="36" />
+        <Logo size="36" />
       </StyledLogoLink>
       <StyledHeaderNav>
         <StyledLink href="#">Обо мне</StyledLink>
