@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 
-import Button from 'ui/Button/Button';
-
 export const StyledTitleBlock = styled.section`
   background-color: #ff7f11;
 `;
