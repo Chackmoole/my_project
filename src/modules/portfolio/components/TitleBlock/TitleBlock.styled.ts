@@ -18,16 +18,14 @@ export const StyledInner = styled.div`
   align-items: end;
 `;
 
-export const StyledQrCode = styled.img`
-  display: none;
-`;
+export const StyledQrCode = styled.img``;
 
 export const StyledPhoto = styled.img`
   border-radius: 4px;
 `;
 
 export const StyledTitileBox = styled.div`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   z-index: 2;
