@@ -4,11 +4,11 @@ export const StyledTitleBlock = styled.section`
   background-color: #ff7f11;
 `;
 
+//TODO проверить на мобильном после добавления продолжения страницы
 export const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  //min-height: 100vh;
-  height: calc(100vh - calc(100vh - 100%));
+  min-height: 100vh;
   align-items: center;
   justify-content: space-between;
   padding-top: 80px;
