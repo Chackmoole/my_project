@@ -18,19 +18,6 @@ export const StyledInner = styled.div`
   align-items: end;
 `;
 
-export const StyledTitle = styled.h1`
-  display: none;
-  font-family: 'Merriweather', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  color: #ffffff;
-  margin: 0;
-  width: 120px;
-  margin-bottom: 40px;
-`;
-
 export const StyledQrCode = styled.img`
   display: none;
 `;
@@ -46,34 +33,13 @@ export const StyledTitileBox = styled.div`
   z-index: 2;
 `;
 
-export const StyledContactBox = styled.div`
+export const StyledProfBox = styled.div`
   position: absolute;
   top: 400px;
+  display: flex;
+  flex-direction: column;
 `;
 
-export const StyledSubtitle = styled.strong`
-  font-family: 'Tahoma', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
-  color: #ffffff;
-
-  &:last-of-type {
-    margin-bottom: 56px;
-  }
-`;
-
-export const StyledText = styled.p`
-  font-family: 'PT Sans', serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 150.7%;
-  letter-spacing: 0.04em;
-  margin: 0;
-  color: #120e3d;
+export const StyledTextBox = styled.p`
   width: 300px;
 `;

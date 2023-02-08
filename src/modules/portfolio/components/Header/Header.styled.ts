@@ -32,7 +32,7 @@ export const StyledLogoLink = styled.a`
   align-items: center;
   justify-content: space-between;
   min-width: 135px;
-  font-family: 'Tahoma', 'serif';
+  font-family: 'Tahoma', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
