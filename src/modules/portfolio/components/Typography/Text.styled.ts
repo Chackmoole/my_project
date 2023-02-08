@@ -1,9 +1,10 @@
 import { css } from '@emotion/react';
+import React from 'react';
 
 import styled from '@emotion/styled';
 
 interface IProps {
-  variant: string;
+  variant: React.ElementType;
 }
 
 export const StyledText = styled.p<IProps>`

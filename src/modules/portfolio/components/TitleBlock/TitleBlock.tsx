@@ -24,25 +24,17 @@ const TitleBlock = () => {
         <StyledWrapper>
           <StyledInner>
             <StyledTitileBox>
-              <Text as="h1" variant="h1">
-                Ильин Евгений
-              </Text>
+              <Text variant="h1">Ильин Евгений</Text>
               <StyledQrCode src={qrCode} alt="QR code for telegram" width={91} height={105} />
             </StyledTitileBox>
             <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={252} height={370} />
           </StyledInner>
           <StyledProfBox>
-            <Text as="strong" variant="strong">
-              UX designer
-            </Text>
-            <Text as="strong" variant="strong">
-              Frontend developer
-            </Text>
+            <Text variant="strong">UX designer</Text>
+            <Text variant="strong">Frontend developer</Text>
           </StyledProfBox>
           <StyledTextBox>
-            <Text as="p" variant="p">
-              Я — Ильин Евгений, web дизайнер, обучаюсь frontend разработке.
-            </Text>
+            <Text variant="p">Я — Ильин Евгений, web дизайнер, обучаюсь frontend разработке.</Text>
           </StyledTextBox>
           <Button>Написать мне</Button>
         </StyledWrapper>
