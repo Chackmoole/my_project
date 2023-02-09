@@ -5,4 +5,7 @@ export const StyledLayout = styled.div`
   max-width: 767px;
   padding: 0 16px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

@@ -39,6 +39,6 @@ export const StyledProfBox = styled.div`
   flex-direction: column;
 `;
 
-export const StyledTextBox = styled.p`
+export const StyledTextBox = styled.div`
   width: 300px;
 `;
