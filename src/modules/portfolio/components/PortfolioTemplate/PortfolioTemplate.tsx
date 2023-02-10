@@ -14,21 +14,24 @@ interface IProps {
   alt: string;
   title: string;
   years: string;
+  url: string;
 }
 
-const PortfolioTemplate = ({ src, alt, title, years }: IProps) => {
+const PortfolioTemplate = ({ src, alt, title, years, url }: IProps) => {
   return (
     <StyledPortfolioTemplate>
       <img src={src} alt={alt} />
-      <StyledBox>
-        <StyledInner>
-          <Text variant="h3">{title}</Text>
-          <Text as="span" variant="caption">
-            {years}
-          </Text>
-        </StyledInner>
-        <IconArrow />
-      </StyledBox>
+      <a href={url}>
+        <StyledBox>
+          <StyledInner>
+            <Text variant="h3">{title}</Text>
+            <Text as="span" variant="caption">
+              {years}
+            </Text>
+          </StyledInner>
+          <IconArrow />
+        </StyledBox>
+      </a>
     </StyledPortfolioTemplate>
   );
 };

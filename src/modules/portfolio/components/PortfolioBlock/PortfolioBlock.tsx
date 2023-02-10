@@ -14,7 +14,7 @@ import { works } from 'src/constants';
 const PortfolioBlock = () => {
   const [visibleWorksCounter, setVisibleWorksCounter] = useState(2);
   const onAddWorkButtonClick = useCallback(() => {
-    setVisibleWorksCounter(visibleWorksCounter + 1);
+    setVisibleWorksCounter(visibleWorksCounter + 2);
   }, [visibleWorksCounter]);
 
   const visibleWorks = works.filter((work) => work.id <= visibleWorksCounter);
@@ -33,6 +33,7 @@ const PortfolioBlock = () => {
                 years={work.years}
                 key={work.id}
                 id={work.id}
+                url={work.url}
               />
             );
           })}

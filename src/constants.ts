@@ -97,6 +97,7 @@ export const works = [
     alt: 'изображение сайта Atlant',
     title: 'Atlant',
     years: '2021г.',
+    url: 'https://chackmoole.github.io/atlant/',
   },
   {
     id: 2,
@@ -104,6 +105,7 @@ export const works = [
     alt: 'изображение сайта Cat Energy',
     title: 'Cat Energy',
     years: '2022г.',
+    url: 'https://chackmoole.github.io/cat-energy/index.html',
   },
   {
     id: 3,
@@ -111,6 +113,7 @@ export const works = [
     alt: 'изображение сайта Device',
     title: 'Device',
     years: '2021г.',
+    url: 'https://chackmoole.github.io/device/',
   },
   {
     id: 4,
@@ -118,6 +121,7 @@ export const works = [
     alt: 'изображение сайта Expoforum',
     title: 'Expoforum',
     years: '2021г.',
+    url: 'https://chackmoole.github.io/expoforum/',
   },
   {
     id: 5,
@@ -125,6 +129,7 @@ export const works = [
     alt: 'изображение сайта Nerds',
     title: 'Nerds',
     years: '2019г.',
+    url: 'https://chackmoole.github.io/nerds/',
   },
   {
     id: 6,
@@ -132,5 +137,6 @@ export const works = [
     alt: 'изображение сайта Портфолио',
     title: 'Портфолио',
     years: '2021г.',
+    url: 'https://chackmoole.github.io/portfolio-example/',
   },
 ];
