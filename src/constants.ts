@@ -1,4 +1,9 @@
-import mock from 'src/img/mock.png';
+import atlantMobile from 'src/img/atlantMobile.png';
+import catEnergyMobile from 'src/img/catEnergyMobile.png';
+import deviceMobile from 'src/img/deviceMobile.png';
+import expoforumMobile from 'src/img/expoforumMobile.png';
+import nerdsMobile from 'src/img/nerdsMobile.png';
+import portfolioMobile from 'src/img/portfolioMobile.png';
 import { IUser } from 'src/types';
 
 export const USERS: IUser[] = [
@@ -87,8 +92,38 @@ export const STATUS_VARIANTS = [
 
 export const MOCK_PORTFOLIO = [
   {
-    src: mock,
-    alt: 'моковая картинка',
+    src: atlantMobile,
+    alt: 'изображение сайта Атлант',
+    title: 'Device',
+    years: 'Год: 2022',
+  },
+  {
+    src: catEnergyMobile,
+    alt: 'изображение сайта Cat Energy',
+    title: 'Device',
+    years: 'Год: 2022',
+  },
+  {
+    src: deviceMobile,
+    alt: 'изображение сайта Device',
+    title: 'Device',
+    years: 'Год: 2022',
+  },
+  {
+    src: expoforumMobile,
+    alt: 'изображение сайта Expoforum',
+    title: 'Device',
+    years: 'Год: 2022',
+  },
+  {
+    src: nerdsMobile,
+    alt: 'изображение сайта Nerds',
+    title: 'Device',
+    years: 'Год: 2022',
+  },
+  {
+    src: portfolioMobile,
+    alt: 'изображение сайта Портфолио',
     title: 'Device',
     years: 'Год: 2022',
   },
