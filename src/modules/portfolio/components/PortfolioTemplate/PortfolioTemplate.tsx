@@ -3,21 +3,30 @@ import React from 'react';
 import IconArrow from 'modules/portfolio/components/IconArrow/IconArrow';
 import {
   StyledBox,
+  StyledInner,
   StyledPortfolioTemplate,
 } from 'modules/portfolio/components/PortfolioTemplate/PortfolioTemplate.styled';
 import Text from 'modules/portfolio/components/Typography/Text';
 
-import { MOCK_PORTFOLIO } from 'src/constants';
+interface IProps {
+  id: number;
+  src: string;
+  alt: string;
+  title: string;
+  years: string;
+}
 
-const PortfolioTemplate = () => {
+const PortfolioTemplate = ({ src, alt, title, years }: IProps) => {
   return (
     <StyledPortfolioTemplate>
-      <img src={MOCK_PORTFOLIO[0].src} alt={MOCK_PORTFOLIO[0].alt} />
+      <img src={src} alt={alt} />
       <StyledBox>
-        <Text variant="h3">{MOCK_PORTFOLIO[0].title}</Text>
-        <Text as="span" variant="caption">
-          {MOCK_PORTFOLIO[0].years}
-        </Text>
+        <StyledInner>
+          <Text variant="h3">{title}</Text>
+          <Text as="span" variant="caption">
+            {years}
+          </Text>
+        </StyledInner>
         <IconArrow />
       </StyledBox>
     </StyledPortfolioTemplate>

@@ -11,3 +11,9 @@ export const StyledBox = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
+
+export const StyledInner = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;

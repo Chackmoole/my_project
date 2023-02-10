@@ -90,41 +90,47 @@ export const STATUS_VARIANTS = [
   },
 ];
 
-export const MOCK_PORTFOLIO = [
+export const works = [
   {
+    id: 1,
     src: atlantMobile,
-    alt: 'изображение сайта Атлант',
-    title: 'Device',
-    years: 'Год: 2022',
+    alt: 'изображение сайта Atlant',
+    title: 'Atlant',
+    years: '2021г.',
   },
   {
+    id: 2,
     src: catEnergyMobile,
     alt: 'изображение сайта Cat Energy',
-    title: 'Device',
-    years: 'Год: 2022',
+    title: 'Cat Energy',
+    years: '2022г.',
   },
   {
+    id: 3,
     src: deviceMobile,
     alt: 'изображение сайта Device',
     title: 'Device',
-    years: 'Год: 2022',
+    years: '2021г.',
   },
   {
+    id: 4,
     src: expoforumMobile,
     alt: 'изображение сайта Expoforum',
-    title: 'Device',
-    years: 'Год: 2022',
+    title: 'Expoforum',
+    years: '2021г.',
   },
   {
+    id: 5,
     src: nerdsMobile,
     alt: 'изображение сайта Nerds',
-    title: 'Device',
-    years: 'Год: 2022',
+    title: 'Nerds',
+    years: '2019г.',
   },
   {
+    id: 6,
     src: portfolioMobile,
     alt: 'изображение сайта Портфолио',
-    title: 'Device',
-    years: 'Год: 2022',
+    title: 'Портфолио',
+    years: '2021г.',
   },
 ];
