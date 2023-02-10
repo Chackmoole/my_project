@@ -16,6 +16,7 @@ export const StyledText = styled.p<IProps>`
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 0.04em;
+
   ${({ variant }) => {
     switch (variant) {
       case 'h1':
@@ -29,6 +30,15 @@ export const StyledText = styled.p<IProps>`
           letter-spacing: 0.02em;
           text-transform: uppercase;
         `;
+      case 'h3':
+        return css`
+          font-family: 'Tahoma', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          text-transform: uppercase;
+        `;
       case 'strong':
         return css`
           font-family: 'Tahoma', sans-serif;
@@ -38,6 +48,14 @@ export const StyledText = styled.p<IProps>`
           letter-spacing: 0.035em;
           text-transform: uppercase;
           color: #ffffff;
+        `;
+      case 'caption':
+        return css`
+          font-family: 'Tahoma', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 14px;
         `;
     }
   }}

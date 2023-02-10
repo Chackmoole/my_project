@@ -1,16 +1,13 @@
 import styled from '@emotion/styled';
 
-export const StyledPortfolioBlock = styled.div`
-  padding-top: 16px;
+export const StyledPortfolioTemplate = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  align-items: center;
+  gap: 8px;
 `;
 
 export const StyledBox = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 64px;
+  justify-content: space-between;
   align-items: center;
 `;

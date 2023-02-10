@@ -12,6 +12,7 @@ export const StyledButton = styled.button`
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.23em;
+  text-transform: uppercase;
   padding: 16px;
 
   &:hover {
