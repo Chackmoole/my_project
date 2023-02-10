@@ -7,15 +7,17 @@ import {
 } from 'modules/portfolio/components/PortfolioTemplate/PortfolioTemplate.styled';
 import Text from 'modules/portfolio/components/Typography/Text';
 
-import mock from 'src/img/mock.png';
+import { MOCK_PORTFOLIO } from 'src/constants';
 
 const PortfolioTemplate = () => {
   return (
     <StyledPortfolioTemplate>
-      <img src={mock} alt="моковая картинка" />
+      <img src={MOCK_PORTFOLIO[0].src} alt={MOCK_PORTFOLIO[0].alt} />
       <StyledBox>
-        <Text variant="h3">Device</Text>
-        <Text variant="caption">Год: 2022</Text>
+        <Text variant="h3">{MOCK_PORTFOLIO[0].title}</Text>
+        <Text as="span" variant="caption">
+          {MOCK_PORTFOLIO[0].years}
+        </Text>
         <IconArrow />
       </StyledBox>
     </StyledPortfolioTemplate>

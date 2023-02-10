@@ -1,3 +1,4 @@
+import mock from 'src/img/mock.png';
 import { IUser } from 'src/types';
 
 export const USERS: IUser[] = [
@@ -81,5 +82,14 @@ export const STATUS_VARIANTS = [
   {
     label: STATUS_TITLE['blocked'],
     value: 'blocked',
+  },
+];
+
+export const MOCK_PORTFOLIO = [
+  {
+    src: mock,
+    alt: 'моковая картинка',
+    title: 'Device',
+    years: 'Год: 2022',
   },
 ];

@@ -4,12 +4,13 @@ import { StyledText } from 'modules/portfolio/components/Typography/Text.styled'
 
 interface IProps {
   variant: React.ElementType;
-  children: string;
+  children: string | React.ReactNode;
+  as?: React.ElementType;
 }
 
-const Text = ({ children, variant }: IProps) => {
+const Text = ({ children, variant, as }: IProps) => {
   return (
-    <StyledText as={variant} variant={variant}>
+    <StyledText as={as || variant} variant={variant}>
       {children}
     </StyledText>
   );

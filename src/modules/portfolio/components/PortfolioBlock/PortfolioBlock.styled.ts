@@ -11,6 +11,6 @@ export const StyledPortfolioBlock = styled.div`
 export const StyledBox = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 40px;
   align-items: center;
 `;
