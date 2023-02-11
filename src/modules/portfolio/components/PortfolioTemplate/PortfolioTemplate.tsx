@@ -4,6 +4,7 @@ import IconArrow from 'modules/portfolio/components/IconArrow/IconArrow';
 import {
   StyledBox,
   StyledInner,
+  StyledLink,
   StyledPortfolioTemplate,
 } from 'modules/portfolio/components/PortfolioTemplate/PortfolioTemplate.styled';
 import Text from 'modules/portfolio/components/Typography/Text';
@@ -20,8 +21,8 @@ interface IProps {
 const PortfolioTemplate = ({ src, alt, title, years, url }: IProps) => {
   return (
     <StyledPortfolioTemplate>
-      <img src={src} alt={alt} />
-      <a href={url}>
+      <img src={src} alt={alt} width="343" height="197" />
+      <StyledLink href={url}>
         <StyledBox>
           <StyledInner>
             <Text variant="h3">{title}</Text>
@@ -31,7 +32,7 @@ const PortfolioTemplate = ({ src, alt, title, years, url }: IProps) => {
           </StyledInner>
           <IconArrow />
         </StyledBox>
-      </a>
+      </StyledLink>
     </StyledPortfolioTemplate>
   );
 };

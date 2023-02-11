@@ -10,12 +10,6 @@ interface IProps {
 export const StyledText = styled.p<IProps>`
   color: #120e3d;
   margin: 0;
-  font-family: 'PT Sans', serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: 0.04em;
 
   ${({ variant }) => {
     switch (variant) {
@@ -56,6 +50,17 @@ export const StyledText = styled.p<IProps>`
           font-weight: 700;
           font-size: 12px;
           line-height: 14px;
+        `;
+      case 'p':
+        return css`
+          color: #120e3d;
+          margin: 0;
+          font-family: 'PT Sans', serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 27px;
+          letter-spacing: 0.04em;
         `;
     }
   }}

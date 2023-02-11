@@ -6,6 +6,10 @@ export const StyledPortfolioTemplate = styled.div`
   gap: 8px;
 `;
 
+export const StyledLink = styled.a`
+  text-decoration-color: #120e3d;
+`;
+
 export const StyledBox = styled.div`
   display: flex;
   justify-content: space-between;
