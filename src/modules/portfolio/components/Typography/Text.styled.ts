@@ -71,6 +71,15 @@ export const StyledText = styled.p<IProps>`
           line-height: 150.7%;
           letter-spacing: 0.04em;
         `;
+      case 'h4':
+        return css`
+          font-family: 'Tahoma', serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          text-transform: uppercase;
+        `;
     }
   }}
 `;
