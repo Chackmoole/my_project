@@ -62,6 +62,15 @@ export const StyledText = styled.p<IProps>`
           line-height: 27px;
           letter-spacing: 0.04em;
         `;
+      case 'body':
+        return css`
+          font-family: 'PT Sans', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150.7%;
+          letter-spacing: 0.04em;
+        `;
     }
   }}
 `;

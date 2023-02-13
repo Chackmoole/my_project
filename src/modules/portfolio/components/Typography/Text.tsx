@@ -8,7 +8,7 @@ interface IProps {
   as?: React.ElementType;
 }
 
-const Text = ({ children, variant = 'p', as }: IProps) => {
+const Text = ({ children, variant = 'body', as }: IProps) => {
   return (
     <StyledText as={as || variant} variant={variant}>
       {children}
