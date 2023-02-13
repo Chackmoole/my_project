@@ -140,3 +140,42 @@ export const works = [
     url: 'https://chackmoole.github.io/portfolio-example/',
   },
 ];
+
+export const SKILLS = [
+  {
+    skill: 'Figma',
+    level: 90,
+  },
+  {
+    skill: 'HTML',
+    level: 80,
+  },
+  {
+    skill: 'CSS',
+    level: 70,
+  },
+  {
+    skill: 'JS',
+    level: 45,
+  },
+  {
+    skill: 'React',
+    level: 40,
+  },
+  {
+    skill: 'Redux',
+    level: 15,
+  },
+  {
+    skill: 'Less/SASS',
+    level: 70,
+  },
+  {
+    skill: 'Styled-components',
+    level: 40,
+  },
+  {
+    skill: 'Material-ui',
+    level: 40,
+  },
+];

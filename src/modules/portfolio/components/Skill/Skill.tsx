@@ -7,15 +7,21 @@ import {
 } from 'modules/portfolio/components/Skill/Skill.styled';
 import Text from 'modules/portfolio/components/Typography/Text';
 
-const Skill = () => {
+interface IProps {
+  skill: any;
+  level: number;
+}
+
+const Skill = ({ skill, level }: IProps) => {
+  console.log(skill);
   return (
     <StyledSkill>
       <StyledTextBox>
         <Text as="p" variant="h4">
-          Figma
+          {skill}
         </Text>
       </StyledTextBox>
-      <StyledScaleBG />
+      <StyledScaleBG level={level} />
     </StyledSkill>
   );
 };

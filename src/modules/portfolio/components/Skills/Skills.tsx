@@ -5,12 +5,16 @@ import Skill from 'modules/portfolio/components/Skill/Skill';
 import { StyledSkills } from 'modules/portfolio/components/Skills/Skills.styled';
 import Text from 'modules/portfolio/components/Typography/Text';
 
+import { SKILLS } from 'src/constants';
+
 const Skills = () => {
   return (
     <Layout>
       <StyledSkills>
         <Text variant="h2">Навыки</Text>
-        <Skill />
+        {SKILLS.map((skill) => {
+          return <Skill skill={skill.skill} level={skill.level} key={skill.skill} />;
+        })}
       </StyledSkills>
     </Layout>
   );
