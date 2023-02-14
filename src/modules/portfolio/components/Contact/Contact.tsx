@@ -12,8 +12,10 @@ interface IProps {
 const Contact = ({ name, value, url }: IProps) => {
   return (
     <StyledContact href={url}>
-      <Text variant="h5">{name}</Text>
-      <Text>{value}</Text>
+      <Text variant="h5" as="p">
+        {name}
+      </Text>
+      <Text as="p">{value}</Text>
     </StyledContact>
   );
 };

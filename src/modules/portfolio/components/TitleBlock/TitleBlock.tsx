@@ -17,7 +17,11 @@ import Text from 'modules/portfolio/components/Typography/Text';
 import mainPhotoMobile from 'src/img/mainPhotoMobile.jpg';
 import qrCode from 'src/img/qr_telegram.jpg';
 
-const TitleBlock = () => {
+interface IProps {
+  onContactButtonClick: () => void;
+}
+
+const TitleBlock = ({ onContactButtonClick }: IProps) => {
   return (
     <StyledTitleBlock>
       <Layout>
@@ -36,7 +40,7 @@ const TitleBlock = () => {
           <StyledTextBox>
             <Text variant="p">Я — Ильин Евгений, web дизайнер, обучаюсь frontend разработке.</Text>
           </StyledTextBox>
-          <Button>Написать мне</Button>
+          <Button onClick={onContactButtonClick}>Написать мне</Button>
         </StyledWrapper>
       </Layout>
     </StyledTitleBlock>

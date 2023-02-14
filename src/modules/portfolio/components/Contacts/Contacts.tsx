@@ -13,7 +13,10 @@ import Text from 'modules/portfolio/components/Typography/Text';
 
 import { CONTACTS } from 'src/constants';
 
-const Contacts = () => {
+interface IProps {
+  onContactButtonClick: () => void;
+}
+const Contacts = ({ onContactButtonClick }: IProps) => {
   return (
     <Layout>
       <StyledContacts>
@@ -31,7 +34,7 @@ const Contacts = () => {
               );
             })}
           </StyledBox>
-          <Button>Написать мне</Button>
+          <Button onClick={onContactButtonClick}>Написать мне</Button>
         </Styledwrapper>
         <StyledContactsText>(c) Ильин Евгений 2023</StyledContactsText>
       </StyledContacts>
