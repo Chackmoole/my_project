@@ -7,7 +7,7 @@ import {
   StyledTextBox,
 } from 'modules/portfolio/components/About/About.styled';
 import Layout from 'modules/portfolio/components/Layout/Layout';
-import Text from 'modules/portfolio/components/Typography/Text';
+import Text from 'modules/portfolio/components/Text/Text';
 
 const About = () => {
   return (
@@ -34,12 +34,12 @@ const About = () => {
               </li>
               <li>
                 <Text as="p" variant="body">
-                  умею верстать, в том числе адаптивно (mobile-first)
+                  умею верстать, в том числе адаптивно (mobile-first), используя БЭМ и препроцессоры
                 </Text>
               </li>
               <li>
                 <Text as="p" variant="body">
-                  используя БЭМ и препроцессоры изучаю react (под руководством опытного наставника)
+                  изучаю react (под руководством опытного наставника)
                 </Text>
               </li>
             </StyledList>

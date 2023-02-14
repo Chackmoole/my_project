@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledText } from 'modules/portfolio/components/Typography/Text.styled';
+import { StyledText } from 'modules/portfolio/components/Text/Text.styled';
 
 interface IProps {
   variant?: React.ElementType;

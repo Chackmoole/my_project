@@ -5,19 +5,16 @@ import {
   StyledSkill,
   StyledTextBox,
 } from 'modules/portfolio/components/Skill/Skill.styled';
-import Text from 'modules/portfolio/components/Typography/Text';
+import Text from 'modules/portfolio/components/Text/Text';
 
-interface IProps {
-  skill: any;
-  level: number;
-}
+import { ISkill } from 'src/types';
 
-const Skill = ({ skill, level }: IProps) => {
+const Skill = ({ name, level }: ISkill) => {
   return (
     <StyledSkill>
       <StyledTextBox>
         <Text as="p" variant="h4">
-          {skill}
+          {name}
         </Text>
       </StyledTextBox>
       <StyledScaleBG level={level} />

@@ -14,3 +14,17 @@ export interface IUSerFormValues {
   lastName: string;
   mail: string;
 }
+
+export interface IPortfolioWork {
+  id: number;
+  src: string;
+  alt: string;
+  title: string;
+  years: string;
+  url: string;
+}
+
+export interface ISkill {
+  name: string;
+  level: number;
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 
 import Button from 'modules/portfolio/components/Button/Button';
+import ContactButton from 'modules/portfolio/components/ContactButton/ContactButton';
 import Layout from 'modules/portfolio/components/Layout/Layout';
+import Text from 'modules/portfolio/components/Text/Text';
 import {
   StyledInner,
   StyledPhoto,
@@ -12,16 +14,11 @@ import {
   StyledTitleBlock,
   StyledWrapper,
 } from 'modules/portfolio/components/TitleBlock/TitleBlock.styled';
-import Text from 'modules/portfolio/components/Typography/Text';
 
 import mainPhotoMobile from 'src/img/mainPhotoMobile.jpg';
 import qrCode from 'src/img/qr_telegram.jpg';
 
-interface IProps {
-  onContactButtonClick: () => void;
-}
-
-const TitleBlock = ({ onContactButtonClick }: IProps) => {
+const TitleBlock = () => {
   return (
     <StyledTitleBlock>
       <Layout>
@@ -40,9 +37,7 @@ const TitleBlock = ({ onContactButtonClick }: IProps) => {
           <StyledTextBox>
             <Text variant="p">Я — Ильин Евгений, web дизайнер, обучаюсь frontend разработке.</Text>
           </StyledTextBox>
-          <Button onClick={onContactButtonClick} withIcon={true}>
-            Написать мне
-          </Button>
+          <ContactButton>Написать мне</ContactButton>
         </StyledWrapper>
       </Layout>
     </StyledTitleBlock>

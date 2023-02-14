@@ -7,18 +7,11 @@ import {
   StyledLink,
   StyledPortfolioTemplate,
 } from 'modules/portfolio/components/PortfolioTemplate/PortfolioTemplate.styled';
-import Text from 'modules/portfolio/components/Typography/Text';
+import Text from 'modules/portfolio/components/Text/Text';
 
-interface IProps {
-  id: number;
-  src: string;
-  alt: string;
-  title: string;
-  years: string;
-  url: string;
-}
+import { IPortfolioWork } from 'src/types';
 
-const PortfolioTemplate = ({ src, alt, title, years, url }: IProps) => {
+const PortfolioTemplate = ({ src, alt, title, years, url }: IPortfolioWork) => {
   return (
     <StyledPortfolioTemplate>
       <img src={src} alt={alt} width="343" height="197" />

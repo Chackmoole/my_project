@@ -8,17 +8,13 @@ import Skills from 'modules/portfolio/components/Skills/Skills';
 import TitleBlock from 'modules/portfolio/components/TitleBlock/TitleBlock';
 
 const Main = () => {
-  const onContactButtonClick = () => {
-    document.location = 'https://t.me/chackmool21';
-  };
-
   return (
     <StyledMain>
-      <TitleBlock onContactButtonClick={onContactButtonClick} />
+      <TitleBlock />
       <PortfolioBlock />
       <About />
       <Skills />
-      <Contacts onContactButtonClick={onContactButtonClick} />
+      <Contacts />
     </StyledMain>
   );
 };

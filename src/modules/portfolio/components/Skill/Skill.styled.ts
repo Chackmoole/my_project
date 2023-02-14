@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { ISkill } from 'src/types';
+
 export const StyledSkill = styled.div`
   display: flex;
   align-items: center;
@@ -11,11 +13,7 @@ export const StyledTextBox = styled.div`
   min-width: 161px;
 `;
 
-interface IProps {
-  level: number;
-}
-
-export const StyledScaleBG = styled.div<IProps>`
+export const StyledScaleBG = styled.div<{ level: number }>`
   position: relative;
   width: 156px;
   height: 6px;

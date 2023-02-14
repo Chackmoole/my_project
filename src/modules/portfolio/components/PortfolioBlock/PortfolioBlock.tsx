@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import Button from 'modules/portfolio/components/Button/Button';
 import Layout from 'modules/portfolio/components/Layout/Layout';
@@ -7,17 +7,26 @@ import {
   StyledPortfolioBlock,
 } from 'modules/portfolio/components/PortfolioBlock/PortfolioBlock.styled';
 import PortfolioTemplate from 'modules/portfolio/components/PortfolioTemplate/PortfolioTemplate';
-import Text from 'modules/portfolio/components/Typography/Text';
+import Text from 'modules/portfolio/components/Text/Text';
 
-import { works } from 'src/constants';
+import { WORKS } from 'src/constants';
 
 const PortfolioBlock = () => {
-  const [visibleWorksCounter, setVisibleWorksCounter] = useState(2);
+  const COUNT_MINIMUM_WORKS = 2;
+  const COUNT_ADDED_WORKS = 2;
+
+  const [visibleWorksCounter, setVisibleWorksCounter] = useState(COUNT_MINIMUM_WORKS);
   const onAddWorkButtonClick = useCallback(() => {
-    setVisibleWorksCounter(visibleWorksCounter + 2);
+    setVisibleWorksCounter(visibleWorksCounter + COUNT_ADDED_WORKS);
   }, [visibleWorksCounter]);
 
-  const visibleWorks = works.filter((work) => work.id <= visibleWorksCounter);
+  const visibleWorks = useMemo(() => {
+    return WORKS.filter((work, i) => {
+      if (i < visibleWorksCounter) {
+        return work;
+      }
+    });
+  }, [visibleWorksCounter]);
 
   return (
     <Layout>

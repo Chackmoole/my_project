@@ -2,6 +2,7 @@ import React from 'react';
 
 import Button from 'modules/portfolio/components/Button/Button';
 import Contact from 'modules/portfolio/components/Contact/Contact';
+import ContactButton from 'modules/portfolio/components/ContactButton/ContactButton';
 import {
   StyledBox,
   StyledContacts,
@@ -9,14 +10,11 @@ import {
   Styledwrapper,
 } from 'modules/portfolio/components/Contacts/Contacts.styled';
 import Layout from 'modules/portfolio/components/Layout/Layout';
-import Text from 'modules/portfolio/components/Typography/Text';
+import Text from 'modules/portfolio/components/Text/Text';
 
 import { CONTACTS } from 'src/constants';
 
-interface IProps {
-  onContactButtonClick: () => void;
-}
-const Contacts = ({ onContactButtonClick }: IProps) => {
+const Contacts = () => {
   return (
     <Layout>
       <StyledContacts>
@@ -34,9 +32,7 @@ const Contacts = ({ onContactButtonClick }: IProps) => {
               );
             })}
           </StyledBox>
-          <Button onClick={onContactButtonClick} withIcon={true}>
-            Написать мне
-          </Button>
+          <ContactButton>Написать мне</ContactButton>
         </Styledwrapper>
         <StyledContactsText>(c) Ильин Евгений 2023</StyledContactsText>
       </StyledContacts>

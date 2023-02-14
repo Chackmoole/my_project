@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StyledContact } from 'modules/portfolio/components/Contact/Contact.styled';
-import Text from 'modules/portfolio/components/Typography/Text';
+import Text from 'modules/portfolio/components/Text/Text';
 
 interface IProps {
   name: string;

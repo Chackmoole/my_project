@@ -90,7 +90,7 @@ export const STATUS_VARIANTS = [
   },
 ];
 
-export const works = [
+export const WORKS = [
   {
     id: 1,
     src: atlantMobile,
@@ -143,39 +143,39 @@ export const works = [
 
 export const SKILLS = [
   {
-    skill: 'Figma',
+    name: 'Figma',
     level: 90,
   },
   {
-    skill: 'HTML',
+    name: 'HTML',
     level: 80,
   },
   {
-    skill: 'CSS',
+    name: 'CSS',
     level: 70,
   },
   {
-    skill: 'JS',
+    name: 'JS',
     level: 45,
   },
   {
-    skill: 'React',
+    name: 'React',
     level: 40,
   },
   {
-    skill: 'Redux',
+    name: 'Redux',
     level: 15,
   },
   {
-    skill: 'Less/SASS',
+    name: 'Less/SASS',
     level: 70,
   },
   {
-    skill: 'Styled-components',
+    name: 'Styled-components',
     level: 40,
   },
   {
-    skill: 'Material-ui',
+    name: 'Material-ui',
     level: 40,
   },
 ];
