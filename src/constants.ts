@@ -184,15 +184,18 @@ export const CONTACTS = [
   {
     name: 'Телефон',
     value: '+7(960)735-72-98',
+    url: 'tel:+79607357298',
   },
 
-  { name: 'Telegram', value: 'https://t.me/chackmool21' },
+  { name: 'Telegram', value: 'https://t.me/chackmool21', url: 'https://t.me/chackmool21' },
   {
     name: 'Github',
     value: 'https://github.com/Chackmoole',
+    url: 'https://github.com/Chackmoole',
   },
   {
     name: 'Хабр',
     value: 'https://career.habr.com/chackmool',
+    url: 'https://career.habr.com/chackmool',
   },
 ];

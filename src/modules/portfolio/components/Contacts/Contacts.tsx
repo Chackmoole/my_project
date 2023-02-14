@@ -21,12 +21,19 @@ const Contacts = () => {
           <Text variant="h2">Контакты</Text>
           <StyledBox>
             {CONTACTS.map((contact) => {
-              return <Contact name={contact.name} value={contact.value} />;
+              return (
+                <Contact
+                  name={contact.name}
+                  value={contact.value}
+                  key={contact.name}
+                  url={contact.url}
+                />
+              );
             })}
           </StyledBox>
           <Button>Написать мне</Button>
         </Styledwrapper>
-        <StyledContactsText variant="p">(c) Ильин Евгений 2023</StyledContactsText>
+        <StyledContactsText>(c) Ильин Евгений 2023</StyledContactsText>
       </StyledContacts>
     </Layout>
   );
