@@ -15,7 +15,9 @@ const Contact = ({ name, value, url }: IProps) => {
       <Text variant="h5" as="p">
         {name}
       </Text>
-      <Text as="p">{value}</Text>
+      <Text variant="p" as="p">
+        {value}
+      </Text>
     </StyledContact>
   );
 };

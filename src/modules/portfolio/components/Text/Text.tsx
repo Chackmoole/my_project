@@ -3,7 +3,7 @@ import React from 'react';
 import { StyledText } from 'modules/portfolio/components/Text/Text.styled';
 
 interface IProps {
-  variant?: React.ElementType;
+  variant: React.ElementType;
   children: string | React.ReactNode;
   as?: React.ElementType;
   className?: string;
