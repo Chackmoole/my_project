@@ -13,7 +13,6 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledHeaderNav = styled.nav`
-  //display: flex;
   display: none;
   gap: 54px;
 `;

@@ -4,7 +4,6 @@ export const StyledTitleBlock = styled.section`
   background-color: #ff7f11;
 `;
 
-//TODO проверить на мобильном после добавления продолжения страницы
 export const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
