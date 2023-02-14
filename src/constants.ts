@@ -179,3 +179,20 @@ export const SKILLS = [
     level: 40,
   },
 ];
+
+export const CONTACTS = [
+  {
+    name: 'Телефон',
+    value: '+7(960)735-72-98',
+  },
+
+  { name: 'Telegram', value: 'https://t.me/chackmool21' },
+  {
+    name: 'Github',
+    value: 'https://github.com/Chackmoole',
+  },
+  {
+    name: 'Хабр',
+    value: 'https://career.habr.com/chackmool',
+  },
+];

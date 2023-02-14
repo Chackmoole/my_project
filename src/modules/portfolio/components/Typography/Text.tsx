@@ -6,6 +6,7 @@ interface IProps {
   variant?: React.ElementType;
   children: string | React.ReactNode;
   as?: React.ElementType;
+  className?: string;
 }
 
 const Text = ({ children, variant = 'body', as }: IProps) => {

@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const StyledPortfolioBlock = styled.div`
   padding-top: 16px;
+  padding-bottom: 24px;
   display: flex;
   flex-direction: column;
   gap: 24px;

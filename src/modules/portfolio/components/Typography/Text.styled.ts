@@ -33,6 +33,24 @@ export const StyledText = styled.p<IProps>`
           line-height: 24px;
           text-transform: uppercase;
         `;
+      case 'h4':
+        return css`
+          font-family: 'Tahoma', serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          text-transform: uppercase;
+        `;
+      case 'h5':
+        return css`
+          font-family: 'Tahoma', serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 17px;
+          line-height: 21px;
+          letter-spacing: 0.115em;
+        `;
       case 'strong':
         return css`
           font-family: 'Tahoma', sans-serif;
@@ -55,7 +73,7 @@ export const StyledText = styled.p<IProps>`
         return css`
           color: #120e3d;
           margin: 0;
-          font-family: 'PT Sans', serif;
+          font-family: 'PT Sans', sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 18px;
@@ -70,15 +88,6 @@ export const StyledText = styled.p<IProps>`
           font-size: 14px;
           line-height: 150.7%;
           letter-spacing: 0.04em;
-        `;
-      case 'h4':
-        return css`
-          font-family: 'Tahoma', serif;
-          font-style: normal;
-          font-weight: 700;
-          font-size: 14px;
-          line-height: 17px;
-          text-transform: uppercase;
         `;
     }
   }}

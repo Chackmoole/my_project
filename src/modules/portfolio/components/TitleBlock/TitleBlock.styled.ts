@@ -12,6 +12,7 @@ export const StyledWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-top: 80px;
+  padding-bottom: 24px;
 `;
 
 export const StyledInner = styled.div`

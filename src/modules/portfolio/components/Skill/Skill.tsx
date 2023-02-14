@@ -13,7 +13,6 @@ interface IProps {
 }
 
 const Skill = ({ skill, level }: IProps) => {
-  console.log(skill);
   return (
     <StyledSkill>
       <StyledTextBox>
