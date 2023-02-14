@@ -30,7 +30,16 @@ module.exports = {
       },
     }),
     new CleanWebpackPlugin(),
-    new FaviconsWebpackPlugin('./assets/favicon.svg'),
+    new FaviconsWebpackPlugin({
+      logo: './assets/favicon.svg',
+      favicons: {
+        appName: 'portfolio',
+        appDescription: 'Портфолио Ильина Евгения',
+        developerName: 'Ильин Евгений',
+        developerURL: null,
+        background: '#FF7F11',
+      },
+    }),
   ],
   module: {
     rules: [
