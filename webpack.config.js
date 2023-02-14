@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => (isDev ? `[name].${ext}` : `[name].[fullhash].${ext}`);
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: `./index.tsx`,
@@ -30,6 +30,7 @@ module.exports = {
       },
     }),
     new CleanWebpackPlugin(),
+    new FaviconsWebpackPlugin('./assets/favicon.svg'),
   ],
   module: {
     rules: [
