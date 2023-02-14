@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 
 export const StyledButton = styled.button`
+  display: flex;
+  gap: 16px;
+  align-items: center;
   background-color: #ff7f11;
   color: #ffffff;
   border-radius: 4px;

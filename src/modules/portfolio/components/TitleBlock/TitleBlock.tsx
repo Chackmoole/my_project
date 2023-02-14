@@ -40,7 +40,9 @@ const TitleBlock = ({ onContactButtonClick }: IProps) => {
           <StyledTextBox>
             <Text variant="p">Я — Ильин Евгений, web дизайнер, обучаюсь frontend разработке.</Text>
           </StyledTextBox>
-          <Button onClick={onContactButtonClick}>Написать мне</Button>
+          <Button onClick={onContactButtonClick} withIcon={true}>
+            Написать мне
+          </Button>
         </StyledWrapper>
       </Layout>
     </StyledTitleBlock>

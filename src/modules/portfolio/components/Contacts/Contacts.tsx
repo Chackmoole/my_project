@@ -34,7 +34,9 @@ const Contacts = ({ onContactButtonClick }: IProps) => {
               );
             })}
           </StyledBox>
-          <Button onClick={onContactButtonClick}>Написать мне</Button>
+          <Button onClick={onContactButtonClick} withIcon={true}>
+            Написать мне
+          </Button>
         </Styledwrapper>
         <StyledContactsText>(c) Ильин Евгений 2023</StyledContactsText>
       </StyledContacts>
