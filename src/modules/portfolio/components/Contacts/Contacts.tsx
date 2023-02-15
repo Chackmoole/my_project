@@ -32,7 +32,7 @@ const Contacts = () => {
               );
             })}
           </StyledBox>
-          <ContactButton>Написать мне</ContactButton>
+          <ContactButton />
         </Styledwrapper>
         <StyledContactsText>(c) Ильин Евгений 2023</StyledContactsText>
       </StyledContacts>

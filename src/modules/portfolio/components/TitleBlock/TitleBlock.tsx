@@ -37,7 +37,7 @@ const TitleBlock = () => {
           <StyledTextBox>
             <Text variant="p">Я — Ильин Евгений, web дизайнер, обучаюсь frontend разработке.</Text>
           </StyledTextBox>
-          <ContactButton>Написать мне</ContactButton>
+          <ContactButton />
         </StyledWrapper>
       </Layout>
     </StyledTitleBlock>
