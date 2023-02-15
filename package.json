@@ -6,6 +6,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode=production",
     "start:develop": "cross-env NODE_ENV=development webpack-dev-server",
+    "ts-watch": "tsc --watch",
     "lint:js": "eslint src/**/*.js src/**/*.jsx  src/**/*.ts src/**/*.tsx",
     "lint:fix": "npm run lint:js -- --fix"
   },
@@ -46,8 +47,8 @@
     "html-webpack-plugin": "5.5.0",
     "prettier": "2.7.1",
     "terser-webpack-plugin": "5.3.6",
-    "ts-loader": "9.4.1",
-    "typescript": "4.8.4",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
     "webpack": "5.74.0",
     "webpack-cli": "4.10.0",
     "webpack-dev-server": "4.11.1"
