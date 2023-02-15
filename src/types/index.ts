@@ -19,7 +19,6 @@ export interface IUSerFormValues {
 
 export interface IPortfolioWork {
   work: {
-    id: number;
     src: string;
     alt: string;
     title: string;

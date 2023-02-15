@@ -21,11 +21,7 @@ const PortfolioBlock = () => {
   }, [visibleWorksCounter]);
 
   const visibleWorks = useMemo(() => {
-    return WORKS.filter((work, i) => {
-      if (i < visibleWorksCounter) {
-        return work;
-      }
-    });
+    return WORKS.slice(0, visibleWorksCounter);
   }, [visibleWorksCounter]);
 
   return (
@@ -34,7 +30,7 @@ const PortfolioBlock = () => {
         <Text variant="h2">Портфолио</Text>
         <StyledBox>
           {visibleWorks.map((work) => {
-            return <PortfolioTemplate work={work} />;
+            return <PortfolioTemplate work={work} key={work.title} />;
           })}
         </StyledBox>
         <Button onClick={onAddWorkButtonClick}>Другие проекты</Button>
