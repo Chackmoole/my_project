@@ -34,11 +34,7 @@ const PortfolioBlock = () => {
         <Text variant="h2">Портфолио</Text>
         <StyledBox>
           {visibleWorks.map((work) => {
-            return (
-              <PortfolioTemplate
-                work={work}
-              />
-            );
+            return <PortfolioTemplate work={work} />;
           })}
         </StyledBox>
         <Button onClick={onAddWorkButtonClick}>Другие проекты</Button>
