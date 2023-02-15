@@ -4,7 +4,7 @@ import deviceMobile from 'src/img/deviceMobile.png';
 import expoforumMobile from 'src/img/expoforumMobile.png';
 import nerdsMobile from 'src/img/nerdsMobile.png';
 import portfolioMobile from 'src/img/portfolioMobile.png';
-import { IUser } from 'src/types';
+import { IContacts, ISkill, IUser, IWorks } from 'src/types';
 
 export const USERS: IUser[] = [
   {
@@ -90,9 +90,8 @@ export const STATUS_VARIANTS = [
   },
 ];
 
-export const WORKS = [
+export const WORKS: IWorks[] = [
   {
-    id: 1,
     src: atlantMobile,
     alt: 'изображение сайта Atlant',
     title: 'Atlant',
@@ -100,7 +99,6 @@ export const WORKS = [
     url: 'https://chackmoole.github.io/atlant/',
   },
   {
-    id: 2,
     src: catEnergyMobile,
     alt: 'изображение сайта Cat Energy',
     title: 'Cat Energy',
@@ -108,7 +106,6 @@ export const WORKS = [
     url: 'https://chackmoole.github.io/cat-energy/index.html',
   },
   {
-    id: 3,
     src: deviceMobile,
     alt: 'изображение сайта Device',
     title: 'Device',
@@ -116,7 +113,6 @@ export const WORKS = [
     url: 'https://chackmoole.github.io/device/',
   },
   {
-    id: 4,
     src: expoforumMobile,
     alt: 'изображение сайта Expoforum',
     title: 'Expoforum',
@@ -124,7 +120,6 @@ export const WORKS = [
     url: 'https://chackmoole.github.io/expoforum/',
   },
   {
-    id: 5,
     src: nerdsMobile,
     alt: 'изображение сайта Nerds',
     title: 'Nerds',
@@ -132,7 +127,6 @@ export const WORKS = [
     url: 'https://chackmoole.github.io/nerds/',
   },
   {
-    id: 6,
     src: portfolioMobile,
     alt: 'изображение сайта Портфолио',
     title: 'Портфолио',
@@ -141,7 +135,7 @@ export const WORKS = [
   },
 ];
 
-export const SKILLS = [
+export const SKILLS: ISkill[] = [
   {
     name: 'Figma',
     level: 90,
@@ -180,7 +174,7 @@ export const SKILLS = [
   },
 ];
 
-export const CONTACTS = [
+export const CONTACTS: IContacts[] = [
   {
     name: 'Телефон',
     value: '+7(960)735-72-98',

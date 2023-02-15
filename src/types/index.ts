@@ -1,3 +1,5 @@
+import atlantMobile from 'src/img/atlantMobile.png';
+
 export type IUserStatus = 'blocked' | 'active' | 'frozen';
 
 export interface IUser {
@@ -29,4 +31,18 @@ export interface IPortfolioWork {
 export interface ISkill {
   name: string;
   level: number;
+}
+
+export interface IContacts {
+  name: string;
+  value: string;
+  url: string;
+}
+
+export interface IWorks {
+  src: string;
+  alt: string;
+  title: string;
+  years: string;
+  url: string;
 }
