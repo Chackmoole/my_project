@@ -11,7 +11,11 @@ import Text from 'modules/portfolio/components/Text/Text';
 
 import { IPortfolioWork } from 'src/types';
 
-const PortfolioTemplate = ({ work }: IPortfolioWork) => {
+interface IProps {
+  work: IPortfolioWork;
+}
+
+const PortfolioTemplate = ({ work }: IProps) => {
   return (
     <StyledPortfolioTemplate>
       <img src={work.src} alt={work.alt} width="343" height="197" />
