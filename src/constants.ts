@@ -1,4 +1,10 @@
-import { IUser } from 'src/types';
+import atlantMobile from 'src/img/atlantMobile.png';
+import catEnergyMobile from 'src/img/catEnergyMobile.png';
+import deviceMobile from 'src/img/deviceMobile.png';
+import expoforumMobile from 'src/img/expoforumMobile.png';
+import nerdsMobile from 'src/img/nerdsMobile.png';
+import portfolioMobile from 'src/img/portfolioMobile.png';
+import { IContact, IPortfolioWork, ISkill, IUser } from 'src/types';
 
 export const USERS: IUser[] = [
   {
@@ -81,5 +87,109 @@ export const STATUS_VARIANTS = [
   {
     label: STATUS_TITLE['blocked'],
     value: 'blocked',
+  },
+];
+
+export const WORKS: IPortfolioWork[] = [
+  {
+    src: atlantMobile,
+    alt: 'изображение сайта Atlant',
+    title: 'Atlant',
+    years: '2021г.',
+    url: 'https://chackmoole.github.io/atlant/',
+  },
+  {
+    src: catEnergyMobile,
+    alt: 'изображение сайта Cat Energy',
+    title: 'Cat Energy',
+    years: '2022г.',
+    url: 'https://chackmoole.github.io/cat-energy/index.html',
+  },
+  {
+    src: deviceMobile,
+    alt: 'изображение сайта Device',
+    title: 'Device',
+    years: '2021г.',
+    url: 'https://chackmoole.github.io/device/',
+  },
+  {
+    src: expoforumMobile,
+    alt: 'изображение сайта Expoforum',
+    title: 'Expoforum',
+    years: '2021г.',
+    url: 'https://chackmoole.github.io/expoforum/',
+  },
+  {
+    src: nerdsMobile,
+    alt: 'изображение сайта Nerds',
+    title: 'Nerds',
+    years: '2019г.',
+    url: 'https://chackmoole.github.io/nerds/',
+  },
+  {
+    src: portfolioMobile,
+    alt: 'изображение сайта Портфолио',
+    title: 'Портфолио',
+    years: '2021г.',
+    url: 'https://chackmoole.github.io/portfolio-example/',
+  },
+];
+
+export const SKILLS: ISkill[] = [
+  {
+    name: 'Figma',
+    level: 90,
+  },
+  {
+    name: 'HTML',
+    level: 80,
+  },
+  {
+    name: 'CSS',
+    level: 70,
+  },
+  {
+    name: 'JS',
+    level: 45,
+  },
+  {
+    name: 'React',
+    level: 40,
+  },
+  {
+    name: 'Redux',
+    level: 15,
+  },
+  {
+    name: 'Less/SASS',
+    level: 70,
+  },
+  {
+    name: 'Styled-components',
+    level: 40,
+  },
+  {
+    name: 'Material-ui',
+    level: 40,
+  },
+];
+
+export const CONTACTS: IContact[] = [
+  {
+    name: 'Телефон',
+    value: '+7(960)735-72-98',
+    url: 'tel:+79607357298',
+  },
+
+  { name: 'Telegram', value: 'https://t.me/chackmool21', url: 'https://t.me/chackmool21' },
+  {
+    name: 'Github',
+    value: 'https://github.com/Chackmoole',
+    url: 'https://github.com/Chackmoole',
+  },
+  {
+    name: 'Хабр',
+    value: 'https://career.habr.com/chackmool',
+    url: 'https://career.habr.com/chackmool',
   },
 ];

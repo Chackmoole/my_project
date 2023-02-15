@@ -1,15 +1,16 @@
 import React from 'react';
 
+import Button from 'modules/portfolio/components/Button/Button';
+import ContactButton from 'modules/portfolio/components/ContactButton/ContactButton';
 import Layout from 'modules/portfolio/components/Layout/Layout';
+import Text from 'modules/portfolio/components/Text/Text';
 import {
-  StyledButton,
-  StyledContactBox,
   StyledInner,
   StyledPhoto,
+  StyledProfBox,
   StyledQrCode,
-  StyledSubtitle,
+  StyledTextBox,
   StyledTitileBox,
-  StyledTitle,
   StyledTitleBlock,
   StyledWrapper,
 } from 'modules/portfolio/components/TitleBlock/TitleBlock.styled';
@@ -24,20 +25,22 @@ const TitleBlock = () => {
         <StyledWrapper>
           <StyledInner>
             <StyledTitileBox>
-              <StyledTitle>Ильин Евгений</StyledTitle>
+              <Text variant="h1">Ильин Евгений</Text>
               <StyledQrCode src={qrCode} alt="QR code for telegram" width={91} height={105} />
             </StyledTitileBox>
-            <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={186} height={304} />
+            <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={252} height={370} />
           </StyledInner>
-          <StyledContactBox>
-            <StyledSubtitle>UX designer</StyledSubtitle>
-            <StyledSubtitle>Frontend developer</StyledSubtitle>
-          </StyledContactBox>
-          <StyledButton size="large">Написать мне</StyledButton>
+          <StyledProfBox>
+            <Text variant="strong">UX designer</Text>
+            <Text variant="strong">Frontend developer</Text>
+          </StyledProfBox>
+          <StyledTextBox>
+            <Text variant="p">Я — Ильин Евгений, web дизайнер, обучаюсь frontend разработке.</Text>
+          </StyledTextBox>
+          <ContactButton />
         </StyledWrapper>
       </Layout>
     </StyledTitleBlock>
   );
 };
-
 export default TitleBlock;

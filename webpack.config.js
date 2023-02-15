@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 const filename = (ext) => (isDev ? `[name].${ext}` : `[name].[fullhash].${ext}`);
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: `./index.tsx`,
@@ -30,13 +30,28 @@ module.exports = {
       },
     }),
     new CleanWebpackPlugin(),
+    new FaviconsWebpackPlugin({
+      logo: './assets/favicon.svg',
+      favicons: {
+        appName: 'portfolio',
+        appDescription: 'Портфолио Ильина Евгения',
+        developerName: 'Ильин Евгений',
+        developerURL: null,
+        background: '#FF7F11',
+      },
+    }),
   ],
   module: {
     rules: [
       {
-        test: /\.(tsx|ts|jsx|js)$/,
+        test: /\.(tsx|ts)$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: ['babel-loader'],
+      },
+      {
+        test: /\.(jsx|js)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
       },
       {
         test: /\.(png|jpg|svg)$/,
