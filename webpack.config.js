@@ -44,9 +44,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx|ts|jsx|js)$/,
+        test: /\.(tsx|ts)$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: ['babel-loader'],
+      },
+      {
+        test: /\.(jsx|js)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
       },
       {
         test: /\.(png|jpg|svg)$/,
