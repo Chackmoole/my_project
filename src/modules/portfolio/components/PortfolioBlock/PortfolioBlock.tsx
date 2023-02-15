@@ -36,13 +36,7 @@ const PortfolioBlock = () => {
           {visibleWorks.map((work) => {
             return (
               <PortfolioTemplate
-                src={work.src}
-                alt={work.alt}
-                title={work.title}
-                years={work.years}
-                key={work.id}
-                id={work.id}
-                url={work.url}
+                work={work}
               />
             );
           })}

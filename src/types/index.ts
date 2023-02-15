@@ -16,12 +16,14 @@ export interface IUSerFormValues {
 }
 
 export interface IPortfolioWork {
-  id: number;
-  src: string;
-  alt: string;
-  title: string;
-  years: string;
-  url: string;
+  work: {
+    id: number;
+    src: string;
+    alt: string;
+    title: string;
+    years: string;
+    url: string;
+  };
 }
 
 export interface ISkill {

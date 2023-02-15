@@ -24,7 +24,7 @@ export const StyledScaleBG = styled.div<{ level: number }>`
     position: absolute;
     top: 0;
     left: 0;
-    width: ${(props) => props.level}px;
+    width: ${(props) => props.level}%;
     height: 6px;
     background-color: rgba(255, 127, 17, 1);
   }

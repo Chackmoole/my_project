@@ -11,16 +11,16 @@ import Text from 'modules/portfolio/components/Text/Text';
 
 import { IPortfolioWork } from 'src/types';
 
-const PortfolioTemplate = ({ src, alt, title, years, url }: IPortfolioWork) => {
+const PortfolioTemplate = ({ work }: IPortfolioWork) => {
   return (
     <StyledPortfolioTemplate>
-      <img src={src} alt={alt} width="343" height="197" />
-      <StyledLink href={url}>
+      <img src={work.src} alt={work.alt} width="343" height="197" />
+      <StyledLink href={work.url}>
         <StyledBox>
           <StyledInner>
-            <Text variant="h3">{title}</Text>
+            <Text variant="h3">{work.title}</Text>
             <Text as="span" variant="caption">
-              {years}
+              {work.years}
             </Text>
           </StyledInner>
           <IconArrow />
