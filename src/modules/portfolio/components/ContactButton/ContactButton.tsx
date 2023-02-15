@@ -1,17 +1,14 @@
 import React from 'react';
 
-import { StyledContactButton } from 'modules/portfolio/components/ContactButton/ContactButton.styled';
+import Button from 'modules/portfolio/components/Button/Button';
 import IconTelegram from 'modules/portfolio/components/IconTelegram/IconTelegram';
 
-interface IProps {
-  children: string;
-}
-const ContactButton = ({ children }: IProps) => {
+const ContactButton = () => {
   return (
-    <StyledContactButton href="https://t.me/chackmool21">
+    <Button as="a" href="https://t.me/chackmool21">
       <IconTelegram />
-      {children}
-    </StyledContactButton>
+      Написать мне
+    </Button>
   );
 };
 
