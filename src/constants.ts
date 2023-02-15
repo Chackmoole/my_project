@@ -4,7 +4,7 @@ import deviceMobile from 'src/img/deviceMobile.png';
 import expoforumMobile from 'src/img/expoforumMobile.png';
 import nerdsMobile from 'src/img/nerdsMobile.png';
 import portfolioMobile from 'src/img/portfolioMobile.png';
-import { IContacts, ISkill, IUser, IWorks } from 'src/types';
+import { IContact, IPortfolioWork, ISkill, IUser } from 'src/types';
 
 export const USERS: IUser[] = [
   {
@@ -90,7 +90,7 @@ export const STATUS_VARIANTS = [
   },
 ];
 
-export const WORKS: IWorks[] = [
+export const WORKS: IPortfolioWork[] = [
   {
     src: atlantMobile,
     alt: 'изображение сайта Atlant',
@@ -174,7 +174,7 @@ export const SKILLS: ISkill[] = [
   },
 ];
 
-export const CONTACTS: IContacts[] = [
+export const CONTACTS: IContact[] = [
   {
     name: 'Телефон',
     value: '+7(960)735-72-98',
