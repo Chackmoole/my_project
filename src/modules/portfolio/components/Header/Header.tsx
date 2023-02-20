@@ -4,16 +4,15 @@ import {
   StyledHeader,
   StyledHeaderNav,
   StyledLink,
-  StyledLogoLink,
 } from 'modules/portfolio/components/Header/Header.styled';
 import Logo from 'modules/portfolio/components/Logo/Logo';
 
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledLogoLink href="#">
+      <a href="#">
         <Logo size="36" />
-      </StyledLogoLink>
+      </a>
       <StyledHeaderNav>
         <StyledLink href="#">Обо мне</StyledLink>
         <StyledLink href="#">Портфолио</StyledLink>

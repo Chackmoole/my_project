@@ -15,29 +15,17 @@ export const StyledHeader = styled.header`
 export const StyledHeaderNav = styled.nav`
   display: none;
   gap: 54px;
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 export const StyledLink = styled.a`
-  font-family: 'PT Sans', serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23px;
   text-decoration: none;
-  color: #120e3d;
-`;
-
-export const StyledLogoLink = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-width: 135px;
   font-family: 'Tahoma', sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
-  letter-spacing: 0.015em;
-  color: #ffffff;
-  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #120e3d;
 `;
