@@ -14,7 +14,15 @@ export const StyledText = styled.p<IProps>`
   ${({ variant }) => {
     switch (variant) {
       case 'h1':
-        return css``;
+        return css`
+          font-family: 'Tahoma', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        `;
       case 'h2':
         return css`
           font-family: 'Tahoma', sans-serif;
@@ -60,6 +68,11 @@ export const StyledText = styled.p<IProps>`
           letter-spacing: 0.035em;
           text-transform: uppercase;
           color: #ffffff;
+          @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: 24px;
+            color: inherit;
+          }
         `;
       case 'caption':
         return css`

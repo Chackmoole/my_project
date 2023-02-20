@@ -7,14 +7,13 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   width: 100%;
   min-width: 320px;
-  max-width: 959px;
   padding: 16px 16px 40px;
   margin: 0 auto;
 `;
 
 export const StyledHeaderNav = styled.nav`
   display: none;
-  gap: 54px;
+  gap: 40px;
   @media (min-width: 768px) {
     display: flex;
   }
