@@ -31,6 +31,12 @@ export const StyledText = styled.p<IProps>`
           line-height: 29px;
           letter-spacing: 0.02em;
           text-transform: uppercase;
+          font-style: normal;
+          @media (min-width: 768px) {
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: 0.04em;
+          }
         `;
       case 'h3':
         return css`

@@ -19,8 +19,10 @@ interface IProps {
 const PortfolioTemplate = ({ work }: IProps) => {
   return (
     <StyledPortfolioTemplate>
-      <StyledImg src={work.src} alt={work.alt} width="200" height="115" />
-      {/*<img src={work.src} alt={work.alt} width="200" height="115" />*/}
+      <picture>
+        <source srcSet={work.srcTablet} media="(min-width: 768px)" />
+        <StyledImg src={work.src} alt={work.alt} width="200" height="115" />
+      </picture>
       <StyledLink href={work.url}>
         <StyledBox>
           <StyledInner>

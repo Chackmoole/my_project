@@ -1,9 +1,15 @@
 import atlantMobile from 'src/img/atlantMobile.png';
+import atlantTablet from 'src/img/atlantTablet.png';
 import catEnergyMobile from 'src/img/catEnergyMobile.png';
+import catEnergyTablet from 'src/img/catEnergyTablet.png';
 import deviceMobile from 'src/img/deviceMobile.png';
+import deviceTablet from 'src/img/deviceTablet.png';
 import expoforumMobile from 'src/img/expoforumMobile.png';
+import expoforumTablet from 'src/img/expoforumTablet.png';
 import nerdsMobile from 'src/img/nerdsMobile.png';
+import nerdsTablet from 'src/img/nerdsTablet.png';
 import portfolioMobile from 'src/img/portfolioMobile.png';
+import portfolioTablet from 'src/img/portfolioTablet.png';
 import { IContact, IPortfolioWork, ISkill, IUser } from 'src/types';
 
 export const USERS: IUser[] = [
@@ -93,6 +99,7 @@ export const STATUS_VARIANTS = [
 export const WORKS: IPortfolioWork[] = [
   {
     src: atlantMobile,
+    srcTablet: atlantTablet,
     alt: 'изображение сайта Atlant',
     title: 'Atlant',
     years: '2021г.',
@@ -100,6 +107,7 @@ export const WORKS: IPortfolioWork[] = [
   },
   {
     src: catEnergyMobile,
+    srcTablet: catEnergyTablet,
     alt: 'изображение сайта Cat Energy',
     title: 'Cat Energy',
     years: '2022г.',
@@ -107,6 +115,7 @@ export const WORKS: IPortfolioWork[] = [
   },
   {
     src: deviceMobile,
+    srcTablet: deviceTablet,
     alt: 'изображение сайта Device',
     title: 'Device',
     years: '2021г.',
@@ -114,6 +123,7 @@ export const WORKS: IPortfolioWork[] = [
   },
   {
     src: expoforumMobile,
+    srcTablet: expoforumTablet,
     alt: 'изображение сайта Expoforum',
     title: 'Expoforum',
     years: '2021г.',
@@ -121,6 +131,7 @@ export const WORKS: IPortfolioWork[] = [
   },
   {
     src: nerdsMobile,
+    srcTablet: nerdsTablet,
     alt: 'изображение сайта Nerds',
     title: 'Nerds',
     years: '2019г.',
@@ -128,6 +139,7 @@ export const WORKS: IPortfolioWork[] = [
   },
   {
     src: portfolioMobile,
+    srcTablet: portfolioTablet,
     alt: 'изображение сайта Портфолио',
     title: 'Портфолио',
     years: '2021г.',

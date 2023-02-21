@@ -23,6 +23,10 @@ export const StyledInner = styled.div`
 `;
 
 export const StyledImg = styled.img`
-  height: 115px;
   width: 200px;
+  height: 115px;
+  @media (min-width: 768px) {
+    width: 310px;
+    height: 178px;
+  }
 `;
