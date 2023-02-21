@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import Button from 'modules/portfolio/components/Button/Button';
 
 export const StyledPortfolioBlock = styled.div`
   padding-top: 16px;
