@@ -107,6 +107,10 @@ export const StyledText = styled.p<IProps>`
           font-size: 14px;
           line-height: 150.7%;
           letter-spacing: 0.04em;
+          @media (min-width: 768px) {
+            font-size: 16px;
+            line-height: 150.7%;
+          }
         `;
     }
   }}
