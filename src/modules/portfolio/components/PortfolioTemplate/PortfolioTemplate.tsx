@@ -3,6 +3,7 @@ import React from 'react';
 import IconArrow from 'modules/portfolio/components/IconArrow/IconArrow';
 import {
   StyledBox,
+  StyledImg,
   StyledInner,
   StyledLink,
   StyledPortfolioTemplate,
@@ -18,7 +19,8 @@ interface IProps {
 const PortfolioTemplate = ({ work }: IProps) => {
   return (
     <StyledPortfolioTemplate>
-      <img src={work.src} alt={work.alt} width="343" height="197" />
+      <StyledImg src={work.src} alt={work.alt} width="200" height="115" />
+      {/*<img src={work.src} alt={work.alt} width="200" height="115" />*/}
       <StyledLink href={work.url}>
         <StyledBox>
           <StyledInner>

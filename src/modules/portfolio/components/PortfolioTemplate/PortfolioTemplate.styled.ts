@@ -21,3 +21,8 @@ export const StyledInner = styled.div`
   align-items: center;
   gap: 16px;
 `;
+
+export const StyledImg = styled.img`
+  height: 115px;
+  width: 200px;
+`;

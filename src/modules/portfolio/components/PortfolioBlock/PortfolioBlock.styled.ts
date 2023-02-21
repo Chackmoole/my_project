@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import Button from 'modules/portfolio/components/Button/Button';
 
 export const StyledPortfolioBlock = styled.div`
   padding-top: 16px;
@@ -8,6 +7,7 @@ export const StyledPortfolioBlock = styled.div`
   flex-direction: column;
   gap: 24px;
   align-items: center;
+  min-height: 100vh;
 `;
 
 export const StyledBox = styled.div`
