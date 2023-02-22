@@ -2,7 +2,11 @@ import styled from '@emotion/styled';
 
 export const StyledAbout = styled.section`
   @media (min-width: 768px) {
-    background: linear-gradient(90deg, rgba(255, 127, 17, 1) 30%, rgba(255, 255, 255, 1) 30%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 127, 17, 1) calc(50% - 180px),
+      rgba(255, 255, 255, 1) calc(50% - 180px)
+    );
   }
 `;
 
@@ -15,7 +19,7 @@ export const StyledWrapper = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
   @media (min-width: 768px) {
-    margin-left: 30%;
+    margin-left: calc(50% - 80px);
     align-items: start;
     padding-left: 60px;
     padding-right: 60px;

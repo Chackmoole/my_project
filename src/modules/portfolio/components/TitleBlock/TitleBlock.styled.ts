@@ -4,7 +4,11 @@ export const StyledTitleBlock = styled.section`
   background-color: #ff7f11;
 
   @media (min-width: 768px) {
-    background: linear-gradient(90deg, rgba(255, 127, 17, 1) 40%, rgba(255, 255, 255, 1) 40%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 127, 17, 1) calc(50% - 80px),
+      rgba(255, 255, 255, 1) calc(50% - 80px)
+    );
   }
 `;
 
@@ -30,7 +34,7 @@ export const StyledInner = styled.div`
   justify-content: space-between;
   gap: 40px;
   @media (min-width: 768px) {
-    margin-left: 46%;
+    margin-left: calc(50% - 24px);
     align-items: start;
     gap: 0;
   }
@@ -44,7 +48,7 @@ export const StyledPhoto = styled.img`
   width: 252px;
   height: 370px;
   @media (min-width: 768px) {
-    margin-left: 15%;
+    margin-left: calc(50% - 240px);
     margin-bottom: 24px;
     width: 312px;
     height: 458px;
