@@ -19,7 +19,7 @@ export interface IPortfolioWork {
   src: { mobile: string; tablet: string };
   alt: string;
   title: string;
-  years: string;
+  date: number;
   url: string;
 }
 

@@ -104,7 +104,7 @@ export const WORKS: IPortfolioWork[] = [
     },
     alt: 'изображение сайта Atlant',
     title: 'Atlant',
-    years: '2021г.',
+    date: 2021,
     url: 'https://chackmoole.github.io/atlant/',
   },
   {
@@ -114,7 +114,7 @@ export const WORKS: IPortfolioWork[] = [
     },
     alt: 'изображение сайта Cat Energy',
     title: 'Cat Energy',
-    years: '2022г.',
+    date: 2022,
     url: 'https://chackmoole.github.io/cat-energy/index.html',
   },
   {
@@ -124,7 +124,7 @@ export const WORKS: IPortfolioWork[] = [
     },
     alt: 'изображение сайта Device',
     title: 'Device',
-    years: '2021г.',
+    date: 2021,
     url: 'https://chackmoole.github.io/device/',
   },
   {
@@ -134,7 +134,7 @@ export const WORKS: IPortfolioWork[] = [
     },
     alt: 'изображение сайта Expoforum',
     title: 'Expoforum',
-    years: '2021г.',
+    date: 2021,
     url: 'https://chackmoole.github.io/expoforum/',
   },
   {
@@ -144,7 +144,7 @@ export const WORKS: IPortfolioWork[] = [
     },
     alt: 'изображение сайта Nerds',
     title: 'Nerds',
-    years: '2019г.',
+    date: 2019,
     url: 'https://chackmoole.github.io/nerds/',
   },
   {
@@ -154,7 +154,7 @@ export const WORKS: IPortfolioWork[] = [
     },
     alt: 'изображение сайта Портфолио',
     title: 'Портфолио',
-    years: '2021г.',
+    date: 2021,
     url: 'https://chackmoole.github.io/portfolio-example/',
   },
 ];

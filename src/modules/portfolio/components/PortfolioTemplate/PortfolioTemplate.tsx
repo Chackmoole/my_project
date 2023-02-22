@@ -28,7 +28,7 @@ const PortfolioTemplate = ({ work }: IProps) => {
           <StyledInner>
             <Text variant="h3">{work.title}</Text>
             <Text as="span" variant="caption">
-              {work.years}
+              {work.date}г.
             </Text>
           </StyledInner>
           <IconArrow />
