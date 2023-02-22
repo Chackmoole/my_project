@@ -13,9 +13,9 @@ export const StyledHeader = styled.header`
 
 export const StyledHeaderNav = styled.nav`
   display: none;
-  gap: 40px;
   @media (min-width: 768px) {
     display: flex;
+    gap: 40px;
   }
 `;
 
