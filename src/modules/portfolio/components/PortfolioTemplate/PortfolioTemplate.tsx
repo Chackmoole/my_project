@@ -21,7 +21,12 @@ const PortfolioTemplate = ({ work }: IProps) => {
     <StyledPortfolioTemplate>
       <picture>
         <source srcSet={work.src.tablet} media="(min-width: 768px)" />
-        <StyledImg src={work.src.mobile} alt={work.alt} width="200" height="115" />
+        <StyledImg
+          src={work.src.mobile}
+          alt={`изображение сайта ${work.title}`}
+          width="200"
+          height="115"
+        />
       </picture>
       <StyledLink href={work.url}>
         <StyledBox>

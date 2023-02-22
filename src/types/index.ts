@@ -17,7 +17,6 @@ export interface IUSerFormValues {
 
 export interface IPortfolioWork {
   src: { mobile: string; tablet: string };
-  alt: string;
   title: string;
   date: number;
   url: string;
