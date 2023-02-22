@@ -98,48 +98,60 @@ export const STATUS_VARIANTS = [
 
 export const WORKS: IPortfolioWork[] = [
   {
-    src: atlantMobile,
-    srcTablet: atlantTablet,
+    src: {
+      mobile: atlantMobile,
+      tablet: atlantTablet,
+    },
     alt: 'изображение сайта Atlant',
     title: 'Atlant',
     years: '2021г.',
     url: 'https://chackmoole.github.io/atlant/',
   },
   {
-    src: catEnergyMobile,
-    srcTablet: catEnergyTablet,
+    src: {
+      mobile: catEnergyMobile,
+      tablet: catEnergyTablet,
+    },
     alt: 'изображение сайта Cat Energy',
     title: 'Cat Energy',
     years: '2022г.',
     url: 'https://chackmoole.github.io/cat-energy/index.html',
   },
   {
-    src: deviceMobile,
-    srcTablet: deviceTablet,
+    src: {
+      mobile: deviceMobile,
+      tablet: deviceTablet,
+    },
     alt: 'изображение сайта Device',
     title: 'Device',
     years: '2021г.',
     url: 'https://chackmoole.github.io/device/',
   },
   {
-    src: expoforumMobile,
-    srcTablet: expoforumTablet,
+    src: {
+      mobile: expoforumMobile,
+      tablet: expoforumTablet,
+    },
     alt: 'изображение сайта Expoforum',
     title: 'Expoforum',
     years: '2021г.',
     url: 'https://chackmoole.github.io/expoforum/',
   },
   {
-    src: nerdsMobile,
-    srcTablet: nerdsTablet,
+    src: {
+      mobile: nerdsMobile,
+      tablet: nerdsTablet,
+    },
     alt: 'изображение сайта Nerds',
     title: 'Nerds',
     years: '2019г.',
     url: 'https://chackmoole.github.io/nerds/',
   },
   {
-    src: portfolioMobile,
-    srcTablet: portfolioTablet,
+    src: {
+      mobile: portfolioMobile,
+      tablet: portfolioTablet,
+    },
     alt: 'изображение сайта Портфолио',
     title: 'Портфолио',
     years: '2021г.',
