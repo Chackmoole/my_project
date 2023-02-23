@@ -12,7 +12,7 @@ import Text from 'modules/portfolio/components/Text/Text';
 
 const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="about">
       <Layout>
         <StyledWrapper>
           <Text variant="h2">Обо мне</Text>

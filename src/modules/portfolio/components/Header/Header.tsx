@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavHashLink } from 'react-router-hash-link';
 
 import {
   StyledHeader,
@@ -14,9 +15,18 @@ const Header = () => {
         <Logo size="36" />
       </a>
       <StyledHeaderNav>
-        <StyledLink href="#">Обо мне</StyledLink>
-        <StyledLink href="#">Портфолио</StyledLink>
-        <StyledLink href="#">Навыки</StyledLink>
+        <StyledLink smooth to="#portfolio">
+          Портфолио
+        </StyledLink>
+        <StyledLink smooth to="#about">
+          Обо мне
+        </StyledLink>
+        <StyledLink smooth to="#skills">
+          Навыки
+        </StyledLink>
+        <StyledLink smooth to="#contacts">
+          Контакты
+        </StyledLink>
       </StyledHeaderNav>
     </StyledHeader>
   );

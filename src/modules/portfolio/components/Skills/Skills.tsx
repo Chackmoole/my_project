@@ -10,7 +10,7 @@ import { SKILLS } from 'src/constants';
 const Skills = () => {
   return (
     <Layout>
-      <StyledSkills>
+      <StyledSkills id="skills">
         <Text variant="h2">Навыки</Text>
         {SKILLS.map((skill) => {
           return <Skill name={skill.name} level={skill.level} key={skill.name} />;

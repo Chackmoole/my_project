@@ -1,3 +1,5 @@
+import { NavHashLink } from 'react-router-hash-link';
+
 import styled from '@emotion/styled';
 
 export const StyledHeader = styled.header`
@@ -19,7 +21,7 @@ export const StyledHeaderNav = styled.nav`
   }
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(NavHashLink)`
   text-decoration: none;
   font-family: 'Tahoma', sans-serif;
   font-style: normal;
@@ -27,4 +29,5 @@ export const StyledLink = styled.a`
   font-size: 16px;
   line-height: 19px;
   color: #120e3d;
+  margin: 0;
 `;

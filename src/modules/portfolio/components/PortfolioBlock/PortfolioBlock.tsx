@@ -19,7 +19,7 @@ const PortfolioBlock = () => {
   }, []);
 
   return (
-    <StyledPortfolioBlock>
+    <StyledPortfolioBlock id="portfolio">
       <Layout>
         <StyledWrapper>
           <Text variant="h2">Портфолио</Text>
