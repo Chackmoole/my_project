@@ -20,7 +20,7 @@ export const StyledWrapper = styled.div`
   align-items: center;
   min-height: 100vh;
   @media (min-width: 768px) {
-    margin-left: calc(50% - 80px);
+    margin-left: calc(50% - 130px);
   }
 `;
 

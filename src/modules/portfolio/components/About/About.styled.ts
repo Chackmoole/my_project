@@ -19,7 +19,7 @@ export const StyledWrapper = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
   @media (min-width: 768px) {
-    margin-left: calc(50% - 80px);
+    margin-left: calc(50% - 130px);
     align-items: start;
     padding-left: 60px;
     padding-right: 60px;
