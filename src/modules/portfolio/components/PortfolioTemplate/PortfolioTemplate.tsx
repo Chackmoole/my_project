@@ -3,6 +3,7 @@ import React from 'react';
 import IconArrow from 'modules/portfolio/components/IconArrow/IconArrow';
 import {
   StyledBox,
+  StyledImg,
   StyledInner,
   StyledLink,
   StyledPortfolioTemplate,
@@ -18,13 +19,21 @@ interface IProps {
 const PortfolioTemplate = ({ work }: IProps) => {
   return (
     <StyledPortfolioTemplate>
-      <img src={work.src} alt={work.alt} width="343" height="197" />
+      <picture>
+        <source srcSet={work.src.tablet} media="(min-width: 768px)" />
+        <StyledImg
+          src={work.src.mobile}
+          alt={`изображение сайта ${work.title}`}
+          width="200"
+          height="115"
+        />
+      </picture>
       <StyledLink href={work.url}>
         <StyledBox>
           <StyledInner>
             <Text variant="h3">{work.title}</Text>
             <Text as="span" variant="caption">
-              {work.years}
+              {work.date}г.
             </Text>
           </StyledInner>
           <IconArrow />

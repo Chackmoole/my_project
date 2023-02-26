@@ -14,7 +14,15 @@ export const StyledText = styled.p<IProps>`
   ${({ variant }) => {
     switch (variant) {
       case 'h1':
-        return css``;
+        return css`
+          font-family: 'Tahoma', sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 48px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        `;
       case 'h2':
         return css`
           font-family: 'Tahoma', sans-serif;
@@ -23,6 +31,12 @@ export const StyledText = styled.p<IProps>`
           line-height: 29px;
           letter-spacing: 0.02em;
           text-transform: uppercase;
+          font-style: normal;
+          @media (min-width: 768px) {
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: 0.04em;
+          }
         `;
       case 'h3':
         return css`
@@ -60,6 +74,11 @@ export const StyledText = styled.p<IProps>`
           letter-spacing: 0.035em;
           text-transform: uppercase;
           color: #ffffff;
+          @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: 24px;
+            color: inherit;
+          }
         `;
       case 'caption':
         return css`
@@ -86,8 +105,12 @@ export const StyledText = styled.p<IProps>`
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
-          line-height: 150.7%;
+          line-height: 20px;
           letter-spacing: 0.04em;
+          @media (min-width: 768px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
         `;
     }
   }}

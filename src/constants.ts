@@ -1,9 +1,15 @@
 import atlantMobile from 'src/img/atlantMobile.png';
+import atlantTablet from 'src/img/atlantTablet.png';
 import catEnergyMobile from 'src/img/catEnergyMobile.png';
+import catEnergyTablet from 'src/img/catEnergyTablet.png';
 import deviceMobile from 'src/img/deviceMobile.png';
+import deviceTablet from 'src/img/deviceTablet.png';
 import expoforumMobile from 'src/img/expoforumMobile.png';
+import expoforumTablet from 'src/img/expoforumTablet.png';
 import nerdsMobile from 'src/img/nerdsMobile.png';
+import nerdsTablet from 'src/img/nerdsTablet.png';
 import portfolioMobile from 'src/img/portfolioMobile.png';
+import portfolioTablet from 'src/img/portfolioTablet.png';
 import { IContact, IPortfolioWork, ISkill, IUser } from 'src/types';
 
 export const USERS: IUser[] = [
@@ -92,45 +98,57 @@ export const STATUS_VARIANTS = [
 
 export const WORKS: IPortfolioWork[] = [
   {
-    src: atlantMobile,
-    alt: 'изображение сайта Atlant',
+    src: {
+      mobile: atlantMobile,
+      tablet: atlantTablet,
+    },
     title: 'Atlant',
-    years: '2021г.',
+    date: 2021,
     url: 'https://chackmoole.github.io/atlant/',
   },
   {
-    src: catEnergyMobile,
-    alt: 'изображение сайта Cat Energy',
+    src: {
+      mobile: catEnergyMobile,
+      tablet: catEnergyTablet,
+    },
     title: 'Cat Energy',
-    years: '2022г.',
+    date: 2022,
     url: 'https://chackmoole.github.io/cat-energy/index.html',
   },
   {
-    src: deviceMobile,
-    alt: 'изображение сайта Device',
+    src: {
+      mobile: deviceMobile,
+      tablet: deviceTablet,
+    },
     title: 'Device',
-    years: '2021г.',
+    date: 2021,
     url: 'https://chackmoole.github.io/device/',
   },
   {
-    src: expoforumMobile,
-    alt: 'изображение сайта Expoforum',
+    src: {
+      mobile: expoforumMobile,
+      tablet: expoforumTablet,
+    },
     title: 'Expoforum',
-    years: '2021г.',
+    date: 2021,
     url: 'https://chackmoole.github.io/expoforum/',
   },
   {
-    src: nerdsMobile,
-    alt: 'изображение сайта Nerds',
+    src: {
+      mobile: nerdsMobile,
+      tablet: nerdsTablet,
+    },
     title: 'Nerds',
-    years: '2019г.',
+    date: 2019,
     url: 'https://chackmoole.github.io/nerds/',
   },
   {
-    src: portfolioMobile,
-    alt: 'изображение сайта Портфолио',
+    src: {
+      mobile: portfolioMobile,
+      tablet: portfolioTablet,
+    },
     title: 'Портфолио',
-    years: '2021г.',
+    date: 2021,
     url: 'https://chackmoole.github.io/portfolio-example/',
   },
 ];

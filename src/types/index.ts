@@ -16,10 +16,9 @@ export interface IUSerFormValues {
 }
 
 export interface IPortfolioWork {
-  src: string;
-  alt: string;
+  src: { mobile: string; tablet: string };
   title: string;
-  years: string;
+  date: number;
   url: string;
 }
 

@@ -21,3 +21,14 @@ export const StyledInner = styled.div`
   align-items: center;
   gap: 16px;
 `;
+
+export const StyledImg = styled.img`
+  width: 200px;
+  height: 115px;
+  display: block;
+
+  @media (min-width: 768px) {
+    width: 310px;
+    height: 178px;
+  }
+`;
