@@ -11,14 +11,14 @@ export const StyledPortfolioBlock = styled.section`
 `;
 
 export const StyledWrapper = styled.div`
-  padding-top: 16px;
-  padding-bottom: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
   align-items: center;
   min-height: 100vh;
+  padding-top: 16px;
+  padding-bottom: 24px;
   @media (min-width: 768px) {
     margin-left: calc(50% - 130px);
   }
