@@ -1,4 +1,4 @@
-import { NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 import styled from '@emotion/styled';
 
@@ -22,7 +22,7 @@ export const StyledHeaderNav = styled.nav`
   }
 `;
 
-export const StyledLink = styled(NavHashLink)`
+export const StyledLink = styled(HashLink)`
   text-decoration: none;
   font-family: 'Tahoma', sans-serif;
   font-style: normal;
