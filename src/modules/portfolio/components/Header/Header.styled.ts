@@ -11,6 +11,7 @@ export const StyledHeader = styled.header`
   min-width: 320px;
   padding: 16px 16px 40px;
   margin: 0 auto;
+  z-index: 99;
 `;
 
 export const StyledHeaderNav = styled.nav`
