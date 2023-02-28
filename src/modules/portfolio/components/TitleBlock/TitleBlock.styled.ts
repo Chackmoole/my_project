@@ -42,16 +42,31 @@ export const StyledInner = styled.div`
 
 export const StyledQrCode = styled.img``;
 
+export const StyledPicture = styled.picture`
+  @media (min-width: 768px) {
+    margin-left: calc(50% - 240px);
+    margin-bottom: 24px;
+    width: 312px;
+    height: 458px;
+  }
+  @media (min-width: 1024px) {
+    width: 476px;
+    height: 700px;
+  }
+`;
+
 export const StyledPhoto = styled.img`
   border-radius: 4px;
   margin-bottom: 8px;
   width: 252px;
   height: 370px;
   @media (min-width: 768px) {
-    margin-left: calc(50% - 240px);
-    margin-bottom: 24px;
     width: 312px;
     height: 458px;
+  }
+  @media (min-width: 1024px) {
+    width: 476px;
+    height: 700px;
   }
 `;
 
