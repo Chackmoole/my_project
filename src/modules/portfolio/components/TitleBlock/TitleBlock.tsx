@@ -27,7 +27,7 @@ const TitleBlock = () => {
           <StyledPicture>
             <source
               srcSet={mainPhotoDesktop}
-              media="(min-width: 1024px)"
+              media="(min-width: 1280px)"
               width={476}
               height={700}
             />
@@ -48,8 +48,8 @@ const TitleBlock = () => {
               <Text variant="p">
                 Я&nbsp;&mdash; Ильин Евгений, web дизайнер, обучаюсь frontend разработке.
               </Text>
+              <ContactButton />
             </StyledTextBox>
-            <ContactButton />
           </StyledInner>
         </StyledWrapper>
       </Layout>

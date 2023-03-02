@@ -31,7 +31,7 @@ export const StyledLink = styled(HashLink)`
   line-height: 19px;
   color: #120e3d;
   margin: 0;
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     font-size: 20px;
     line-height: 24px;
   }
