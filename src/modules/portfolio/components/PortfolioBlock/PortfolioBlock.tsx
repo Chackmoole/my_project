@@ -13,11 +13,13 @@ import Text from 'modules/portfolio/components/Text/Text';
 import { WORKS } from 'src/constants';
 
 const PortfolioBlock = () => {
-  const COUNT_VISIBLE_WORKS = 3;
-  const visibleWorks = useMemo(() => {
-    return WORKS.slice(0, COUNT_VISIBLE_WORKS);
+  const COUNT_MIN_VISIBLE_WORKS = 3;
+  const calcVisibleWorks = React.useCallback(() => {
+    return window.innerWidth < 1280 ? COUNT_MIN_VISIBLE_WORKS : COUNT_MIN_VISIBLE_WORKS + 1;
   }, []);
-
+  const visibleWorks = useMemo(() => {
+    return WORKS.slice(0, calcVisibleWorks());
+  }, [calcVisibleWorks]);
   return (
     <StyledPortfolioBlock id="portfolio">
       <Layout>
