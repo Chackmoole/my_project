@@ -29,4 +29,10 @@ export const StyledBox = styled.div`
   flex-direction: column;
   gap: 40px;
   align-items: center;
+  @media (min-width: 1280px) {
+    gap: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
