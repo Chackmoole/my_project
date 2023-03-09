@@ -127,5 +127,6 @@ export const StyledTextBox = styled.div`
     width: 330px;
     min-height: 160px;
     justify-content: space-between;
+    align-items: start;
   }
 `;

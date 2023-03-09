@@ -22,6 +22,9 @@ export const StyledWrapper = styled.div`
   @media (min-width: 768px) {
     margin-left: calc(50% - 130px);
   }
+  @media (min-width: 1280px) {
+    align-items: start;
+  }
 `;
 
 export const StyledBox = styled.div`
