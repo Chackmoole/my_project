@@ -18,11 +18,11 @@ interface IProps {
 
 const PortfolioTemplate = ({ work }: IProps) => {
   const imageTabletUrl = window.innerWidth < 768 ? null : work.url;
-  const isTextLink = window.innerWidth < 768 ? 'a' : 'span';
-  const isCardLink = window.innerWidth >= 768 ? 'a' : 'span';
+  const textTag = window.innerWidth < 768 ? 'a' : 'span';
+  const cardTag = window.innerWidth >= 768 ? 'a' : 'span';
 
   return (
-    <StyledPortfolioTemplate as={isCardLink} href={imageTabletUrl}>
+    <StyledPortfolioTemplate as={cardTag} href={imageTabletUrl} target="_blank">
       <picture>
         <source srcSet={work.src.tablet} media="(min-width: 768px)" />
         <StyledImg
@@ -32,7 +32,7 @@ const PortfolioTemplate = ({ work }: IProps) => {
           height="115"
         />
       </picture>
-      <StyledLink as={isTextLink} href={work.url}>
+      <StyledLink as={textTag} href={work.url}>
         <StyledBox>
           <StyledInner>
             <Text variant="h3">{work.title}</Text>

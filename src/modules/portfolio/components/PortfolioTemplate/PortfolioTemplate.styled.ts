@@ -4,39 +4,25 @@ export const StyledPortfolioTemplate = styled.a`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  text-decoration-color: #120e3d;
   @media (min-width: 1280px) {
     align-items: center;
     min-height: 280px;
     justify-content: space-between;
     gap: 0;
     padding: 32px;
-  }
+    opacity: 0.75;
 
-  &:hover  {
-    @media (min-width: 1280px) {
-      background-color: #d9d9d9;
-         }
-  }
-  &:hover picture {
-    @media (min-width: 1280px) {
-      opacity: 30%;
+    &:hover {
+      opacity: 1;
     }
-  }
 
-  &:hover a {
-    @media (min-width: 1280px) {
+    &:hover span {
       display: block;
     }
 
-  &:active picture {
-    @media (min-width: 1280px) {
-      opacity: 100%;
-    }
-  }
-
-  &:active a {
-    @media (min-width: 1280px) {
-      color: #ffffff
+    &:active {
+      opacity: 0.5;
     }
   }
 `;
