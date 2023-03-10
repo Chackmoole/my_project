@@ -7,6 +7,10 @@ export const StyledContacts = styled.section`
       rgba(255, 127, 17, 1) calc(50% - 180px),
       rgba(255, 255, 255, 1) calc(50% - 180px)
     );
+    @media (min-width: 1280px) {
+      position: relative;
+      overflow: hidden;
+    }
   }
 `;
 
@@ -20,7 +24,6 @@ export const StyledWrapper = styled.div`
   padding-bottom: 24px;
   @media (min-width: 768px) {
     margin-left: calc(50% - 130px);
-    //align-items: start;
     padding-left: 60px;
     padding-right: 60px;
   }
