@@ -11,7 +11,7 @@ export const StyledSkills = styled.section`
   @media (min-width: 1280px) {
     position: relative;
     overflow: hidden;
-    z-index: 1;
+    z-index: -3;
   }
 `;
 
