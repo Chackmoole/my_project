@@ -7,10 +7,9 @@ export const StyledPortfolioTemplate = styled.a`
   text-decoration-color: #120e3d;
   @media (min-width: 1280px) {
     align-items: center;
-    min-height: 280px;
+    min-height: 216px;
     justify-content: space-between;
     gap: 0;
-    padding: 32px;
     opacity: 0.75;
 
     &:hover {
