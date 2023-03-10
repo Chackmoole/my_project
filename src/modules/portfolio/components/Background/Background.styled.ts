@@ -8,5 +8,6 @@ export const StyledBackground = styled.svg`
     opacity: 0.4;
     bottom: -150px;
     right: -150px;
+    z-index: -2;
   }
 `;

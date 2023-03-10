@@ -8,6 +8,11 @@ export const StyledSkills = styled.section`
       rgba(255, 255, 255, 1) calc(50% - 180px)
     );
   }
+  @media (min-width: 1280px) {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
 `;
 
 export const StyledWrapper = styled.div`
@@ -26,5 +31,6 @@ export const StyledWrapper = styled.div`
   }
   @media (min-width: 1280px) {
     padding: 80px 0 124px;
+    z-index: 1;
   }
 `;
