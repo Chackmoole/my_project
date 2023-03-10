@@ -1,12 +1,13 @@
 import styled from '@emotion/styled';
 
-import { ISkill } from 'src/types';
-
 export const StyledSkill = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  @media (min-width: 1280px) {
+    gap: 46px;
+  }
 `;
 
 export const StyledTextBox = styled.div`
@@ -27,5 +28,8 @@ export const StyledScaleBG = styled.div<{ level: number }>`
     width: ${(props) => props.level}%;
     height: 6px;
     background-color: rgba(255, 127, 17, 1);
+  }
+  @media (min-width: 1280px) {
+    width: 300px;
   }
 `;

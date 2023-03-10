@@ -24,4 +24,7 @@ export const StyledWrapper = styled.div`
     padding-left: 60px;
     padding-right: 60px;
   }
+  @media (min-width: 1280px) {
+    padding: 80px 0 124px;
+  }
 `;
