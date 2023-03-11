@@ -15,7 +15,8 @@ import { WORKS } from 'src/constants';
 const PortfolioBlock = () => {
   const COUNT_MOBILE = 3;
   const COUNT_DESKTOP = 4;
-  const visibleWorksCount = window.innerWidth < 1280 ? COUNT_MOBILE : COUNT_DESKTOP;
+  const visibleWorksCount =
+    document.documentElement.clientWidth < 1280 ? COUNT_MOBILE : COUNT_DESKTOP;
 
   const visibleWorks = useMemo(() => {
     return WORKS.slice(0, visibleWorksCount);

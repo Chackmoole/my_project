@@ -17,9 +17,9 @@ interface IProps {
 }
 
 const PortfolioTemplate = ({ work }: IProps) => {
-  const imageTabletUrl = window.innerWidth < 768 ? null : work.url;
-  const textTag = window.innerWidth < 768 ? 'a' : 'span';
-  const cardTag = window.innerWidth >= 768 ? 'a' : 'span';
+  const imageTabletUrl = document.documentElement.clientWidth < 768 ? null : work.url;
+  const textTag = document.documentElement.clientWidth < 768 ? 'a' : 'span';
+  const cardTag = document.documentElement.clientWidth >= 768 ? 'a' : 'span';
 
   return (
     <StyledPortfolioTemplate
