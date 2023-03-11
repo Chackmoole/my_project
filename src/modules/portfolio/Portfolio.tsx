@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPageScroller from 'react-page-scroller';
 
 import About from 'modules/portfolio/components/About/About';
 import Contacts from 'modules/portfolio/components/Contacts/Contacts';
@@ -12,11 +13,13 @@ const Portfolio = () => {
     <>
       <Header />
       <main>
-        <TitleBlock />
-        <PortfolioBlock />
-        <About />
-        <Skills />
-        <Contacts />
+        <ReactPageScroller>
+          <TitleBlock />
+          <PortfolioBlock />
+          <About />
+          <Skills />
+          <Contacts />
+        </ReactPageScroller>
       </main>
     </>
   );
