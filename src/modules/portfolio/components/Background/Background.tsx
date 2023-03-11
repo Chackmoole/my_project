@@ -2,7 +2,7 @@ import React from 'react';
 
 import { StyledBackground } from 'modules/portfolio/components/Background/Background.styled';
 
-const Background = (props: any) => {
+const Background = () => {
   return (
     <StyledBackground
       width="753"

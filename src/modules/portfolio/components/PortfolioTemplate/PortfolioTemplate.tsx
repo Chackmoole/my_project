@@ -22,7 +22,12 @@ const PortfolioTemplate = ({ work }: IProps) => {
   const cardTag = window.innerWidth >= 768 ? 'a' : 'span';
 
   return (
-    <StyledPortfolioTemplate as={cardTag} href={imageTabletUrl} target="_blank">
+    <StyledPortfolioTemplate
+      as={cardTag}
+      href={imageTabletUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <picture>
         <source srcSet={work.src.tablet} media="(min-width: 768px)" />
         <StyledImg
