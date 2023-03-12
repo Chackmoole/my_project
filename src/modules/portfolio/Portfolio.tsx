@@ -1,6 +1,6 @@
 import React from 'react';
+import ScrollContainer from 'react-page-scroll';
 
-// import ReactPageScroller from 'react-page-scroller';
 import About from 'modules/portfolio/components/About/About';
 import Contacts from 'modules/portfolio/components/Contacts/Contacts';
 import Header from 'modules/portfolio/components/Header/Header';
@@ -13,13 +13,13 @@ const Portfolio = () => {
     <>
       <Header />
       <main>
-        {/*<ReactPageScroller>*/}
-        <TitleBlock />
-        <PortfolioBlock />
-        <About />
-        <Skills />
-        <Contacts />
-        {/*</ReactPageScroller>*/}
+        <ScrollContainer height="100vh" width="100vw" animationDuration={700}>
+          <TitleBlock />
+          <PortfolioBlock />
+          <About />
+          <Skills />
+          <Contacts />
+        </ScrollContainer>
       </main>
     </>
   );
