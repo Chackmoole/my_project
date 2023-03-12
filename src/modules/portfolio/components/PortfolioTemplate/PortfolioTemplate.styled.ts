@@ -1,13 +1,36 @@
 import styled from '@emotion/styled';
 
-export const StyledPortfolioTemplate = styled.div`
+export const StyledPortfolioTemplate = styled.a`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  text-decoration-color: #120e3d;
+  @media (min-width: 1280px) {
+    align-items: center;
+    min-height: 216px;
+    justify-content: space-between;
+    gap: 0;
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:hover span {
+      display: block;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
 `;
 
 export const StyledLink = styled.a`
   text-decoration-color: #120e3d;
+  @media (min-width: 1280px) {
+    display: none;
+  }
 `;
 
 export const StyledBox = styled.div`

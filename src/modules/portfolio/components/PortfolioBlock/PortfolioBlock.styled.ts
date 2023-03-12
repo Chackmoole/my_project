@@ -22,6 +22,11 @@ export const StyledWrapper = styled.div`
   @media (min-width: 768px) {
     margin-left: calc(50% - 130px);
   }
+  @media (min-width: 1280px) {
+    align-items: start;
+    padding-top: 80px;
+    padding-bottom: 124px;
+  }
 `;
 
 export const StyledBox = styled.div`
@@ -29,4 +34,12 @@ export const StyledBox = styled.div`
   flex-direction: column;
   gap: 40px;
   align-items: center;
+  @media (min-width: 1280px) {
+    gap: 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 64px;
+  }
 `;

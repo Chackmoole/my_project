@@ -17,8 +17,17 @@ interface IProps {
 }
 
 const PortfolioTemplate = ({ work }: IProps) => {
+  const imageTabletUrl = document.documentElement.clientWidth < 768 ? null : work.url;
+  const textTag = document.documentElement.clientWidth < 768 ? 'a' : 'span';
+  const cardTag = document.documentElement.clientWidth >= 768 ? 'a' : 'span';
+
   return (
-    <StyledPortfolioTemplate>
+    <StyledPortfolioTemplate
+      as={cardTag}
+      href={imageTabletUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <picture>
         <source srcSet={work.src.tablet} media="(min-width: 768px)" />
         <StyledImg
@@ -28,7 +37,7 @@ const PortfolioTemplate = ({ work }: IProps) => {
           height="115"
         />
       </picture>
-      <StyledLink href={work.url}>
+      <StyledLink as={textTag} href={work.url}>
         <StyledBox>
           <StyledInner>
             <Text variant="h3">{work.title}</Text>

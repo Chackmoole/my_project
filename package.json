@@ -18,6 +18,7 @@
     "@mui/material": "5.10.13",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-page-scroll": "1.0.6",
     "react-router-dom": "6.4.3",
     "react-router-hash-link": "2.4.3"
   },
@@ -37,6 +38,7 @@
     "clean-webpack-plugin": "4.0.0",
     "copy-webpack-plugin": "11.0.0",
     "cross-env": "7.0.3",
+    "css-loader": "^6.7.3",
     "eslint": "8.27.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
@@ -49,6 +51,7 @@
     "file-loader": "6.2.0",
     "html-webpack-plugin": "5.5.0",
     "prettier": "2.7.1",
+    "style-loader": "^3.3.1",
     "terser-webpack-plugin": "5.3.6",
     "ts-loader": "9.4.1",
     "typescript": "4.8.4",

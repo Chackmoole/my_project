@@ -1,4 +1,4 @@
-import { NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 import styled from '@emotion/styled';
 
@@ -11,6 +11,7 @@ export const StyledHeader = styled.header`
   min-width: 320px;
   padding: 16px 16px 40px;
   margin: 0 auto;
+  z-index: 99;
 `;
 
 export const StyledHeaderNav = styled.nav`
@@ -21,7 +22,7 @@ export const StyledHeaderNav = styled.nav`
   }
 `;
 
-export const StyledLink = styled(NavHashLink)`
+export const StyledLink = styled(HashLink)`
   text-decoration: none;
   font-family: 'Tahoma', sans-serif;
   font-style: normal;
@@ -30,4 +31,8 @@ export const StyledLink = styled(NavHashLink)`
   line-height: 19px;
   color: #120e3d;
   margin: 0;
+  @media (min-width: 1280px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 `;
