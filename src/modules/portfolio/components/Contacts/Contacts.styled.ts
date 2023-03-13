@@ -7,6 +7,11 @@ export const StyledContacts = styled.section`
       rgba(255, 127, 17, 1) calc(50% - 180px),
       rgba(255, 255, 255, 1) calc(50% - 180px)
     );
+    @media (min-width: 1280px) {
+      position: relative;
+      overflow: hidden;
+      z-index: -3;
+    }
   }
 `;
 
@@ -20,10 +25,13 @@ export const StyledWrapper = styled.div`
   padding-bottom: 24px;
   @media (min-width: 768px) {
     margin-left: calc(50% - 130px);
-    align-items: start;
     padding-left: 60px;
     padding-right: 60px;
-  } ;
+  }
+  @media (min-width: 1280px) {
+    padding: 80px 0 24px;
+    z-index: 1;
+  }
 `;
 
 export const StyledInner = styled.div`
@@ -31,6 +39,9 @@ export const StyledInner = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 768px) {
+    align-items: start;
+  }
 `;
 
 export const StyledBox = styled.div`
@@ -40,6 +51,10 @@ export const StyledBox = styled.div`
   padding-top: 24px;
   padding-bottom: 80px;
   width: 100%;
+  @media (min-width: 1280px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const StyledContactsText = styled.p`

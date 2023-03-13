@@ -7,12 +7,14 @@ import {
   StyledTextBox,
   StyledWrapper,
 } from 'modules/portfolio/components/About/About.styled';
+import Background from 'modules/portfolio/components/Background/Background';
 import Layout from 'modules/portfolio/components/Layout/Layout';
 import Text from 'modules/portfolio/components/Text/Text';
 
 const About = () => {
   return (
     <StyledAbout id="about">
+      <Background />
       <Layout>
         <StyledWrapper>
           <Text variant="h2">Обо мне</Text>

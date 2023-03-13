@@ -6,6 +6,7 @@ import Text from 'modules/portfolio/components/Text/Text';
 import {
   StyledInner,
   StyledPhoto,
+  StyledPicture,
   StyledProfBox,
   StyledQrCode,
   StyledTextBox,
@@ -14,14 +15,25 @@ import {
   StyledWrapper,
 } from 'modules/portfolio/components/TitleBlock/TitleBlock.styled';
 
+import mainPhotoDesktop from 'src/img/mainPhotoDesktop.jpg';
 import mainPhotoMobile from 'src/img/mainPhotoMobile.jpg';
+import mainPhotoTablet from 'src/img/mainPhotoTablet.jpg';
 
 const TitleBlock = () => {
   return (
     <StyledTitleBlock>
       <Layout>
         <StyledWrapper>
-          <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={252} height={370} />
+          <StyledPicture>
+            <source
+              srcSet={mainPhotoDesktop}
+              media="(min-width: 1280px)"
+              width={476}
+              height={700}
+            />
+            <source srcSet={mainPhotoTablet} media="(min-width: 768px)" width={312} height={458} />
+            <StyledPhoto src={mainPhotoMobile} alt="фото Ильин Евгений" width={252} height={370} />
+          </StyledPicture>
           <StyledInner>
             <StyledTitileBox>
               <Text variant="h1">Ильин</Text>
@@ -36,8 +48,8 @@ const TitleBlock = () => {
               <Text variant="p">
                 Я&nbsp;&mdash; Ильин Евгений, web дизайнер, обучаюсь frontend разработке.
               </Text>
+              <ContactButton />
             </StyledTextBox>
-            <ContactButton />
           </StyledInner>
         </StyledWrapper>
       </Layout>

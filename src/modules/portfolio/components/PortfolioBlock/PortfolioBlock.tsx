@@ -13,11 +13,14 @@ import Text from 'modules/portfolio/components/Text/Text';
 import { WORKS } from 'src/constants';
 
 const PortfolioBlock = () => {
-  const COUNT_VISIBLE_WORKS = 3;
-  const visibleWorks = useMemo(() => {
-    return WORKS.slice(0, COUNT_VISIBLE_WORKS);
-  }, []);
+  const COUNT_MOBILE = 3;
+  const COUNT_DESKTOP = 4;
+  const visibleWorksCount =
+    document.documentElement.clientWidth < 1280 ? COUNT_MOBILE : COUNT_DESKTOP;
 
+  const visibleWorks = useMemo(() => {
+    return WORKS.slice(0, visibleWorksCount);
+  }, [visibleWorksCount]);
   return (
     <StyledPortfolioBlock id="portfolio">
       <Layout>

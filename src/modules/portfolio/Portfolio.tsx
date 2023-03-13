@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollContainer from 'react-page-scroll';
 
 import About from 'modules/portfolio/components/About/About';
 import Contacts from 'modules/portfolio/components/Contacts/Contacts';

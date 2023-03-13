@@ -23,7 +23,10 @@ export const StyledWrapper = styled.div`
   padding-bottom: 24px;
   @media (min-width: 768px) {
     align-items: start;
-    padding-top: 168px;
+  }
+  @media (min-width: 1280px) {
+    flex-direction: row;
+    align-items: center;
   }
 `;
 
@@ -38,9 +41,27 @@ export const StyledInner = styled.div`
     align-items: start;
     gap: 0;
   }
+  @media (min-width: 1280px) {
+    margin-left: 100px;
+  }
 `;
 
 export const StyledQrCode = styled.img``;
+
+export const StyledPicture = styled.picture`
+  @media (min-width: 768px) {
+    margin-left: calc(50% - 240px);
+    margin-bottom: 24px;
+    width: 312px;
+    height: 458px;
+  }
+  @media (min-width: 1280px) {
+    width: 476px;
+    height: 700px;
+    margin-left: calc(50% - 320px);
+    margin-bottom: 0;
+  }
+`;
 
 export const StyledPhoto = styled.img`
   border-radius: 4px;
@@ -48,10 +69,12 @@ export const StyledPhoto = styled.img`
   width: 252px;
   height: 370px;
   @media (min-width: 768px) {
-    margin-left: calc(50% - 240px);
-    margin-bottom: 24px;
     width: 312px;
     height: 458px;
+  }
+  @media (min-width: 1280px) {
+    width: 476px;
+    height: 700px;
   }
 `;
 
@@ -93,8 +116,17 @@ export const StyledProfBox = styled.div`
 
 export const StyledTextBox = styled.div`
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
   @media (min-width: 768px) {
     width: 330px;
-    margin-bottom: 54px;
+  }
+  @media (min-width: 1280px) {
+    width: 330px;
+    min-height: 160px;
+    justify-content: space-between;
+    align-items: start;
   }
 `;

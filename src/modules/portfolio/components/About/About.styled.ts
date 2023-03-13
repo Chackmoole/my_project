@@ -8,6 +8,11 @@ export const StyledAbout = styled.section`
       rgba(255, 255, 255, 1) calc(50% - 180px)
     );
   }
+  @media (min-width: 1280px) {
+    position: relative;
+    overflow: hidden;
+    z-index: -3;
+  }
 `;
 
 export const StyledWrapper = styled.div`
@@ -23,6 +28,10 @@ export const StyledWrapper = styled.div`
     align-items: start;
     padding-left: 60px;
     padding-right: 60px;
+  }
+  @media (min-width: 1280px) {
+    padding: 80px 0 124px;
+    z-index: 1;
   }
 `;
 

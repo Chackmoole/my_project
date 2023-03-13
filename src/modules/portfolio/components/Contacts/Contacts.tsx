@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Background from 'modules/portfolio/components/Background/Background';
 import Contact from 'modules/portfolio/components/Contact/Contact';
 import ContactButton from 'modules/portfolio/components/ContactButton/ContactButton';
 import {
@@ -17,6 +18,7 @@ import { CONTACTS } from 'src/constants';
 const Contacts = () => {
   return (
     <StyledContacts id="contacts">
+      <Background />
       <Layout>
         <StyledWrapper>
           <StyledInner>

@@ -7,4 +7,7 @@ export const StyledContact = styled.a`
   flex-direction: column;
   gap: 4px;
   text-decoration: none;
+  @media (min-width: 1280px) {
+    width: 348px;
+  }
 `;
