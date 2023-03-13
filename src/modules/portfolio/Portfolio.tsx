@@ -13,13 +13,11 @@ const Portfolio = () => {
     <>
       <Header />
       <main>
-        <ScrollContainer height="100vh" width="100vw" animationDuration={700}>
-          <TitleBlock />
-          <PortfolioBlock />
-          <About />
-          <Skills />
-          <Contacts />
-        </ScrollContainer>
+        <TitleBlock />
+        <PortfolioBlock />
+        <About />
+        <Skills />
+        <Contacts />
       </main>
     </>
   );
